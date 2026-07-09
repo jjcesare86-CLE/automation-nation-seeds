@@ -1,1 +1,28 @@
-{"brand":"Marrow Type","tagline":"A creative agency where the type is the hero","phone":"","email":"studio@marrowtype.co","address":{"line1":"Rotterdam · Melbourne","city":""},"palette":{"paper":"#f4f0eb","ink":"#0f0f0f","hot":"#ff3d1f"},"FORM_WEBHOOK_URL":"https://services.leadconnectorhq.com/hooks/example/marrow","meta":{"title":"Marrow Type — Kinetic identity for teams that ship","description":"A creative agency built around variable typography. Kinetic identity systems for teams shipping software, motion, and cultural moments."}}
+{
+  "brand": "Marrow Type",
+  "tagline": "A creative agency where the type is the hero",
+  "phone": "",
+  "email": "studio@marrowtype.co",
+  "address": {
+    "line1": "Rotterdam · Melbourne",
+    "city": ""
+  },
+  "palette": {
+    "paper": "#f4f0eb",
+    "ink": "#0f0f0f",
+    "hot": "#ff3d1f"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/marrow",
+  "meta": {
+    "title": "Marrow Type — Kinetic identity for teams that ship",
+    "description": "A creative agency built around variable typography. Kinetic identity systems for teams shipping software, motion, and cultural moments."
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Wren",
+    "agentGreeting": "Wren from Marrow. What are you shipping?",
+    "accent": "#ff3d1f"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/kinetic-typography-voice"
+}

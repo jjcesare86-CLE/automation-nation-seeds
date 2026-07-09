@@ -1,1 +1,30 @@
-{"brand":"Sunward Solar","tagline":"Panels that pay back. Nothing else.","phone":"(602) 555-0187","email":"hello@sunwardsolar.co","address":{"line1":"215 W. Roosevelt St.","city":"Phoenix, AZ 85003"},"palette":{"navy":"#0d1a2c","offwhite":"#f0eee8","yellow":"#f0b400","brass":"#c9955a","moss":"#3a5348"},"FORM_WEBHOOK_URL":"https://services.leadconnectorhq.com/hooks/example/sunward","meta":{"title":"Sunward Solar — Residential Solar, Phoenix","description":"A residential solar installer with an engineer's honesty. Free savings estimate, no door-knockers, no leased panels, ever."}}
+{
+  "brand": "Sunward Solar",
+  "tagline": "Panels that pay back. Nothing else.",
+  "phone": "(602) 555-0187",
+  "email": "hello@sunwardsolar.co",
+  "address": {
+    "line1": "215 W. Roosevelt St.",
+    "city": "Phoenix, AZ 85003"
+  },
+  "palette": {
+    "navy": "#0d1a2c",
+    "offwhite": "#f0eee8",
+    "yellow": "#f0b400",
+    "brass": "#c9955a",
+    "moss": "#3a5348"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/sunward",
+  "meta": {
+    "title": "Sunward Solar — Residential Solar, Phoenix",
+    "description": "A residential solar installer with an engineer's honesty. Free savings estimate, no door-knockers, no leased panels, ever."
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Miguel",
+    "agentGreeting": "Miguel at Sunward. Send me your last twelve bills and I'll price it.",
+    "accent": "#f0b400"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/solar-voice"
+}

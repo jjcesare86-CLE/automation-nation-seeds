@@ -1,1 +1,28 @@
-{"brand":"Field Study 07","tagline":"A generative-art series. Every visit is a new artwork.","phone":"","email":"studio@fieldstudy.art","address":{"line1":"Berlin","city":""},"palette":{"bone":"#f3f0e8","ink":"#0f0f0f","hot":"#ff3d1f"},"FORM_WEBHOOK_URL":"https://services.leadconnectorhq.com/hooks/example/field","meta":{"title":"Field Study 07 — Generative Art Collection","description":"A seedable flow-field generative art collection. Every visit produces a unique canvas piece. Prints available at 60×80cm and 120×160cm."}}
+{
+  "brand": "Field Study 07",
+  "tagline": "A generative-art series. Every visit is a new artwork.",
+  "phone": "",
+  "email": "studio@fieldstudy.art",
+  "address": {
+    "line1": "Berlin",
+    "city": ""
+  },
+  "palette": {
+    "bone": "#f3f0e8",
+    "ink": "#0f0f0f",
+    "hot": "#ff3d1f"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/field",
+  "meta": {
+    "title": "Field Study 07 — Generative Art Collection",
+    "description": "A seedable flow-field generative art collection. Every visit produces a unique canvas piece. Prints available at 60×80cm and 120×160cm."
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Iris",
+    "agentGreeting": "Iris from Field Study 07. Which seed caught you?",
+    "accent": "#ff3d1f"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/generative-art-voice"
+}

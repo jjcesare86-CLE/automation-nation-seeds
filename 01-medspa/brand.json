@@ -31,5 +31,13 @@
   "meta": {
     "title": "Lumen Aesthetics — An editorial med spa in San Francisco",
     "description": "A small, quiet, afternoon-light med spa on Nob Hill. Botox, filler, microneedling, and skin studies — by consultation, by appointment, by a practitioner who runs on time."
-  }
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Ella",
+    "agentGreeting": "Hi, I'm Ella — ask me anything about Lumen Aesthetics.",
+    "accent": "#c89a70"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/medspa-voice"
 }

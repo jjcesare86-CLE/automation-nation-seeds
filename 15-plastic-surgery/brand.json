@@ -1,1 +1,30 @@
-{"brand":"Ravel Surgical","tagline":"A private surgical practice.","phone":"(310) 555-0104","email":"consultation@ravelsurgical.co","address":{"line1":"9601 Wilshire Blvd., Suite 620","city":"Beverly Hills, CA 90210"},"palette":{"bone":"#f2ebe0","ink":"#141210","gold":"#c8a373","rose":"#e2c5c1","dim":"#8a807a"},"FORM_WEBHOOK_URL":"https://services.leadconnectorhq.com/hooks/example/ravel","meta":{"title":"Ravel Surgical — Private Practice, Beverly Hills","description":"A single-surgeon aesthetic and reconstructive practice in Beverly Hills. By referral and consultation only."}}
+{
+  "brand": "Ravel Surgical",
+  "tagline": "A private surgical practice.",
+  "phone": "(310) 555-0104",
+  "email": "consultation@ravelsurgical.co",
+  "address": {
+    "line1": "9601 Wilshire Blvd., Suite 620",
+    "city": "Beverly Hills, CA 90210"
+  },
+  "palette": {
+    "bone": "#f2ebe0",
+    "ink": "#141210",
+    "gold": "#c8a373",
+    "rose": "#e2c5c1",
+    "dim": "#8a807a"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/ravel",
+  "meta": {
+    "title": "Ravel Surgical — Private Practice, Beverly Hills",
+    "description": "A single-surgeon aesthetic and reconstructive practice in Beverly Hills. By referral and consultation only."
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Yara",
+    "agentGreeting": "Yara, Dr. Ravel's assistant. How can I help?",
+    "accent": "#c8a373"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/plastic-surgery-voice"
+}

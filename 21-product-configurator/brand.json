@@ -1,1 +1,30 @@
-{"brand":"Astria Objects","tagline":"A small-batch concrete lighting studio.","phone":"","email":"studio@astriaobjects.co","address":{"line1":"Studio 12, Boiler Row","city":"Portland, OR 97214"},"palette":{"paper":"#f0ece4","ink":"#111111","concrete":"#a8a29a","brass":"#c9955a","hazard":"#f0b400"},"FORM_WEBHOOK_URL":"https://services.leadconnectorhq.com/hooks/example/astria","meta":{"title":"Astria Objects — Cast Concrete Lighting","description":"A small-batch cast-concrete lighting studio. Configure the object in real 3D, then order."}}
+{
+  "brand": "Astria Objects",
+  "tagline": "A small-batch concrete lighting studio.",
+  "phone": "",
+  "email": "studio@astriaobjects.co",
+  "address": {
+    "line1": "Studio 12, Boiler Row",
+    "city": "Portland, OR 97214"
+  },
+  "palette": {
+    "paper": "#f0ece4",
+    "ink": "#111111",
+    "concrete": "#a8a29a",
+    "brass": "#c9955a",
+    "hazard": "#f0b400"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/astria",
+  "meta": {
+    "title": "Astria Objects — Cast Concrete Lighting",
+    "description": "A small-batch cast-concrete lighting studio. Configure the object in real 3D, then order."
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Ozi",
+    "agentGreeting": "Ozi from Astria studio. Which finish are you considering?",
+    "accent": "#c9955a"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/product-configurator-voice"
+}

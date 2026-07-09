@@ -1,1 +1,30 @@
-{"brand":"Longitude Homes","tagline":"We build to be lived in for a hundred years.","phone":"(512) 555-0170","email":"studio@longitudehomes.co","address":{"line1":"1201 W. 6th Street","city":"Austin, TX 78703"},"palette":{"paper":"#efe9dd","ink":"#0e0f12","brass":"#a8823c","sky":"#c8d5db","moss":"#4a5b48"},"FORM_WEBHOOK_URL":"https://services.leadconnectorhq.com/hooks/example/longitude","meta":{"title":"Longitude Homes — Custom Residential, Austin","description":"An architect-led custom home builder. Six commissions a year, all in the Texas Hill Country."}}
+{
+  "brand": "Longitude Homes",
+  "tagline": "We build to be lived in for a hundred years.",
+  "phone": "(512) 555-0170",
+  "email": "studio@longitudehomes.co",
+  "address": {
+    "line1": "1201 W. 6th Street",
+    "city": "Austin, TX 78703"
+  },
+  "palette": {
+    "paper": "#efe9dd",
+    "ink": "#0e0f12",
+    "brass": "#a8823c",
+    "sky": "#c8d5db",
+    "moss": "#4a5b48"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/longitude",
+  "meta": {
+    "title": "Longitude Homes — Custom Residential, Austin",
+    "description": "An architect-led custom home builder. Six commissions a year, all in the Texas Hill Country."
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Marisa",
+    "agentGreeting": "Marisa at Longitude Homes. Tell me about the site.",
+    "accent": "#a8823c"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/home-builder-voice"
+}

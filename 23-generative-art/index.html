@@ -193,4 +193,5 @@ function drawField(canvas, seed, opts={}){
     try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'field.web',at:new Date().toISOString()})})}catch(_){}
     f.reset(); st.textContent='Order received. Studio confirms and invoices within one business day.';
   });
-})();</script></body></html>
+})();</script><script src="../voice-widget.js" defer></script>
+</body></html>

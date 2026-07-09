@@ -25,5 +25,13 @@
   "meta": {
     "title": "Ingot Atelier — Bespoke Goldsmith, Kraków",
     "description": "A one-goldsmith bespoke jewelry atelier in Kraków. Signet rings, wedding bands, and small cast objects — one commission per week, by consultation."
-  }
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Marek",
+    "agentGreeting": "Marek at the atelier. What piece did you have in mind?",
+    "accent": "#c9a353"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/webgl-hero-voice"
 }

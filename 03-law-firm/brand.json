@@ -1,1 +1,30 @@
-{"brand":"Halvorsen & Kaye","tagline":"We do not settle.","phone":"(212) 555-0182","email":"partners@halvorsenkaye.com","address":{"line1":"500 Fifth Ave., 46th Fl.","city":"New York, NY 10110"},"palette":{"black":"#0a0a0b","bone":"#eae6dd","brass":"#b58b3f","oxblood":"#7a1d20","ash":"#5c5c5f"},"FORM_WEBHOOK_URL":"https://services.leadconnectorhq.com/hooks/example/halvorsen","meta":{"title":"Halvorsen & Kaye — Litigation","description":"A litigation-first firm handling bet-the-company disputes. Small partner-led teams, sixty-day matter minimums."}}
+{
+  "brand": "Halvorsen & Kaye",
+  "tagline": "We do not settle.",
+  "phone": "(212) 555-0182",
+  "email": "partners@halvorsenkaye.com",
+  "address": {
+    "line1": "500 Fifth Ave., 46th Fl.",
+    "city": "New York, NY 10110"
+  },
+  "palette": {
+    "black": "#0a0a0b",
+    "bone": "#eae6dd",
+    "brass": "#b58b3f",
+    "oxblood": "#7a1d20",
+    "ash": "#5c5c5f"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/halvorsen",
+  "meta": {
+    "title": "Halvorsen & Kaye — Litigation",
+    "description": "A litigation-first firm handling bet-the-company disputes. Small partner-led teams, sixty-day matter minimums."
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Marion",
+    "agentGreeting": "Marion, on the partner desk at Halvorsen & Kaye. How can I help?",
+    "accent": "#b58b3f"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/law-firm-voice"
+}

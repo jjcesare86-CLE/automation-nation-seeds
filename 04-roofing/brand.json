@@ -26,13 +26,33 @@
   },
   "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/summit",
   "credentials": [
-    { "label": "BBB", "value": "A+ Accredited · 12 yrs" },
-    { "label": "GAF", "value": "Master Elite™ Contractor" },
-    { "label": "Insured", "value": "$2M General · Fully bonded" },
-    { "label": "Reviews", "value": "5.0 stars · 412 verified" }
+    {
+      "label": "BBB",
+      "value": "A+ Accredited · 12 yrs"
+    },
+    {
+      "label": "GAF",
+      "value": "Master Elite™ Contractor"
+    },
+    {
+      "label": "Insured",
+      "value": "$2M General · Fully bonded"
+    },
+    {
+      "label": "Reviews",
+      "value": "5.0 stars · 412 verified"
+    }
   ],
   "meta": {
     "title": "Summit Roofing Co. — Lakewood's neighborhood roofers",
     "description": "Full tear-off, install, and cleanup. GAF Master Elite™ contractor. Free inspections, lifetime workmanship warranty, and a schedule you can plan a Saturday around."
-  }
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Ashley",
+    "agentGreeting": "Ashley from Summit Roofing dispatch — what's going on up there?",
+    "accent": "#c9241f"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/roofing-voice"
 }

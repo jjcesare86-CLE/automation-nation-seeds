@@ -3,7 +3,10 @@
   "tagline": "Same-day comfort, from a family that has heated Cleveland since 1972.",
   "phone": "(216) 555-0179",
   "email": "hello@northlineclimate.com",
-  "address": { "line1": "1804 Detroit Ave.", "city": "Lakewood, OH 44107" },
+  "address": {
+    "line1": "1804 Detroit Ave.",
+    "city": "Lakewood, OH 44107"
+  },
   "palette": {
     "navy": "#0f2437",
     "cyan": "#5cbde0",
@@ -15,5 +18,13 @@
   "meta": {
     "title": "Northline Climate — Lakewood's heating & cooling family",
     "description": "Furnaces, AC, ductless, and 24/7 emergency service. Second-generation, family-owned. Free estimates and a same-day guarantee, May through September."
-  }
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Ashley",
+    "agentGreeting": "Ashley at Northline dispatch — what can I fix for you today?",
+    "accent": "#5cbde0"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/hvac-voice"
 }

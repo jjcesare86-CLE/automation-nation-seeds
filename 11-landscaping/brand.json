@@ -1,1 +1,30 @@
-{"brand":"Green Hour Landscape","tagline":"The garden is the ground floor of the house.","phone":"(408) 555-0116","email":"studio@greenhour.co","address":{"line1":"411 University Ave., Suite 220","city":"Palo Alto, CA 94301"},"palette":{"sage":"#8ba382","moss":"#3d4a2f","sand":"#dcd1b8","ink":"#1a1614","blush":"#c48a6c"},"FORM_WEBHOOK_URL":"https://services.leadconnectorhq.com/hooks/example/greenhour","meta":{"title":"Green Hour Landscape — Design + Build","description":"A design-build landscape studio in the Bay Area. Site-plan aesthetic, seasonal photography, portfolio-forward."}}
+{
+  "brand": "Green Hour Landscape",
+  "tagline": "The garden is the ground floor of the house.",
+  "phone": "(408) 555-0116",
+  "email": "studio@greenhour.co",
+  "address": {
+    "line1": "411 University Ave., Suite 220",
+    "city": "Palo Alto, CA 94301"
+  },
+  "palette": {
+    "sage": "#8ba382",
+    "moss": "#3d4a2f",
+    "sand": "#dcd1b8",
+    "ink": "#1a1614",
+    "blush": "#c48a6c"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/greenhour",
+  "meta": {
+    "title": "Green Hour Landscape — Design + Build",
+    "description": "A design-build landscape studio in the Bay Area. Site-plan aesthetic, seasonal photography, portfolio-forward."
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Ines",
+    "agentGreeting": "Ines at Green Hour. What are you picturing outside?",
+    "accent": "#3d4a2f"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/landscaping-voice"
+}

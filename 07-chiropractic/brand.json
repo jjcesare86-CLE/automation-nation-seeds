@@ -3,11 +3,28 @@
   "tagline": "Your spine is the schedule your day runs on.",
   "phone": "(310) 555-0164",
   "email": "hello@meridianspinal.co",
-  "address": { "line1": "2140 Main St., Suite 202", "city": "Santa Monica, CA 90405" },
-  "palette": {"bone":"#f2ebe0","ink":"#1a1614","terracotta":"#c26a4a","sage":"#7a8f6d","dim":"#6a655e"},
+  "address": {
+    "line1": "2140 Main St., Suite 202",
+    "city": "Santa Monica, CA 90405"
+  },
+  "palette": {
+    "bone": "#f2ebe0",
+    "ink": "#1a1614",
+    "terracotta": "#c26a4a",
+    "sage": "#7a8f6d",
+    "dim": "#6a655e"
+  },
   "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/meridian",
   "meta": {
     "title": "Meridian Spinal Care — Santa Monica",
     "description": "A sports-medicine chiropractic practice combining hands-on adjustment with mobility and breathwork. Same-week new-patient exams, direct-pay pricing, no packages."
-  }
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Reya",
+    "agentGreeting": "Reya at Meridian Spinal — what part of your day isn't working?",
+    "accent": "#c26a4a"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/chiropractic-voice"
 }

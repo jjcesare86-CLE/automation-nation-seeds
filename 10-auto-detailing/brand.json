@@ -1,1 +1,30 @@
-{"brand":"Meridian Detailing","tagline":"Your paint is a substrate. We make it a shell.","phone":"(720) 555-0141","email":"detail@meridianstudio.co","address":{"line1":"7180 S. Alton Way","city":"Centennial, CO 80112"},"palette":{"carbon":"#0a0a0b","offwhite":"#e6e6e4","chrome":"#b8b8bc","hazard":"#f0b400","cobalt":"#1a3a75"},"FORM_WEBHOOK_URL":"https://services.leadconnectorhq.com/hooks/example/meridian-det","meta":{"title":"Meridian Detailing — Ceramic coating & PPF, Denver","description":"A concours-grade detailing studio in south Denver. Ceramic coatings, PPF, and paint correction by a team of four."}}
+{
+  "brand": "Meridian Detailing",
+  "tagline": "Your paint is a substrate. We make it a shell.",
+  "phone": "(720) 555-0141",
+  "email": "detail@meridianstudio.co",
+  "address": {
+    "line1": "7180 S. Alton Way",
+    "city": "Centennial, CO 80112"
+  },
+  "palette": {
+    "carbon": "#0a0a0b",
+    "offwhite": "#e6e6e4",
+    "chrome": "#b8b8bc",
+    "hazard": "#f0b400",
+    "cobalt": "#1a3a75"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/meridian-det",
+  "meta": {
+    "title": "Meridian Detailing — Ceramic coating & PPF, Denver",
+    "description": "A concours-grade detailing studio in south Denver. Ceramic coatings, PPF, and paint correction by a team of four."
+  },
+  "voice": {
+    "publicKey": "",
+    "assistantId": "",
+    "agentName": "Mario",
+    "agentGreeting": "Mario at Meridian Detailing. What are we protecting?",
+    "accent": "#f0b400"
+  },
+  "VOICE_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/auto-detailing-voice"
+}
