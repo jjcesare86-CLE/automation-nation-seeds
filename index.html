@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Automation Nation — Seed Library (Pilot)</title>
+<title>Automation Nation — Seed Library · 25 flagship websites</title>
+<meta name="description" content="A library of 25 flagship-quality websites, rebrandable in ~15 minutes. Seeds for the Automation Nation platform.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,ital@9..144,300..700,0..1&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #0a0a0b;
@@ -15,36 +16,40 @@
   --accent: #c9a353;
   --card: rgba(255,255,255,.04);
   --rule: rgba(239,233,217,.12);
-  --ease-soft: cubic-bezier(.2, .9, .2, 1);
+  --ease-soft: cubic-bezier(.2,.9,.2,1);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 html, body { background: var(--bg); color: var(--fg); font-family: "Inter", sans-serif; min-height: 100vh; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 .mono { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); }
-main { max-width: 1200px; margin: 0 auto; padding: 60px 32px 100px; }
-header.hero { padding: 80px 0 60px; border-bottom: 1px solid var(--rule); }
+main { max-width: 1400px; margin: 0 auto; padding: 60px 32px 100px; }
+header.hero { padding: 80px 0 60px; border-bottom: 1px solid var(--rule); position: relative; }
 .brand { display: flex; align-items: center; gap: 10px; font-family: "Fraunces", serif; font-size: 20px; font-variation-settings: "opsz" 24, "wght" 500; margin-bottom: 24px; }
 .brand-mark { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; }
-h1 { font-family: "Fraunces", serif; font-size: clamp(48px, 8vw, 120px); line-height: .95; font-variation-settings: "opsz" 144, "wght" 400; letter-spacing: -.02em; margin-bottom: 24px; }
-h1 em { font-style: italic; color: var(--accent); font-variation-settings: "opsz" 144, "wght" 350; }
+h1 { font-family: "Fraunces", serif; font-size: clamp(48px, 8vw, 130px); line-height: .95; font-variation-settings: "opsz" 144, "wght" 400; letter-spacing: -.02em; margin-bottom: 24px; }
+h1 em { font-style: italic; color: var(--accent); font-variation-settings: "opsz" 144, "wght" 350, "ital" 1; }
 .lead { font-family: "Fraunces", serif; font-size: 22px; line-height: 1.55; color: rgba(239,233,217,.75); max-width: 60ch; font-variation-settings: "opsz" 24, "wght" 350; }
 .meta { display: flex; gap: 32px; margin-top: 40px; flex-wrap: wrap; }
 .meta > div { display: flex; flex-direction: column; gap: 4px; }
 .meta .k { color: var(--dim); font-size: 10px; letter-spacing: .3em; text-transform: uppercase; font-family: "IBM Plex Mono", monospace; }
 .meta .v { font-size: 15px; }
-.status { margin-top: 60px; padding: 20px 24px; background: rgba(201, 163, 83, .08); border: 1px solid rgba(201, 163, 83, .3); border-radius: 4px; }
-.status .badge { color: var(--accent); font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; }
-.status p { margin-top: 6px; font-family: "Fraunces", serif; font-size: 18px; line-height: 1.5; font-variation-settings: "opsz" 20, "wght" 350; }
+.meta .v a { color: var(--fg); border-bottom: 1px solid var(--rule); text-decoration: none; }
+.meta .v a:hover { border-bottom-color: var(--accent); color: var(--accent); }
 
-.grid { padding: 60px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.filters { margin: 40px 0 8px; display: flex; gap: 8px; flex-wrap: wrap; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; }
+.filters button { background: transparent; color: var(--dim); border: 1px solid var(--rule); padding: 8px 14px; cursor: pointer; font: inherit; }
+.filters button.on { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+.grid { padding: 40px 0 60px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .card { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; transition: transform .5s var(--ease-soft), border-color .5s var(--ease-soft), background-color .5s var(--ease-soft); display: block; text-decoration: none; color: var(--fg); }
 .card:hover, .card:focus-visible { transform: translateY(-6px); border-color: var(--accent); background: rgba(255,255,255,.06); outline: none; }
 .card-preview { aspect-ratio: 16/10; background: linear-gradient(160deg, #1a1614, #0e0f12); position: relative; overflow: hidden; border-bottom: 1px solid var(--rule); }
-.card-preview img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.card-preview .placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: "Fraunces", serif; font-style: italic; font-size: 44px; color: rgba(239,233,217,.15); font-variation-settings: "opsz" 96, "wght" 300; letter-spacing: -.02em; }
+.card-preview .placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: "Fraunces", serif; font-style: italic; font-size: 44px; color: rgba(239,233,217,.15); font-variation-settings: "opsz" 96, "wght" 300; letter-spacing: -.02em; text-align: center; padding: 20px; line-height: 1.05; }
 .card-body { padding: 24px; }
-.card-num { color: var(--accent); font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; margin-bottom: 10px; }
-.card h3 { font-family: "Fraunces", serif; font-size: 24px; line-height: 1.15; font-variation-settings: "opsz" 32, "wght" 500; letter-spacing: -.005em; margin-bottom: 6px; }
-.card h3 em { font-style: italic; color: var(--accent); font-variation-settings: "opsz" 32, "wght" 400; }
+.card-num { color: var(--accent); font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; margin-bottom: 10px; display: flex; justify-content: space-between; }
+.card-num .cat { color: var(--dim); }
+.card h3 { font-family: "Fraunces", serif; font-size: 22px; line-height: 1.15; font-variation-settings: "opsz" 32, "wght" 500; letter-spacing: -.005em; margin-bottom: 6px; }
+.card h3 em { font-style: italic; color: var(--accent); font-variation-settings: "opsz" 32, "wght" 400, "ital" 1; }
 .card .concept { color: rgba(239,233,217,.65); font-size: 14px; line-height: 1.55; margin-bottom: 16px; }
 .card .tags { display: flex; gap: 8px; flex-wrap: wrap; }
 .card .tag { font-family: "IBM Plex Mono", monospace; font-size: 9px; letter-spacing: .25em; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 999px; color: var(--dim); }
@@ -58,6 +63,7 @@ footer a:hover, footer a:focus-visible { border-bottom-color: var(--accent); col
   .meta { gap: 20px; }
   main { padding: 40px 24px 80px; }
   header.hero { padding: 40px 0; }
+  h1 { font-size: 56px; }
 }
 </style>
 </head>
@@ -65,54 +71,75 @@ footer a:hover, footer a:focus-visible { border-bottom-color: var(--accent); col
 <main>
 <header class="hero">
   <div class="brand"><span class="brand-mark"></span>Automation Nation · Seed Library</div>
-  <h1>25 flagship websites,<br><em>seeded</em> for one-day rebrands.</h1>
-  <p class="lead">A living library of $10,000-quality agency websites — every one of them rebrandable to a client's business in about fifteen minutes. What follows is the pilot: three sites, one from each of two unglamorous niches and one WebGL showpiece, built end-to-end and shipped to a live URL.</p>
+  <h1>25 flagship websites,<br><em>rebrandable</em> in fifteen minutes.</h1>
+  <p class="lead">A living library of $10,000-quality agency websites — every one of them rebrandable to a client's business in about fifteen minutes. Twenty niche seeds and five showpieces. Each site is fully self-contained: HTML + CSS + JS + <code style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--accent)">brand.json</code>, with a <code style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--accent)">/guide/</code> route documenting the rebrand mechanics.</p>
   <div class="meta">
-    <div><span class="k">Phase</span><span class="v">Pilot · 3 of 25</span></div>
-    <div><span class="k">Design Constitution</span><span class="v"><a href="BRIEFS.md" style="color:inherit;border-bottom:1px solid var(--rule)">BRIEFS.md</a></span></div>
+    <div><span class="k">Phase</span><span class="v">Complete · 25 of 25</span></div>
+    <div><span class="k">Design Constitution</span><span class="v"><a href="BRIEFS.md">BRIEFS.md</a></span></div>
     <div><span class="k">Motion</span><span class="v">Custom-bezier · reduced-motion aware</span></div>
-    <div><span class="k">Payload</span><span class="v">Under 1.5&nbsp;MB per site</span></div>
+    <div><span class="k">Payload</span><span class="v">≤ 1.5 MB per site</span></div>
   </div>
-  <div class="status">
-    <div class="badge">◆ Pilot Gate</div>
-    <p>These three sites are the validation batch. Next phase — 22 additional seeds — begins on a "continue" from the operator.</p>
+  <div class="filters">
+    <button class="on" data-f="all">All 25</button>
+    <button data-f="niche">Niches (20)</button>
+    <button data-f="show">Showpieces (5)</button>
+    <button data-f="asset">Photo-heavy</button>
+    <button data-f="zero">Zero-asset</button>
   </div>
 </header>
 
-<section class="grid">
-  <a class="card" href="01-medspa/" aria-label="Open Lumen Aesthetics">
-    <div class="card-preview" style="background:#f5efe6;color:#1a1614"><span class="placeholder" style="color:rgba(26,22,20,.15)">Lumen</span></div>
-    <div class="card-body">
-      <div class="card-num">Site 01 · Med Spa</div>
-      <h3>Lumen <em>Aesthetics</em></h3>
-      <p class="concept">Editorial afternoon-light med spa. Fraunces italic + Manrope, hero portrait, ink-underline treatment menu, "letter" intake form.</p>
-      <div class="tags"><span class="tag">Editorial</span><span class="tag">Fraunces</span><span class="tag">Accordion menu</span><span class="tag">Parallax</span></div>
-    </div>
-  </a>
-  <a class="card" href="04-roofing/" aria-label="Open Summit Roofing Co.">
-    <div class="card-preview" style="background:#141416"><span class="placeholder">Summit</span></div>
-    <div class="card-body">
-      <div class="card-num">Site 04 · Roofing</div>
-      <h3>Summit Roofing <em>Co.</em></h3>
-      <p class="concept">Cinematic golden-hour hero, draggable before/after slider, warranty-forward copy. Trade site with editorial taste.</p>
-      <div class="tags"><span class="tag">Cinematic hero</span><span class="tag">Before / After</span><span class="tag">Trade</span><span class="tag">Fraunces</span></div>
-    </div>
-  </a>
-  <a class="card" href="25-webgl-hero/" aria-label="Open Fold — shader study">
-    <div class="card-preview"><span class="placeholder">Fold</span></div>
-    <div class="card-body">
-      <div class="card-num">Site 25 · Showpiece</div>
-      <h3>Fold — <em>Shader Study</em></h3>
-      <p class="concept">Vanilla WebGL 1.0 raymarched SDF liquid metal, Fresnel-Schlick lighting, cursor-reactive displacement, idle-breathing.</p>
-      <div class="tags"><span class="tag">WebGL</span><span class="tag">SDF</span><span class="tag">Cursor-reactive</span><span class="tag">Zero-asset</span></div>
-    </div>
-  </a>
-</section>
+<section class="grid" id="grid"></section>
 
 <footer>
-  <div>Automation Nation · Seed Library · Pilot MMXXVI</div>
+  <div>Automation Nation · Seed Library · MMXXVI</div>
   <div><a href="BRIEFS.md">Design constitution &amp; all 25 briefs →</a></div>
 </footer>
 </main>
-</body>
-</html>
+<script>
+const SITES = [
+  { slug:'01-medspa', num:'Site 01', cat:'Med Spa', name:'Lumen <em>Aesthetics</em>', concept:'Editorial afternoon-light spa, Fraunces italic hero portrait, ink-underline treatment menu.', tags:['Editorial','Photo','Fraunces','Parallax'], group:['niche','asset'] },
+  { slug:'02-luxury-real-estate', num:'Site 02', cat:'Real Estate', name:'Norderlys <em>Property</em>', concept:'Private brokerage. Horizon-strip ticker, chapter-style listings with reference numbers + specs.', tags:['Editorial','Photo','Recoleta','Ticker'], group:['niche','asset'] },
+  { slug:'03-law-firm', num:'Site 03', cat:'Litigation', name:'Halvorsen &amp; <em>Kaye</em>', concept:'Dark authoritative litigation practice. Canela italic, senator portraits, docket ticker.', tags:['Authority','Photo','Canela'], group:['niche','asset'] },
+  { slug:'04-roofing', num:'Site 04', cat:'Roofing', name:'Summit Roofing <em>Co.</em>', concept:'Cinematic golden-hour hero, draggable before/after slider, warranty-forward copy.', tags:['Cinematic','Before/After','Trade'], group:['niche','asset'] },
+  { slug:'05-hvac', num:'Site 05', cat:'HVAC', name:'Northline <em>Climate</em>', concept:'Cool navy-cyan editorial, SVG wind currents, live seasonal-banner from visitor\'s clock.', tags:['SVG','Live','Zero-asset'], group:['niche','zero'] },
+  { slug:'06-dental', num:'Site 06', cat:'Dental', name:'Aperture Dental <em>Studio</em>', concept:'Architecture-office-feel dental practice. Priced-out-loud services, drawing-in smile line.', tags:['Söhne Breit','Grid','Photo'], group:['niche','asset'] },
+  { slug:'07-chiropractic', num:'Site 07', cat:'Chiropractic', name:'Meridian Spinal <em>Care</em>', concept:'Sports-medicine chiropractic. SVG spine rotates 30° across page scroll, vertebrae highlight per service.', tags:['SVG','Scroll','Zero-asset'], group:['niche','zero'] },
+  { slug:'08-boutique-gym', num:'Site 08', cat:'Boutique Gym', name:'FOUNDRY <em>STRENGTH</em>', concept:'Brutalist barbell club. Anton display, red-on-black train-timetable with live NEXT-class flag.', tags:['Brutalist','Anton','Live','Zero-asset'], group:['niche','zero'] },
+  { slug:'09-fine-dining', num:'Site 09', cat:'Fine Dining', name:'Vespertine <em>Room</em>', concept:'Nine-course tasting-menu program. GT Sectra italic, cursor spotlight, three plated courses.', tags:['GT Sectra','Photo','Cursor'], group:['niche','asset'] },
+  { slug:'10-auto-detailing', num:'Site 10', cat:'Auto Detailing', name:'Meridian <em>Detailing</em>', concept:'Ceramic-coating studio. Söhne Breit + cinematic beading macro, three-tier packages.', tags:['Söhne Breit','Photo','Packages'], group:['niche','asset'] },
+  { slug:'11-landscaping', num:'Site 11', cat:'Landscaping', name:'Green Hour <em>Landscape</em>', concept:'Architect-flavored design-build. Self-drawing SVG site-plan hero, portfolio + process.', tags:['SVG','Fraunces','Zero-asset'], group:['niche','zero'] },
+  { slug:'12-home-builder', num:'Site 12', cat:'Home Builder', name:'Longitude <em>Homes</em>', concept:'Editorial architectural monograph. Page counter tracks chapters, project stats, Recoleta serif.', tags:['Editorial','Photo','Recoleta','Chapters'], group:['niche','asset'] },
+  { slug:'13-wedding-venue', num:'Site 13', cat:'Wedding Venue', name:'Halcyon <em>Estate</em>', concept:'Country estate. Zoom hero, RSVP-card tour form, six-part day-of schedule.', tags:['Cormorant','Photo','RSVP'], group:['niche','asset'] },
+  { slug:'14-barbershop', num:'Site 14', cat:'Barbershop', name:'Hartwell &amp; <em>Co.</em>', concept:'Heritage barbershop. CSS-only spinning barber-pole, live "chair open at" indicator.', tags:['Playfair','CSS-only','Live','Zero-asset'], group:['niche','zero'] },
+  { slug:'15-plastic-surgery', num:'Site 15', cat:'Plastic Surgery', name:'Ravel <em>Surgical</em>', concept:'Single-surgeon private practice. GT Sectra italic, "gallery is patient-viewed" not slider.', tags:['GT Sectra','Photo','Discreet'], group:['niche','asset'] },
+  { slug:'16-wealth-management', num:'Site 16', cat:'Wealth Mgmt', name:'Sonderberg <em>Advisors</em>', concept:'Independent fee-only wealth firm. Self-drawing SVG performance chart, initials-only partners.', tags:['SVG','Data-viz','Zero-asset'], group:['niche','zero'] },
+  { slug:'17-charter', num:'Site 17', cat:'Charter', name:'Meridian <em>Charters</em>', concept:'Private jet + yacht brokerage. Canvas world-map with traveling route arcs, fleet ticker.', tags:['Canvas','Ticker','Zero-asset'], group:['niche','zero'] },
+  { slug:'18-boutique-hotel', num:'Site 18', cat:'Boutique Hotel', name:'The <em>Larkspur</em>', concept:'Nob Hill hotel. Slow pan hero, live availability strip, rooms + restaurant + rooftop.', tags:['Fraunces','Photo','Live'], group:['niche','asset'] },
+  { slug:'19-solar', num:'Site 19', cat:'Solar', name:'Sunward <em>Solar</em>', concept:'Residential installer. Isometric SVG roof, panels self-install, live savings estimator.', tags:['SVG','Estimator','Zero-asset'], group:['niche','zero'] },
+  { slug:'20-vet-hospital', num:'Site 20', cat:'Vet Hospital', name:'Cedarwood <em>Veterinary</em>', concept:'Warm veterinary clinic. Blob hero, sage palette, resident "clinic cats" easter egg.', tags:['Recoleta','Warm','Zero-asset'], group:['niche','zero'] },
+  { slug:'21-product-configurator', num:'Site 21', cat:'Showpiece', name:'Astria <em>Objects</em>', concept:'Real-time product configurator. Drag-rotate 3D lamp, live finish/stem swap, live price.', tags:['Canvas 3D','Drag','Live price'], group:['show','asset'] },
+  { slug:'22-kinetic-typography', num:'Site 22', cat:'Showpiece', name:'Marrow <em>Type</em>', concept:'Variable-font type-first agency. Live axes sliders, idle-breathing hero, morphing work-list.', tags:['Variable font','Roboto Flex','Zero-asset'], group:['show','zero'] },
+  { slug:'23-generative-art', num:'Site 23', cat:'Showpiece', name:'Field <em>Study 07</em>', concept:'Seedable Perlin flow-field. Every visit = a new artwork. Seed encoded in URL, orderable.', tags:['Canvas','Seedable','Zero-asset'], group:['show','zero'] },
+  { slug:'24-data-story', num:'Site 24', cat:'Showpiece', name:'Longform · <em>500 Winters</em>', concept:'Scroll-driven data story. Five chapters, sticky-viz with progressive 500-year line reveal.', tags:['Canvas','Scroll','Zero-asset'], group:['show','zero'] },
+  { slug:'25-webgl-hero', num:'Site 25', cat:'Showpiece · Goldsmith', name:'Ingot <em>Atelier</em>', concept:'Bespoke goldsmith. Vanilla WebGL raymarched liquid metal, cursor-reactive, idle-breathing.', tags:['WebGL','SDF','Cursor-reactive','Zero-asset'], group:['show','zero'] },
+];
+const grid = document.getElementById('grid');
+const render = (f='all') => {
+  grid.innerHTML = SITES.filter(s => f==='all' || s.group.includes(f)).map(s => `
+    <a class="card" href="${s.slug}/" aria-label="Open ${s.cat} seed">
+      <div class="card-preview"><span class="placeholder">${s.name.replace(/<[^>]+>/g,'')}</span></div>
+      <div class="card-body">
+        <div class="card-num"><span>${s.num}</span><span class="cat">${s.cat}</span></div>
+        <h3>${s.name}</h3>
+        <p class="concept">${s.concept}</p>
+        <div class="tags">${s.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      </div>
+    </a>`).join('');
+};
+render();
+document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.filters button').forEach(o => o.classList.remove('on'));
+  b.classList.add('on'); render(b.dataset.f);
+}));
+</script>
+</body></html>

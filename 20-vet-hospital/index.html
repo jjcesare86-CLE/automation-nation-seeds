@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cedarwood Veterinary — South Austin</title>
+<meta name="description" content="A warm veterinary hospital in South Austin. Fear-Free certified. Same-week new-patient appointments.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Recoleta:wght@400;500&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f5efe4;--ink:#1a1614;--sage:#98a884;--terracotta:#c46a4a;--dim:#7a746c;--rule:rgba(26,22,20,.14);--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:"Manrope",sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Recoleta","Playfair Display",serif}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+.skip{position:absolute;left:-9999px;background:var(--terracotta);color:var(--cream);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;background:rgba(245,239,228,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.chrome .brand{font-family:"Recoleta",serif;font-size:22px;font-weight:500;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+.chrome .brand svg{width:24px;height:24px;color:var(--terracotta)}
+.chrome nav{display:flex;gap:22px;font-size:13px}
+.chrome nav a{color:var(--ink);text-decoration:none;opacity:.75}
+.chrome nav a:hover{opacity:1}
+.chrome .cta-h{background:var(--terracotta);color:var(--cream);padding:10px 18px;border-radius:999px;font-weight:500}
+.hero{padding:110px 32px 60px;max-width:1600px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;min-height:82vh;position:relative}
+.kicker{color:var(--terracotta);letter-spacing:.4em;font-size:11px;text-transform:uppercase;margin-bottom:32px;font-family:"IBM Plex Mono",monospace}
+h1{font-family:"Recoleta",serif;font-size:clamp(52px,7vw,110px);line-height:.98;letter-spacing:-.02em;font-weight:500}
+h1 em{color:var(--terracotta);font-style:italic;font-weight:400}
+.hero p{margin-top:32px;font-size:20px;line-height:1.55;max-width:44ch;color:rgba(26,22,20,.72)}
+.hero .actions{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.cta{padding:16px 28px;border-radius:999px;font-size:14px;letter-spacing:.02em;text-decoration:none;transition:transform .35s var(--ease);display:inline-block;border:1px solid transparent;font-weight:500}
+.cta.p{background:var(--terracotta);color:var(--cream)}
+.cta.p:hover{transform:translateY(-2px);background:var(--ink)}
+.cta.g{background:transparent;color:var(--ink);border-color:var(--ink)}
+.cta.g:hover{background:var(--ink);color:var(--cream);transform:translateY(-2px)}
+.paws{position:absolute;bottom:32px;right:32px;opacity:.4;pointer-events:none}
+.paws svg{width:80px;height:80px;color:var(--terracotta)}
+.hero-illus{position:relative;justify-self:center;width:100%;max-width:520px;aspect-ratio:1/1;background:var(--sage);border-radius:60% 40% 55% 45% / 60% 45% 55% 40%;display:flex;align-items:center;justify-content:center;font-family:"Recoleta",serif;font-size:220px;color:var(--cream);letter-spacing:-.05em;line-height:1;overflow:hidden;position:relative}
+.hero-illus::after{content:"";position:absolute;inset:20% 15% 15% 20%;background:radial-gradient(ellipse at 30% 30%,rgba(245,239,228,.35),transparent 60%)}
+section{padding:120px 32px;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start}
+.head>.mono{color:var(--terracotta);padding-top:20px;border-top:1px solid var(--terracotta)}
+.head h2{font-family:"Recoleta",serif;font-size:clamp(36px,5vw,72px);line-height:1;letter-spacing:-.02em;font-weight:500;max-width:22ch}
+.head h2 em{color:var(--terracotta);font-style:italic;font-weight:400}
+.svc-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc{background:#fff;padding:32px;border-radius:12px;border:1px solid var(--rule);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.svc:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(196,106,74,.14)}
+.svc .icon{width:40px;height:40px;color:var(--terracotta);margin-bottom:20px}
+.svc h3{font-family:"Recoleta",serif;font-size:24px;line-height:1.15;font-weight:500;margin-bottom:10px}
+.svc h3 em{color:var(--terracotta);font-style:italic}
+.svc p{color:var(--dim);font-size:14px;line-height:1.6}
+.cats{background:var(--sage);color:var(--cream)}
+.cats .head h2{color:var(--cream)}
+.cats .head h2 em,.cats .head>.mono{color:var(--terracotta);border-top-color:var(--terracotta)}
+.cats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.cat-card{padding:32px;background:rgba(255,255,255,.06);border-radius:16px;text-align:center}
+.cat-card .face{width:120px;height:120px;background:var(--cream);border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-family:"Recoleta",serif;font-size:60px;color:var(--sage);font-weight:500}
+.cat-card h3{font-family:"Recoleta",serif;font-size:24px;font-weight:500;margin-bottom:6px}
+.cat-card .role{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;opacity:.85;margin-bottom:16px}
+.cat-card p{font-size:14px;line-height:1.6;color:rgba(245,239,228,.85)}
+.docs{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.doc{padding:32px;border:1px solid var(--rule);background:#fff;border-radius:12px}
+.doc .init{font-family:"Recoleta",serif;font-size:56px;color:var(--terracotta);line-height:1;margin-bottom:16px;font-weight:500}
+.doc h3{font-family:"Recoleta",serif;font-size:22px;font-weight:500;margin-bottom:4px}
+.doc .role{color:var(--dim);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:16px}
+.doc p{font-size:14px;line-height:1.6;color:rgba(26,22,20,.72)}
+.book{background:var(--cream)}
+.book-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.book form{background:#fff;padding:32px;display:flex;flex-direction:column;gap:16px;border-radius:12px;border:1px solid var(--rule)}
+.book .field{display:flex;flex-direction:column;gap:6px}
+.book label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+.book input,.book select,.book textarea{font:inherit;font-size:16px;padding:12px 14px;background:transparent;border:1px solid var(--rule);border-radius:6px;color:var(--ink)}
+.book input:focus,.book select:focus,.book textarea:focus{outline:none;border-color:var(--terracotta)}
+.emg{max-width:1200px;margin:24px auto 0;padding:24px;background:var(--terracotta);color:var(--cream);border-radius:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.emg b{font-family:"Recoleta",serif;font-size:24px;font-weight:500}
+.foot{background:var(--ink);color:var(--cream);padding:40px 32px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,239,228,.55)}
+.foot a{color:var(--terracotta);text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:900px){.chrome{padding:14px 20px}.chrome nav a:not(.cta-h){display:none}.hero{grid-template-columns:1fr;padding:100px 20px 60px;gap:32px}.hero-illus{aspect-ratio:16/9;font-size:120px}.paws{display:none}.head{grid-template-columns:1fr;gap:16px}.svc-grid,.cats-grid,.docs{grid-template-columns:1fr}.book-inner{grid-template-columns:1fr;gap:32px}section{padding:80px 20px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">
+    <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="7" cy="10" r="2"/><circle cx="12" cy="7" r="2"/><circle cx="17" cy="10" r="2"/><ellipse cx="12" cy="16" rx="4" ry="3"/></svg>
+    Cedarwood Veterinary
+  </a>
+  <nav><a href="#services">Services</a><a href="#cats">Clinic cats</a><a href="#doctors">Doctors</a><a href="#book" class="cta-h">Book a visit</a></nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div>
+    <div class="kicker" data-editable="hero.kicker">Fear-Free · South Austin · Since 2016</div>
+    <h1 data-editable="hero.headline">We sit on the <em>floor</em> to examine your <em>dog</em>.</h1>
+    <p data-editable="hero.sub">A warm, low-stress veterinary hospital in South Austin. Fear-Free certified, same-week new-patient exams, and a house policy that the exam room floor is nicer than the exam table for anyone we can convince.</p>
+    <div class="actions"><a class="cta p" href="#book">Book a visit →</a><a class="cta g" href="tel:+15125550159">512 · 555 · 0159</a></div>
+  </div>
+  <div class="hero-illus" aria-hidden="true">🐕</div>
+  <div class="paws" aria-hidden="true">
+    <svg viewBox="0 0 100 100" fill="currentColor"><circle cx="30" cy="30" r="8"/><circle cx="50" cy="20" r="7"/><circle cx="70" cy="30" r="8"/><ellipse cx="50" cy="55" rx="15" ry="12"/></svg>
+  </div>
+</section>
+<section id="services">
+  <div class="head"><div class="mono">§ 01 · Services</div><h2>What a Cedarwood visit <em>looks like</em>.</h2></div>
+  <div class="svc-grid">
+    <div class="svc"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 v6 M8 5 h8 M8 20 c-3 0 -5 -3 -5 -6 c0 -3 2 -6 5 -6 h8 c3 0 5 3 5 6 c0 3 -2 6 -5 6"/></svg><h3>Wellness &amp; preventive</h3><p>Annual exams, vaccines, spay/neuter, dentals, and lifetime care plans for dogs and cats. All appointments run 45 minutes.</p></div>
+    <div class="svc"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12 h4 l3 -8 l3 16 l3 -12 l3 4 h2"/></svg><h3>Diagnostics &amp; imaging</h3><p>In-house digital radiology, ultrasound, and CBC/chem panels. Results in twenty minutes for most panels.</p></div>
+    <div class="svc"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 10 h6 M9 14 h6 M12 4 v3"/></svg><h3>Soft-tissue surgery</h3><p>Mass removals, ACL repairs, foreign body surgery. Board-certified surgeon on the roster, Wed &amp; Fri.</p></div>
+    <div class="svc"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 20 v-8 c0 -3 3 -6 6 -6 s6 3 6 6 v8"/><circle cx="12" cy="10" r="2"/></svg><h3>Dentistry</h3><p>Full-mouth digital x-ray, ultrasonic scale + polish, extractions. Every dental starts with a phone call from the doctor.</p></div>
+    <div class="svc"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12 c4 -4 12 -4 16 0"/><path d="M6 12 v6"/><path d="M18 12 v6"/></svg><h3>End-of-life care</h3><p>In-clinic and in-home euthanasia. Grief counselor on call. Cremation and paw-print keepsake included at no charge.</p></div>
+    <div class="svc"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 8 v4 l3 2"/></svg><h3>Same-day urgent care</h3><p>Two same-day urgent-care slots held daily. Call by 10 AM; we'll fit you in that afternoon.</p></div>
+  </div>
+</section>
+<section class="cats" id="cats">
+  <div class="head"><div class="mono">§ 02 · The clinic cats</div><h2>Three permanent <em>residents</em>.</h2></div>
+  <div class="cats-grid">
+    <div class="cat-card"><div class="face">🐈</div><h3>Beatrice</h3><div class="role">Front desk · adopted 2016</div><p>Twelve years old, three-legged, and knows the exact chair that gets the afternoon sun. She will occupy your lap if invited.</p></div>
+    <div class="cat-card"><div class="face">🐈‍⬛</div><h3>Bishop</h3><div class="role">Pharmacy · adopted 2020</div><p>Formerly of the SPCA. Presents as aloof, is not. Answers to a tuna treat and will visit any exam room he hears in progress.</p></div>
+    <div class="cat-card"><div class="face">🐆</div><h3>Coriander</h3><div class="role">Blood-draw shadow · adopted 2023</div><p>Bengal cross, arrived as a stray in 2023, has since been present at every canine blood draw. Calming influence, we're told.</p></div>
+  </div>
+</section>
+<section id="doctors">
+  <div class="head"><div class="mono">§ 03 · Doctors</div><h2>Four doctors. <em>One roster.</em></h2></div>
+  <div class="docs">
+    <div class="doc"><div class="init">MG</div><h3>Dr. Marisol Guerra</h3><div class="role">Medical Director · dogs, cats</div><p>Texas A&amp;M ('06). Fear-Free certified. Specializes in senior wellness and end-of-life care.</p></div>
+    <div class="doc"><div class="init">JO</div><h3>Dr. James Okafor</h3><div class="role">Surgery · Wed &amp; Fri</div><p>Board-certified soft-tissue surgeon. Twelve years in referral hospital before joining Cedarwood in 2022.</p></div>
+    <div class="doc"><div class="init">HL</div><h3>Dr. Hyeon-Ju Lee</h3><div class="role">Dentistry &amp; imaging</div><p>Ultrasound + dental radiology specialist. Trains our technicians on every dental start-of-day.</p></div>
+  </div>
+</section>
+<section id="book" class="book">
+  <div class="head"><div class="mono">§ 04 · New patient</div><h2>New <em>patient</em>? Welcome.</h2></div>
+  <div class="book-inner">
+    <div><p style="font-family:'Recoleta',serif;font-size:24px;line-height:1.4;max-width:44ch;font-weight:500">Fill this out and reception rings within one business hour. We reserve two new-patient slots a day, and every new patient gets a 45-minute exam whether they need it or not.</p>
+    <p style="margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase"><b>Records transfer</b> · we handle it, just tell us the previous clinic name</p></div>
+    <form id="bookForm" novalidate>
+      <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="p">Pet's name &amp; species</label><input id="p" name="pet" type="text" placeholder="Cornelia · English Bulldog"></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="ph">Phone</label><input id="ph" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="r">Reason for visit</label><select id="r" name="reason"><option>Wellness / annual</option><option>Vaccines</option><option>Something's off</option><option>Second opinion</option><option>End-of-life care</option><option>Just to say hi</option></select></div>
+      <button class="cta p" type="submit" style="border:0;cursor:pointer;font-family:inherit">Book my visit →</button>
+      <p id="status" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--terracotta)" aria-live="polite"></p>
+    </form>
+  </div>
+  <div class="emg">
+    <div><b>Emergency after hours?</b><br><span style="font-size:13px">Call BluePearl South Austin · 512-961-1000. We coordinate with them Monday morning at no charge.</span></div>
+  </div>
+</section>
+</main>
+<footer class="foot">Cedarwood Veterinary · Austin · A seed in the Automation Nation library · <a href="guide/">rebrand guide</a></footer>
+<script>
+(() => { const f = document.getElementById('bookForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/cedarwood';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.email){st.textContent='Name and email please.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'cedarwood.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Received. Reception rings within one business hour.';
+  });
+})();</script></body></html>

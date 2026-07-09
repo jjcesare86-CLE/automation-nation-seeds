@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sonderberg Advisors — Independent Private Wealth Management</title>
+<meta name="description" content="An independent, four-partner private wealth practice. Fee-only, fiduciary, $5M minimum, fifty-two clients, capped.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,ital@9..144,300..700,0..1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--parchment:#efe9dd;--ink:#0e0f12;--navy:#1a3a75;--gold:#b28a4b;--moss:#3a5348;--rule:rgba(14,15,18,.14);--ease:cubic-bezier(.85,0,.15,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--parchment);color:var(--ink);font-family:"IBM Plex Mono",monospace;font-size:14px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Fraunces",serif;font-variation-settings:"opsz" 24,"wght" 400}
+.skip{position:absolute;left:-9999px;background:var(--ink);color:var(--parchment);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:24px 40px;display:flex;justify-content:space-between;align-items:center;z-index:40;background:rgba(239,233,221,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.chrome .brand{font-family:"Fraunces",serif;font-variation-settings:"opsz" 32,"wght" 500;font-size:22px;letter-spacing:-.005em;color:var(--ink);text-decoration:none;font-family:"Fraunces",serif}
+.chrome nav{display:flex;gap:28px;align-items:center;font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.chrome nav a{color:var(--ink);text-decoration:none;opacity:.75}
+.chrome nav a:hover{opacity:1}
+.chrome .cta-h{background:var(--ink);color:var(--parchment);padding:10px 18px;border-radius:0;letter-spacing:.24em;font-size:10px}
+.hero{padding:160px 40px 80px;max-width:1400px;margin:0 auto}
+.kicker{color:var(--navy);letter-spacing:.4em;text-transform:uppercase;font-size:10px;margin-bottom:32px}
+h1{font-family:"Fraunces",serif;font-size:clamp(48px,7vw,110px);line-height:.98;font-variation-settings:"opsz" 144,"wght" 400;letter-spacing:-.02em;max-width:20ch}
+h1 em{font-style:italic;color:var(--navy);font-variation-settings:"opsz" 144,"wght" 400,"ital" 1}
+.hero .sub{margin-top:36px;font-family:"Fraunces",serif;font-variation-settings:"opsz" 22,"wght" 350;font-size:20px;line-height:1.55;max-width:52ch;color:rgba(14,15,18,.75)}
+.chart{margin-top:80px;background:#fff;border:1px solid var(--rule);padding:40px;border-radius:0;position:relative}
+.chart .cap{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(14,15,18,.5);margin-bottom:32px}
+.chart svg{width:100%;height:auto;display:block}
+.chart .line{fill:none;stroke:var(--navy);stroke-width:1.5;stroke-linejoin:round;stroke-dasharray:2000;stroke-dashoffset:2000;animation:draw 2.4s var(--ease) forwards 0.4s}
+.chart .bench{fill:none;stroke:var(--gold);stroke-width:1;stroke-dasharray:4 4;opacity:.7}
+@keyframes draw{to{stroke-dashoffset:0}}
+.chart .an{font-family:"IBM Plex Mono",monospace;font-size:9px;fill:var(--ink);opacity:.6;letter-spacing:.1em}
+.chart .an-mark{font-family:"IBM Plex Mono",monospace;font-size:9px;fill:var(--navy);letter-spacing:.1em;font-weight:500}
+.chart .caveat{margin-top:32px;font-size:10px;letter-spacing:.05em;color:rgba(14,15,18,.55);font-family:"IBM Plex Mono",monospace;text-transform:none}
+section{padding:120px 40px;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px}
+.head .num{color:var(--gold);font-size:10px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:12px}
+.head h2{font-family:"Fraunces",serif;font-size:clamp(36px,5vw,72px);line-height:1;font-variation-settings:"opsz" 96,"wght" 400;letter-spacing:-.02em;max-width:22ch}
+.head h2 em{font-style:italic;color:var(--navy);font-variation-settings:"opsz" 96,"wght" 400,"ital" 1}
+.phil{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.phil p{font-family:"Fraunces",serif;font-variation-settings:"opsz" 20,"wght" 350;font-size:19px;line-height:1.65;max-width:44ch;margin-bottom:24px}
+.phil p em{font-style:italic;color:var(--navy)}
+.svcs{max-width:1400px;margin:0 auto;border-top:1px solid var(--rule)}
+.svc{display:grid;grid-template-columns:120px 1fr auto;gap:40px;padding:32px 0;border-bottom:1px solid var(--rule);align-items:center}
+.svc .n{color:var(--gold);letter-spacing:.28em}
+.svc h3{font-family:"Fraunces",serif;font-size:28px;font-variation-settings:"opsz" 32,"wght" 400;letter-spacing:-.01em}
+.svc h3 em{font-style:italic;color:var(--navy)}
+.svc .m{color:rgba(14,15,18,.6);font-size:12px;letter-spacing:.06em}
+.team{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.p-card{padding:24px;border:1px solid var(--rule);background:#fff;transition:border-color .35s var(--ease)}
+.p-card:hover{border-color:var(--navy)}
+.p-card .init{font-family:"Fraunces",serif;font-variation-settings:"opsz" 96,"wght" 400;font-size:64px;color:var(--navy);line-height:1;margin-bottom:20px}
+.p-card h4{font-family:"Fraunces",serif;font-size:20px;font-variation-settings:"opsz" 24,"wght" 500;margin-bottom:6px}
+.p-card .role{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.p-card p{font-size:12px;line-height:1.6;color:rgba(14,15,18,.7);font-family:"IBM Plex Mono",monospace}
+.contact{background:var(--ink);color:var(--parchment)}
+.contact .head h2{color:var(--parchment)}
+.contact .head h2 em,.contact .head .num{color:var(--gold)}
+.contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact form{background:rgba(255,255,255,.03);border:1px solid rgba(239,233,221,.16);padding:32px;display:flex;flex-direction:column;gap:16px}
+.contact .field{display:flex;flex-direction:column;gap:6px}
+.contact label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(239,233,221,.55)}
+.contact input,.contact textarea{font:inherit;font-size:14px;padding:12px 14px;background:transparent;border:0;border-bottom:1px solid rgba(239,233,221,.24);color:var(--parchment)}
+.contact input:focus,.contact textarea:focus{outline:none;border-bottom-color:var(--gold)}
+.contact textarea{border:1px solid rgba(239,233,221,.24);border-radius:0;min-height:100px;resize:vertical}
+.contact button{padding:14px 24px;background:var(--gold);color:var(--ink);border:0;font:inherit;letter-spacing:.24em;text-transform:uppercase;font-size:11px;cursor:pointer}
+.foot{background:var(--ink);color:var(--parchment);padding:40px;text-align:center;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(239,233,221,.5);border-top:1px solid rgba(239,233,221,.12)}
+@media(max-width:900px){.chrome{padding:16px 20px}.chrome nav a:not(.cta-h){display:none}.hero{padding:120px 20px 60px}.phil,.contact-inner{grid-template-columns:1fr;gap:32px}.svc{grid-template-columns:60px 1fr;gap:16px}.svc .m{display:none}.team{grid-template-columns:1fr 1fr}section{padding:80px 20px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">Sonderberg &amp; Cie.</a>
+  <nav>
+    <a href="#philosophy">Philosophy</a><a href="#services">Services</a><a href="#partners">Partners</a>
+    <a class="cta-h" href="#contact">Request meeting</a>
+  </nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="kicker" data-editable="hero.kicker">Independent · Fee-only · Est. 1998 · New York</div>
+  <h1 data-editable="hero.headline">We manage <em>fewer</em> relationships, on purpose.</h1>
+  <p class="sub" data-editable="hero.sub">Sonderberg Advisors is a four-partner independent private wealth practice. We are fee-only, no commissions, no revenue from any product provider. We take on eight new client relationships a year and cap the firm at fifty-two families. This is a design constraint, not a marketing one.</p>
+  <figure class="chart" aria-label="Illustrative performance chart — a Sonderberg-style balanced portfolio versus the S&amp;P 500 (2004–2025)">
+    <div class="cap"><span>Illustrative · Balanced portfolio · 2004–2025</span><span>Trailing 5-year Sharpe · 1.18</span></div>
+    <svg viewBox="0 0 1000 260" preserveAspectRatio="none">
+      <g stroke="rgba(14,15,18,.1)" stroke-width="1">
+        <line x1="0" y1="60" x2="1000" y2="60"/><line x1="0" y1="130" x2="1000" y2="130"/><line x1="0" y1="200" x2="1000" y2="200"/>
+      </g>
+      <path class="bench" d="M0,190 L50,180 L100,175 L150,155 L200,220 L250,180 L300,155 L350,145 L400,135 L450,155 L500,140 L550,110 L600,95 L650,85 L700,70 L750,60 L800,80 L850,55 L900,35 L950,50 L1000,30"/>
+      <path class="line" d="M0,200 L50,192 L100,186 L150,170 L200,205 L250,185 L300,170 L350,160 L400,150 L450,165 L500,148 L550,120 L600,105 L650,92 L700,78 L750,68 L800,88 L850,60 L900,42 L950,55 L1000,32"/>
+      <text class="an-mark" x="200" y="240">'08 crisis</text><text class="an" x="500" y="240">'15 chop</text><text class="an-mark" x="700" y="240">'20 covid</text><text class="an" x="900" y="20">Present</text>
+    </svg>
+    <div class="caveat">Illustrative composite. Past performance does not guarantee future results. Individual client returns vary meaningfully by allocation, entry point, tax profile, and cash flow. Composite methodology available on request.</div>
+  </figure>
+</section>
+<section id="philosophy">
+  <div class="head"><div class="num">§ 01 · Philosophy</div><h2>We plan the <em>next fifty</em> years, not the next quarter.</h2></div>
+  <div class="phil">
+    <div><p>Every client relationship begins with a five-hour financial architecture session, held in our library, in person, with all four partners present. We do not delegate the initial reading. If we cannot articulate the plan back to you within two weeks, the fee for the session is refunded and no engagement letter is signed.</p></div>
+    <div><p>Portfolios are built around <em>after-tax, after-cash-flow</em> objectives, not benchmark comparison. We publish a private quarterly letter to clients only, discussing what changed, what did not change, and why. There is no marketing team.</p></div>
+  </div>
+</section>
+<section>
+  <div class="head"><div class="num">§ 02 · Services</div><h2>What a Sonderberg <em>engagement</em> covers.</h2></div>
+  <div class="svcs">
+    <div class="svc"><div class="n">01</div><div><h3>Investment <em>management</em></h3></div><div class="m">Discretionary · fee-only · custodial</div></div>
+    <div class="svc"><div class="n">02</div><div><h3>Estate &amp; <em>trust</em> coordination</h3></div><div class="m">In-house counsel liaison · quarterly review</div></div>
+    <div class="svc"><div class="n">03</div><div><h3>Tax <em>architecture</em></h3></div><div class="m">Multi-year · in partnership with your CPA</div></div>
+    <div class="svc"><div class="n">04</div><div><h3>Business <em>liquidity</em> events</h3></div><div class="m">Pre-sale, sale, post-sale · six-month engagement</div></div>
+    <div class="svc"><div class="n">05</div><div><h3>Family <em>governance</em></h3></div><div class="m">Multi-generational · charters, meetings, next-gen prep</div></div>
+  </div>
+</section>
+<section id="partners">
+  <div class="head"><div class="num">§ 03 · Partners</div><h2>Four partners. <em>Two decades.</em> No juniors.</h2></div>
+  <div class="team">
+    <div class="p-card"><div class="init">HS</div><h4>Helena Sonderberg, CFA</h4><div class="role">Managing Partner</div><p>Founded the firm in 1998. Wharton MBA. Previously PIMCO.</p></div>
+    <div class="p-card"><div class="init">MB</div><h4>Michael Barra, JD, CFP</h4><div class="role">Partner · Estate</div><p>Yale Law. Fifteen years at Milbank. Joined 2007.</p></div>
+    <div class="p-card"><div class="init">AO</div><h4>Aiko Ono, CPA/PFS</h4><div class="role">Partner · Tax</div><p>Former director at Deloitte private client. Joined 2012.</p></div>
+    <div class="p-card"><div class="init">TR</div><h4>Thomas Rand, CFA</h4><div class="role">Partner · Portfolio</div><p>Chicago Booth MPA. Ex-Bridgewater. Joined 2015.</p></div>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="head"><div class="num">§ 04 · Meeting</div><h2>Request a <em>library</em> conversation.</h2></div>
+  <div class="contact-inner">
+    <div><p style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 22,'wght' 350;font-size:20px;line-height:1.55;max-width:44ch">The first meeting is at our offices, ninety minutes, all four partners present. Coffee. No slide deck. If we are a fit, a written proposal follows within ten business days. If we are not, we introduce you to a firm we believe is.</p><p style="margin-top:24px;font-size:11px;letter-spacing:.15em;color:rgba(239,233,221,.6)">Minimum investable · <b style="color:var(--gold)">$5,000,000</b></p></div>
+    <form id="cForm" novalidate>
+      <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="i">Introduced by (optional)</label><input id="i" name="intro" type="text"></div>
+      <div class="field"><label for="d">A short note</label><textarea id="d" name="note" rows="3" placeholder="A sentence about what prompted the meeting is appreciated."></textarea></div>
+      <button type="submit">Request meeting →</button>
+      <p id="status" style="font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot"> Sonderberg Advisors · 40 Wall Street, 41st Fl. · New York, NY · A seed in the Automation Nation library · <a href="guide/" style="color:inherit">rebrand guide</a></footer>
+<script>
+(() => { const f = document.getElementById('cForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/sonderberg';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.email){st.textContent='Name and email required.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'sonderberg.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Received. Helena or Michael replies within one business day.';
+  });
+})();</script></body></html>

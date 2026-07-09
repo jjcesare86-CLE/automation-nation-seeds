@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ravel Surgical — Private Practice, Beverly Hills</title>
+<meta name="description" content="A single-surgeon aesthetic and reconstructive practice in Beverly Hills. By referral and consultation only.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GT+Sectra:ital,wght@0,400;0,500;1,400&family=Söhne:wght@400;500&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#f2ebe0;--ink:#141210;--gold:#c8a373;--rose:#e2c5c1;--dim:#8a807a;--rule:rgba(20,18,16,.12);--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bone);color:var(--ink);font-family:-apple-system,"Söhne",sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.serif{font-family:"GT Sectra",serif}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+.skip{position:absolute;left:-9999px;background:var(--gold);color:var(--ink);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;color:var(--ink);transition:background-color .5s var(--ease)}
+.chrome.solid{background:rgba(242,235,224,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.chrome .brand{font-family:"GT Sectra",serif;font-size:22px;color:inherit;text-decoration:none;font-weight:500;letter-spacing:.01em}
+.chrome nav{display:flex;gap:22px;font-size:12px;letter-spacing:.02em}
+.chrome nav a{color:inherit;text-decoration:none;opacity:.75}
+.chrome nav a:hover{opacity:1}
+.chrome .cta-h{background:var(--ink);color:var(--bone);padding:10px 18px;border-radius:0;font-weight:500}
+.hero{min-height:100vh;padding:0;display:grid;grid-template-columns:5fr 6fr;align-items:stretch;position:relative}
+.hero-fig{position:relative;overflow:hidden;background:var(--ink)}
+.hero-fig img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-inner{padding:160px 60px 80px;display:flex;flex-direction:column;justify-content:center;max-width:720px;position:relative;z-index:2}
+.hero-eyebrow{color:var(--gold);letter-spacing:.5em;font-size:11px;text-transform:uppercase;margin-bottom:40px;font-family:"IBM Plex Mono",monospace}
+h1{font-family:"GT Sectra",serif;font-size:clamp(56px,7vw,110px);line-height:1;letter-spacing:-.02em;font-weight:500;font-style:italic}
+h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{margin-top:32px;font-family:"GT Sectra",serif;font-size:22px;line-height:1.5;max-width:44ch;color:rgba(20,18,16,.72)}
+.hero-actions{margin-top:48px;display:flex;gap:16px;flex-wrap:wrap}
+.cta{padding:16px 28px;border-radius:0;font-size:12px;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;transition:transform .35s var(--ease);display:inline-block;font-family:"IBM Plex Mono",monospace;border:1px solid transparent;font-weight:500}
+.cta.p{background:var(--ink);color:var(--bone)}
+.cta.p:hover{transform:translateY(-2px);background:var(--gold)}
+.cta.g{background:transparent;color:var(--ink);border-color:var(--ink)}
+.cta.g:hover{background:var(--ink);color:var(--bone);transform:translateY(-2px)}
+section{padding:140px 40px;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start}
+.head>.mono{color:var(--gold);padding-top:20px;border-top:1px solid var(--gold)}
+.head h2{font-family:"GT Sectra",serif;font-size:clamp(36px,5vw,72px);line-height:1;letter-spacing:-.02em;font-weight:500;max-width:22ch}
+.head h2 em{font-style:italic;color:var(--gold);font-weight:400}
+.proc{max-width:1400px;margin:0 auto;border-top:1px solid var(--rule)}
+.proc-row{display:grid;grid-template-columns:80px 1fr auto;gap:32px;padding:32px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.proc-row .n{color:var(--gold);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em}
+.proc-row h3{font-family:"GT Sectra",serif;font-size:28px;font-weight:500;font-style:italic;letter-spacing:-.005em}
+.proc-row .m{color:var(--dim);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;text-align:right}
+.dr{background:var(--rose)}
+.dr-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.dr-inner .cap{}
+.dr-inner .cap .kick{color:var(--ink);opacity:.65;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:24px}
+.dr-inner h2{font-family:"GT Sectra",serif;font-size:clamp(40px,5.5vw,88px);line-height:1;font-style:italic;font-weight:500;margin-bottom:24px;letter-spacing:-.02em}
+.dr-inner h2 em{font-style:normal;color:var(--gold)}
+.dr-inner p{font-family:"GT Sectra",serif;font-size:19px;line-height:1.55;margin-bottom:1em;max-width:44ch}
+.dr-inner .creds{margin-top:24px;padding-top:20px;border-top:1px solid rgba(20,18,16,.24);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink);opacity:.7;line-height:1.8}
+.gallery-note{max-width:900px;margin:0 auto;text-align:center;font-family:"GT Sectra",serif;font-style:italic;font-size:22px;line-height:1.5;color:rgba(20,18,16,.65);padding:60px 20px;background:#fff;border:1px solid var(--rule)}
+.consult-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.consult-inner p{font-family:"GT Sectra",serif;font-size:22px;line-height:1.5;max-width:44ch;font-style:italic}
+form{background:#fff;padding:40px;display:flex;flex-direction:column;gap:16px;border:1px solid var(--rule)}
+.field{display:flex;flex-direction:column;gap:6px}
+label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+input,select,textarea{font:inherit;font-family:"GT Sectra",serif;font-size:19px;font-style:italic;padding:12px 14px;background:transparent;border:0;border-bottom:1px solid var(--rule);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--gold)}
+textarea{border:1px solid var(--rule);border-radius:0;min-height:100px;resize:vertical}
+button{padding:16px 24px;background:var(--ink);color:var(--bone);border:0;font:inherit;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
+.foot{background:var(--ink);color:var(--bone);padding:40px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(242,235,224,.5)}
+.foot a{color:var(--gold);text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:900px){.chrome{padding:14px 20px}.chrome nav a:not(.cta-h){display:none}.hero{grid-template-columns:1fr}.hero-fig{min-height:50vh}.hero-inner{padding:60px 24px 80px}.head{grid-template-columns:1fr;gap:16px}.proc-row{grid-template-columns:1fr;gap:8px}.proc-row .m{text-align:left}.dr-inner,.consult-inner{grid-template-columns:1fr;gap:32px}section{padding:80px 20px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome" id="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">Ravel Surgical</a>
+  <nav><a href="#procedures">Procedures</a><a href="#doctor">Dr. Ravel</a><a href="#gallery">Gallery</a><a href="#consult" class="cta-h">Consultation</a></nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-fig"><img src="assets/hero-portrait.webp" alt="A woman resting in a warmly lit recovery room, three-quarter profile, eyes gently closed." fetchpriority="high"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow" data-editable="hero.kicker">By referral · By consultation · Beverly Hills</div>
+    <h1 data-editable="hero.headline">A <em>private</em> surgical practice.</h1>
+    <p class="hero-sub" data-editable="hero.sub">Ravel Surgical is a single-surgeon aesthetic and reconstructive practice. All patients begin with a ninety-minute consultation. Very few will proceed to a surgical date. Those who do become the practice's focus for the six weeks around and after their operation.</p>
+    <div class="hero-actions"><a class="cta p" href="#consult">Request consultation →</a><a class="cta g" href="#doctor">About Dr. Ravel</a></div>
+  </div>
+</section>
+<section id="procedures">
+  <div class="head"><div class="mono">§ 01 · Procedures</div><h2>Six <em>procedures</em>. All discussed at intake.</h2></div>
+  <div class="proc">
+    <div class="proc-row"><span class="n">01</span><h3>Rhinoplasty · <em>primary &amp; revision</em></h3><span class="m">7 hr · nasal architecture</span></div>
+    <div class="proc-row"><span class="n">02</span><h3>Blepharoplasty · <em>upper &amp; lower</em></h3><span class="m">2 hr · eyelid</span></div>
+    <div class="proc-row"><span class="n">03</span><h3>Facelift · <em>deep-plane, extended</em></h3><span class="m">6 hr · SMAS &amp; deep-plane</span></div>
+    <div class="proc-row"><span class="n">04</span><h3>Breast · <em>reconstruction &amp; aesthetic</em></h3><span class="m">4 hr · autologous &amp; implant</span></div>
+    <div class="proc-row"><span class="n">05</span><h3>Body <em>contouring</em> · post-weight-loss</h3><span class="m">3 hr · abdominoplasty +</span></div>
+    <div class="proc-row"><span class="n">06</span><h3>Reconstructive · <em>trauma &amp; oncologic</em></h3><span class="m">variable · referral practice</span></div>
+  </div>
+</section>
+<section class="dr" id="doctor">
+  <div class="dr-inner">
+    <div class="cap">
+      <div class="kick">§ 02 · The practice</div>
+      <h2>Dr. Ines <em>Ravel</em>, MD, FACS</h2>
+      <p>Founded Ravel Surgical in 2013. Board certified by the American Board of Plastic Surgery. Fellowship trained in microsurgery at Memorial Sloan-Kettering.</p>
+      <p>Practice caps at fourteen surgical patients per month. Every consultation is ninety minutes, seated. Every surgical date includes a first-week post-op home visit performed by the surgeon.</p>
+      <div class="creds">
+        Yale School of Medicine, 2004<br>
+        NYU Langone, plastic &amp; reconstructive surgery residency<br>
+        Memorial Sloan-Kettering, microsurgery fellowship<br>
+        American Board of Plastic Surgery, board certified 2013
+      </div>
+    </div>
+    <div style="aspect-ratio:1/1;background:linear-gradient(160deg,var(--rose),var(--ink));display:flex;align-items:center;justify-content:center;font-family:'GT Sectra',serif;font-style:italic;font-size:180px;color:rgba(242,235,224,.16);letter-spacing:-.03em">R</div>
+  </div>
+</section>
+<section id="gallery">
+  <div class="head"><div class="mono">§ 03 · Gallery</div><h2>The <em>gallery</em> is patient-viewed.</h2></div>
+  <div class="gallery-note">Before-and-after photographs are made available privately at consultation. We do not publish patient images. If you are researching, we suggest reading Dr. Ravel's chapter in <em>Aesthetic Surgery: A Journal</em>, 2024 · vol. 44, pp. 812–841.</div>
+</section>
+<section id="consult">
+  <div class="head"><div class="mono">§ 04 · Consultation</div><h2>Ninety <em>minutes</em>, seated.</h2></div>
+  <div class="consult-inner">
+    <div><p>Every consultation is scheduled personally by Dr. Ravel's assistant. The intake below reaches her within the business day. If the practice can help, a first-available consultation is offered within four weeks.</p></div>
+    <form id="cForm" novalidate>
+      <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="p">Procedure of interest</label><select id="p" name="proc"><option>Rhinoplasty</option><option>Blepharoplasty</option><option>Facelift</option><option>Breast</option><option>Body</option><option>Reconstructive · referral</option><option>Not yet decided</option></select></div>
+      <div class="field"><label for="d">A short note</label><textarea id="d" name="note" rows="3"></textarea></div>
+      <button type="submit">Request consultation →</button>
+      <p id="status" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">Ravel Surgical · Beverly Hills · A seed in the Automation Nation library · <a href="guide/">rebrand guide</a></footer>
+<script>
+(() => { const c = document.getElementById('chrome');
+  const on = () => c.classList.toggle('solid', scrollY > 60);
+  on(); addEventListener('scroll', on, { passive: true });
+})();
+(() => { const f = document.getElementById('cForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/ravel';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.email){st.textContent='Name and email please.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'ravel.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Received. Dr. Ravel\'s assistant replies within one business day.';
+  });
+})();</script></body></html>

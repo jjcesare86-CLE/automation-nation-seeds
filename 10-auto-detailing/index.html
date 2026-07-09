@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meridian Detailing — Ceramic coating & PPF, Denver</title>
+<meta name="description" content="A concours-grade detailing studio in south Denver. Ceramic coatings, PPF, and paint correction.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Söhne+Breit:wght@600;700&family=Söhne:wght@400;500&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--carbon:#0a0a0b;--offwhite:#e6e6e4;--chrome:#b8b8bc;--hazard:#f0b400;--cobalt:#1a3a75;--rule:rgba(230,230,228,.14);--ease:cubic-bezier(.7,0,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--carbon);color:var(--offwhite);font-family:-apple-system,"Söhne",sans-serif;font-size:17px;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.disp{font-family:"Söhne Breit","Arial Black",sans-serif;font-weight:700;letter-spacing:-.02em;text-transform:uppercase}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--chrome)}
+.skip{position:absolute;left:-9999px;background:var(--hazard);color:var(--carbon);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;background:rgba(10,10,11,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.chrome .brand{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:16px;color:var(--offwhite);text-decoration:none;letter-spacing:.01em;text-transform:uppercase;display:flex;gap:12px;align-items:center}
+.chrome .brand .dot{width:10px;height:10px;background:var(--hazard)}
+.chrome nav{display:flex;gap:22px;font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.chrome nav a{color:var(--offwhite);text-decoration:none;opacity:.75}
+.chrome nav a:hover{opacity:1}
+.chrome .cta-h{background:var(--hazard);color:var(--carbon);padding:10px 18px;font-weight:600}
+.hero{position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:flex-end}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.05)}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,11,.4) 0%,transparent 30%,transparent 55%,rgba(10,10,11,.9) 100%),linear-gradient(90deg,rgba(10,10,11,.55) 0%,transparent 50%)}
+.hero-inner{position:relative;z-index:2;padding:80px 32px 100px;max-width:1400px;margin:0 auto;width:100%}
+.kicker{color:var(--hazard);letter-spacing:.4em;font-size:11px;text-transform:uppercase;margin-bottom:20px;font-family:"IBM Plex Mono",monospace}
+h1{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:clamp(56px,10vw,160px);line-height:.86;letter-spacing:-.03em;text-transform:uppercase}
+h1 .h{color:var(--hazard)}
+.hero-sub{margin-top:32px;font-size:19px;line-height:1.55;max-width:52ch;color:rgba(230,230,228,.85)}
+.hero-actions{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.cta{padding:16px 28px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;transition:transform .35s var(--ease);display:inline-block;font-weight:500}
+.cta.p{background:var(--hazard);color:var(--carbon)}
+.cta.p:hover{transform:translateY(-2px)}
+.cta.g{background:transparent;color:var(--offwhite);border:1px solid var(--offwhite)}
+.cta.g:hover{background:var(--offwhite);color:var(--carbon);transform:translateY(-2px)}
+section{padding:120px 32px;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start}
+.head>.mono{color:var(--hazard);padding-top:20px;border-top:1px solid var(--hazard)}
+.head h2{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:clamp(36px,5vw,72px);line-height:1;letter-spacing:-.02em;text-transform:uppercase;max-width:22ch}
+.head h2 .h{color:var(--hazard)}
+.pkgs{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pkg{padding:36px;border:1px solid var(--rule);background:rgba(255,255,255,.02);position:relative;transition:transform .35s var(--ease),border-color .35s var(--ease)}
+.pkg:hover{transform:translateY(-6px);border-color:var(--hazard)}
+.pkg.pop{border-color:var(--hazard);background:linear-gradient(180deg,rgba(240,180,0,.08),transparent)}
+.pkg .pop-tag{position:absolute;top:-12px;left:32px;background:var(--hazard);color:var(--carbon);padding:4px 12px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
+.pkg h3{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:24px;line-height:1;letter-spacing:-.005em;text-transform:uppercase;margin-bottom:12px}
+.pkg .price{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:52px;line-height:1;color:var(--hazard);margin:24px 0 8px}
+.pkg .per{color:var(--chrome);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:28px}
+.pkg ul{list-style:none;padding-top:24px;border-top:1px dashed var(--rule)}
+.pkg li{padding:6px 0;font-size:14px;color:rgba(230,230,228,.85)}
+.pkg li::before{content:"› ";color:var(--hazard)}
+.proc{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.proc>div{padding:32px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.proc .n{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:60px;color:var(--hazard);line-height:1;margin-bottom:16px;letter-spacing:-.02em}
+.proc h3{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:-.005em;margin-bottom:8px}
+.proc p{color:var(--chrome);font-size:13px;line-height:1.6}
+.book-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.book-inner p{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:32px;line-height:1.1;text-transform:uppercase;letter-spacing:-.02em;max-width:16ch}
+.book-inner p .h{color:var(--hazard)}
+form{background:rgba(255,255,255,.03);border:1px solid var(--rule);padding:32px;display:flex;flex-direction:column;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--chrome)}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;background:transparent;border:1px solid var(--rule);color:var(--offwhite)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--hazard)}
+button{padding:16px 24px;background:var(--hazard);color:var(--carbon);border:0;font:inherit;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;font-weight:600}
+.foot{padding:40px 32px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--chrome);border-top:1px solid var(--rule)}
+.foot a{color:var(--hazard);text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:900px){.chrome{padding:12px 20px}.chrome nav a:not(.cta-h){display:none}.hero-inner{padding:60px 20px 80px}.head{grid-template-columns:1fr;gap:16px}.pkgs{grid-template-columns:1fr}.proc{grid-template-columns:1fr 1fr}.book-inner{grid-template-columns:1fr;gap:32px}section{padding:80px 20px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name"><span class="dot"></span>Meridian Detailing</a>
+  <nav><a href="#packages">Packages</a><a href="#process">Process</a><a href="#book" class="cta-h">Book detail</a></nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <img src="assets/hero-beading.webp" alt="Macro of water droplets beading on a freshly ceramic-coated deep black car panel." fetchpriority="high">
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <div class="kicker" data-editable="hero.kicker">Concours · Ceramic · PPF · Denver</div>
+    <h1 data-editable="hero.headline">Your paint is a <span class="h">substrate.</span> We make it a <span class="h">shell.</span></h1>
+    <p class="hero-sub" data-editable="hero.sub">A four-technician detailing studio in south Denver. Ten-year ceramic coatings, self-healing PPF, and multi-stage paint correction on twelve vehicles a month. We only take work we can finish to concours specification.</p>
+    <div class="hero-actions"><a class="cta p" href="#book">Book a detail →</a><a class="cta g" href="#packages">See packages</a></div>
+  </div>
+</section>
+<section id="packages">
+  <div class="head"><div class="mono">§ 01 · Packages</div><h2>Three <span class="h">tiers.</span> No <span class="h">upsells.</span></h2></div>
+  <div class="pkgs">
+    <div class="pkg"><h3>Studio · Foundation</h3><div class="price">$1,400</div><div class="per">Two days · daily driver</div><ul><li>Full decontamination wash</li><li>Iron + tar removal</li><li>Single-stage paint correction</li><li>3-year ceramic coating</li><li>Wheels &amp; door jambs coated</li></ul></div>
+    <div class="pkg pop"><div class="pop-tag">Recommended</div><h3>Studio · Signature</h3><div class="price">$3,600</div><div class="per">Four days · enthusiast pick</div><ul><li>Everything in Foundation</li><li>Two-stage paint correction</li><li>7-year ceramic coating (Gyeon Mohs+)</li><li>PPF on high-impact zones</li><li>Interior leather + Alcantara</li></ul></div>
+    <div class="pkg"><h3>Studio · Concours</h3><div class="price">$7,800</div><div class="per">7–10 days · full-car protection</div><ul><li>Everything in Signature</li><li>Three-stage correction, wet-sanded</li><li>10-year ceramic (System X Ultra)</li><li>Full-body PPF (Xpel Stealth or Ultimate Plus)</li><li>Yearly maintenance included</li></ul></div>
+  </div>
+</section>
+<section id="process">
+  <div class="head"><div class="mono">§ 02 · Process</div><h2>Four <span class="h">stages.</span> No shortcuts.</h2></div>
+  <div class="proc">
+    <div><div class="n">01</div><h3>Intake</h3><p>Photo record of every panel + interior. Paint depth measured with electronic gauge. Written intake report emailed before we begin.</p></div>
+    <div><div class="n">02</div><h3>Correction</h3><p>Wash, decontaminate, clay, correct. Between one and three passes with diminishing abrasives, room-temp climate-controlled.</p></div>
+    <div><div class="n">03</div><h3>Protection</h3><p>Ceramic layer applied panel by panel in twelve-hour intervals. PPF applied by a single technician with a laser template.</p></div>
+    <div><div class="n">04</div><h3>Handoff</h3><p>Photo record of every finished panel. Written care card + a bottle of maintenance shampoo. Ninety-day check-in wash, complimentary.</p></div>
+  </div>
+</section>
+<section id="book">
+  <div class="head"><div class="mono">§ 03 · Book</div><h2>Book a <span class="h">detail.</span></h2></div>
+  <div class="book-inner">
+    <div><p>Send us your car, we quote in <span class="h">24 hours.</span> If it's not right for our studio, we send you where.</p></div>
+    <form id="bForm" novalidate>
+      <div class="field"><label for="n">Name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="v">Vehicle</label><input id="v" name="vehicle" type="text" placeholder="Year · Make · Model · Trim"></div>
+      <div class="field"><label for="p">Package interest</label><select id="p" name="pkg"><option>Foundation · $1,400</option><option>Signature · $3,600</option><option>Concours · $7,800</option><option>Not sure — advise</option></select></div>
+      <button type="submit">Send for a quote →</button>
+      <p id="status" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--hazard)" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">Meridian Detailing · Centennial, Colorado · A seed in the Automation Nation library · <a href="guide/">rebrand guide</a></footer>
+<script>
+(() => { const f = document.getElementById('bForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/meridian-det';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.email){st.textContent='Name and email please.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'meridian-detail.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Received. Studio quotes within one business day.';
+  });
+})();</script></body></html>

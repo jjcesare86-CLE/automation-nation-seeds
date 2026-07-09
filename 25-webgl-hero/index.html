@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Fold — a shader study by an anonymous studio. Vanilla WebGL, raymarched liquid metal, cursor-reactive.">
-<title>Fold — Shader Study</title>
+<meta name="description" content="Ingot Atelier — a bespoke goldsmith and jewelry atelier in Kraków. Signet rings, wedding bands, and small cast objects, one commission per week.">
+<title>Ingot Atelier — Bespoke Goldsmith, Kraków</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,66 +15,104 @@
 <canvas id="gl" aria-hidden="true"></canvas>
 <div class="grain" aria-hidden="true"></div>
 <header class="chrome">
-  <div class="brand" data-editable="brand.name">Fold<span class="brand-mark" aria-hidden="true">◈</span></div>
+  <div class="brand" data-editable="brand.name">Ingot<span class="brand-mark" aria-hidden="true">◈</span></div>
   <nav>
-    <a href="#study">Study</a>
-    <a href="#studio">Studio</a>
-    <a href="mailto:hello@fold.studio" data-editable="brand.email">hello@fold.studio</a>
+    <a href="#pieces">Pieces</a>
+    <a href="#atelier">Atelier</a>
+    <a href="#commission">Commission →</a>
   </nav>
 </header>
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-meta">
-      <span class="mono">Fragment · WebGL 1.0 · SDF · 60fps</span>
-      <span class="mono">Study Nº 07 · MMXXVI</span>
+      <span class="mono">Bespoke goldsmith · Kraków · MMXXVI</span>
+      <span class="mono">Commission Nº 214 · in progress</span>
     </div>
     <h1 id="hero-title" data-editable="hero.headline">
-      <span class="italic">how</span> a surface
-      <span class="block"><span class="italic">remembers</span> its</span>
-      <span class="block accent"><em>own weight.</em></span>
+      <span class="italic">metal,</span> poured
+      <span class="block"><span class="italic">for</span> one</span>
+      <span class="block accent"><em>hand.</em></span>
     </h1>
     <p class="hero-sub" data-editable="hero.sub">
-      A raymarched signed-distance field, animated in fragment. No mesh. No model. One equation, one loop, one long look at the light.
+      A one-goldsmith atelier on the second floor of an old town-house on Grodzka Street. Signet rings, wedding bands, and small cast objects — one piece a week, by referral and by patience. Move your cursor: the crucible is watching.
     </p>
     <div class="hero-actions">
-      <a class="cta" href="#study" data-editable="hero.cta">Read the study →</a>
-      <button class="ghost" id="pauseBtn" type="button">Pause the metal</button>
+      <a class="cta" href="#commission" data-editable="hero.cta">Begin a commission →</a>
+      <a class="ghost" href="#pieces">See recent pieces</a>
     </div>
   </section>
 
-  <section class="study" id="study">
+  <section class="study" id="pieces">
     <div class="study-inner">
       <div class="study-num mono">§ 01</div>
       <div class="study-body">
-        <p class="lead" data-editable="study.lead">
-          The metal is not modelled. There is no vertex here, no mesh, no ambient occlusion pass. Every frame is a fresh sphere-traced field, evaluated per pixel against a distance function that folds itself around a central mass, pulled toward the cursor, quieted by time.
+        <p class="lead" data-editable="pieces.lead">
+          Every piece is cast from raw stock — 18k yellow, 18k rose, sterling, sometimes platinum — melted in a graphite crucible over a torch you can hear from the street. The wax is carved by hand, the mould is invested in the same room, and the piece is finished on the same afternoon it is cast.
         </p>
-        <p data-editable="study.body">
-          When you leave the page idle, the field breathes. When you return, it remembers. The lighting model is a two-term reduction of the classic Fresnel-Schlick approximation, tuned for a warm bone highlight over a mercury body — the same palette a jeweller would use on a wax carving under a north-facing window.
+        <p data-editable="pieces.body">
+          Recent commissions include a signet in 18k yellow for a family in Antwerp, a pair of wedding bands with matched inscription in rose, and a small cast pear-shaped pendant intended, we were told, for a christening. We do not photograph pieces once they leave the atelier. What you see below is the crucible — the constant, not the product.
         </p>
         <dl class="specs">
-          <div><dt>Runtime</dt><dd>Vanilla WebGL 1.0</dd></div>
-          <div><dt>Shader</dt><dd>~180 lines · GLSL</dd></div>
-          <div><dt>Payload</dt><dd>&lt; 14 KB · gzipped</dd></div>
-          <div><dt>Reduced motion</dt><dd>Yes · static frame</dd></div>
+          <div><dt>Cast in</dt><dd>18k yellow, rose, sterling, platinum</dd></div>
+          <div><dt>Turnaround</dt><dd>4–6 weeks · one piece per week</dd></div>
+          <div><dt>Deposit</dt><dd>40% at design approval</dd></div>
+          <div><dt>Repairs</dt><dd>Lifetime, free, on any piece we made</dd></div>
         </dl>
       </div>
     </div>
   </section>
 
-  <section class="studio" id="studio">
-    <div class="studio-word" aria-hidden="true">Fold</div>
+  <section class="studio" id="atelier">
+    <div class="studio-word" aria-hidden="true">Ingot</div>
     <div class="studio-note">
-      <p data-editable="studio.about">
-        Fold is a two-person shader studio operating out of a rented dark room in Kraków. We take one commission per quarter — usually for a museum, occasionally for a founder who understands that pixels are, structurally, a material.
+      <p data-editable="atelier.about">
+        The atelier is run by Marek Wójcik, third-generation goldsmith, formerly a bench for a house in Antwerp. Commissions begin with a 90-minute seated consultation in the workshop, coffee included, no obligation. If the piece is right for us, we quote it in writing within a week and hold your slot in the queue.
       </p>
-      <a class="cta" href="mailto:hello@fold.studio">Write the studio →</a>
+      <a class="cta" href="#commission">Write the atelier →</a>
     </div>
   </section>
+
+  <section class="commission" id="commission">
+    <div class="commission-inner">
+      <div class="commission-copy">
+        <div class="mono commission-eyebrow">§ 02 · Begin a commission</div>
+        <h2>A short <em>letter</em> before you visit.</h2>
+        <p>Tell us who the piece is for, roughly when it needs to be worn, and any material you're already thinking about. We reply in one business day. If the piece is right for us — and we're right for it — we invite you to the workshop for a coffee and a sketch.</p>
+        <p class="signed"><span class="sig">Marek Wójcik, Goldsmith</span><br><span class="mono">Atelier of record · Kraków, Poland</span></p>
+      </div>
+      <form class="commission-form" id="commForm" novalidate>
+        <div class="field">
+          <label for="c-name">Your name</label>
+          <input id="c-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="c-email">Email</label>
+          <input id="c-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="c-piece">What piece did you have in mind?</label>
+          <select id="c-piece" name="piece">
+            <option value="signet">Signet ring</option>
+            <option value="wedding">Wedding band(s)</option>
+            <option value="engagement">Engagement ring</option>
+            <option value="pendant">Pendant / small cast object</option>
+            <option value="other">Other — I'll describe</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="c-note">A short note</label>
+          <textarea id="c-note" name="note" rows="4" placeholder="Who it's for. Roughly when. Any metal or size you already know." required></textarea>
+        </div>
+        <button class="cta" type="submit">Send the letter →</button>
+        <p class="form-status mono" id="formStatus" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
 </main>
 <footer class="foot">
-  <div>Fold · Anonymous Studio · MMXXVI</div>
-  <div class="mono">A seed in the Automation Nation library · <a href="/sites/gallery/">Return to gallery</a></div>
+  <div>Ingot Atelier · Grodzka 14 · Kraków · MMXXVI</div>
+  <div class="mono">A seed in the Automation Nation library · <a href="/">Return to gallery</a></div>
 </footer>
 <script src="app.js"></script>
 </body>

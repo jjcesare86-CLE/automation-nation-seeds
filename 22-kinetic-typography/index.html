@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marrow Type — Kinetic identity for teams that ship</title>
+<meta name="description" content="A creative agency built around variable typography. Kinetic identity for software, motion, and cultural moments.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-10..0,25..151,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f4f0eb;--ink:#0f0f0f;--hot:#ff3d1f;--dim:#78766f;--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Roboto Flex",sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-variation-settings:"wght" 400,"wdth" 100}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);font-variation-settings:normal}
+.skip{position:absolute;left:-9999px;background:var(--ink);color:var(--paper);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;mix-blend-mode:difference;color:#fff}
+.chrome .brand{font-family:"Fraunces",serif;font-style:italic;font-size:22px;color:inherit;text-decoration:none}
+.chrome nav{display:flex;gap:22px;font-size:12px;letter-spacing:.02em}
+.chrome nav a{color:inherit;text-decoration:none;opacity:.85}
+.chrome nav a:hover{opacity:1}
+.hero{min-height:100vh;padding:120px 32px 80px;display:flex;flex-direction:column;justify-content:center;max-width:1600px;margin:0 auto;position:relative}
+.hero .meta{display:flex;justify-content:space-between;margin-bottom:40px}
+.title{font-family:"Roboto Flex",sans-serif;font-size:clamp(80px,20vw,340px);line-height:.86;letter-spacing:-.04em;font-variation-settings:"wght" 900,"wdth" 151,"slnt" 0}
+.title span{display:block;transition:font-variation-settings .5s var(--ease)}
+.title .r1{}
+.title .r2{padding-left:2vw;font-variation-settings:"wght" 100,"wdth" 25,"slnt" 0}
+.title .r3{padding-left:1vw;font-variation-settings:"wght" 900,"wdth" 151,"slnt" -10;color:var(--hot);font-style:italic}
+.sub{margin-top:48px;font-size:20px;line-height:1.55;max-width:56ch;color:rgba(15,15,15,.72)}
+.controls{margin-top:56px;display:flex;gap:32px;flex-wrap:wrap}
+.controls label{display:flex;flex-direction:column;gap:6px;min-width:180px}
+.controls .lbl{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);display:flex;justify-content:space-between}
+.controls .lbl .v{color:var(--hot);font-weight:500}
+.controls input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:2px;background:var(--ink);outline:none;cursor:pointer}
+.controls input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:var(--hot);border-radius:50%;cursor:pointer;border:0}
+section{padding:140px 32px;border-top:1px solid var(--ink)}
+.head{max-width:1600px;margin:0 auto 60px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start}
+.head>.mono{color:var(--hot);padding-top:20px;border-top:1px solid var(--hot)}
+.head h2{font-family:"Roboto Flex",sans-serif;font-size:clamp(48px,8vw,140px);line-height:.94;font-variation-settings:"wght" 900,"wdth" 100;letter-spacing:-.04em;max-width:14ch}
+.head h2 em{font-style:italic;color:var(--hot);font-variation-settings:"wght" 900,"wdth" 60,"slnt" -8}
+.work-list{max-width:1600px;margin:0 auto;list-style:none}
+.work-item{padding:32px 0;border-bottom:1px solid rgba(15,15,15,.14);display:grid;grid-template-columns:80px 1fr 160px 100px;gap:32px;align-items:center;cursor:pointer;transition:padding .5s var(--ease)}
+.work-item:hover{padding-left:32px}
+.work-item .n{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;color:var(--dim)}
+.work-item h3{font-family:"Roboto Flex",sans-serif;font-size:clamp(28px,4vw,64px);line-height:1;font-variation-settings:"wght" 800,"wdth" 100;letter-spacing:-.02em;transition:font-variation-settings .5s var(--ease),color .3s var(--ease)}
+.work-item:hover h3{font-variation-settings:"wght" 900,"wdth" 60,"slnt" -6;color:var(--hot)}
+.work-item .cat{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase}
+.work-item .yr{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;color:var(--dim)}
+.marquee{background:var(--ink);color:var(--paper);border-block:1px solid var(--ink);overflow:hidden;padding:32px 0}
+.marquee-inner{display:flex;gap:0;white-space:nowrap;animation:mm 22s linear infinite;font-size:clamp(72px,15vw,220px);line-height:1;font-variation-settings:"wght" 800,"wdth" 25;letter-spacing:-.02em}
+.marquee-inner span{padding:0 32px}
+.marquee-inner .h{color:var(--hot);font-variation-settings:"wght" 900,"wdth" 151;font-style:italic}
+@keyframes mm{to{transform:translateX(-50%)}}
+.mani{max-width:1200px;margin:0 auto}
+.mani p{font-family:"Fraunces",serif;font-size:clamp(28px,3.6vw,64px);line-height:1.15;font-style:italic;margin-bottom:.6em;letter-spacing:-.01em}
+.mani p em{color:var(--hot)}
+.contact{background:var(--ink);color:var(--paper)}
+.contact .head h2{color:var(--paper)}
+.contact .head h2 em,.contact .head>.mono{color:var(--hot);border-top-color:var(--hot)}
+.c-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.c-inner p{font-family:"Fraunces",serif;font-size:22px;line-height:1.5;max-width:44ch;color:rgba(244,240,235,.85)}
+.c-inner form{background:rgba(255,255,255,.03);border:1px solid rgba(244,240,235,.16);padding:32px;display:flex;flex-direction:column;gap:16px}
+.c-inner .field{display:flex;flex-direction:column;gap:6px}
+.c-inner label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(244,240,235,.5)}
+.c-inner input,.c-inner textarea{font:inherit;font-family:"Roboto Flex",sans-serif;font-size:16px;padding:12px 14px;background:transparent;border:0;border-bottom:1px solid rgba(244,240,235,.24);color:var(--paper)}
+.c-inner input:focus,.c-inner textarea:focus{outline:none;border-bottom-color:var(--hot)}
+.c-inner textarea{border:1px solid rgba(244,240,235,.24);min-height:100px;resize:vertical}
+.c-inner button{padding:16px 24px;background:var(--hot);color:var(--paper);border:0;font:inherit;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
+.foot{padding:40px 32px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);border-top:1px solid rgba(15,15,15,.1)}
+@media(max-width:900px){.chrome{padding:14px 20px}.chrome nav a{font-size:10px}.hero{padding:100px 20px 60px}.title{font-size:15vw}.title .r2,.title .r3{padding-left:0}.controls{gap:16px}.controls label{min-width:140px}.head{grid-template-columns:1fr;gap:16px}.work-item{grid-template-columns:60px 1fr;gap:16px}.work-item>*:nth-child(3),.work-item>*:nth-child(4){display:none}.c-inner{grid-template-columns:1fr;gap:32px}section{padding:80px 20px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">Marrow<span style="color:#ff3d1f;font-style:normal">↯</span></a>
+  <nav><a href="#work">Work</a><a href="#manifesto">Manifesto</a><a href="#contact">Contact</a></nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="meta"><span class="mono" data-editable="hero.kicker">Rotterdam · Melbourne · MMXXVI</span><span class="mono">Roboto Flex · 100–1000 · wdth 25–151 · slnt -10 → 0</span></div>
+  <h1 class="title" id="title" data-editable="hero.headline">
+    <span class="r1">Type</span>
+    <span class="r2">that</span>
+    <span class="r3">moves.</span>
+  </h1>
+  <p class="sub" data-editable="hero.sub">Marrow is a creative agency where typography is the interface. We build kinetic identities for founders whose product is the letters — dashboards, editorials, motion sig, product pages, and everything a screen can render.</p>
+  <div class="controls">
+    <label><span class="lbl">Weight <span class="v" id="wV">400</span></span><input type="range" min="100" max="1000" value="400" data-axis="wght"></label>
+    <label><span class="lbl">Width <span class="v" id="dV">100</span></span><input type="range" min="25" max="151" value="100" data-axis="wdth"></label>
+    <label><span class="lbl">Slant <span class="v" id="sV">0</span></span><input type="range" min="-10" max="0" value="0" data-axis="slnt"></label>
+  </div>
+</section>
+<section id="work">
+  <div class="head"><div class="mono">§ 01 · Selected</div><h2>Twelve <em>recent</em> shipments.</h2></div>
+  <ul class="work-list">
+    <li class="work-item"><span class="n">01</span><h3>Aurora — motion identity system</h3><span class="cat">Motion · Identity</span><span class="yr">2026 Q1</span></li>
+    <li class="work-item"><span class="n">02</span><h3>Kilo — cursor-reactive editor branding</h3><span class="cat">Product · Branding</span><span class="yr">2026 Q1</span></li>
+    <li class="work-item"><span class="n">03</span><h3>Halcyon — publishing wordmark set</h3><span class="cat">Identity · Print</span><span class="yr">2025 Q4</span></li>
+    <li class="work-item"><span class="n">04</span><h3>Bureau — motion signature for a bank</h3><span class="cat">Motion · Enterprise</span><span class="yr">2025 Q4</span></li>
+    <li class="work-item"><span class="n">05</span><h3>Field Studio — collection page kinetic</h3><span class="cat">Web · Motion</span><span class="yr">2025 Q3</span></li>
+    <li class="work-item"><span class="n">06</span><h3>Nocturne — dispatch title cards</h3><span class="cat">Broadcast · Motion</span><span class="yr">2025 Q3</span></li>
+  </ul>
+</section>
+<div class="marquee"><div class="marquee-inner">
+  <span>Marrow</span><span class="h">Type</span><span>Kinetic</span><span class="h">Identity</span><span>Motion</span><span class="h">Systems</span>
+  <span>Marrow</span><span class="h">Type</span><span>Kinetic</span><span class="h">Identity</span><span>Motion</span><span class="h">Systems</span>
+</div></div>
+<section id="manifesto">
+  <div class="head"><div class="mono">§ 02 · Manifesto</div><h2>Type is <em>infrastructure.</em></h2></div>
+  <div class="mani">
+    <p>A wordmark is not a picture. It is the load-bearing beam of an identity, and beam design has been abandoned to the machine.</p>
+    <p>We build <em>every letter</em> like it will be watched at 60 frames a second by a person on a train who is unhappy about their week.</p>
+    <p>The variable axis is not decoration. It is the difference between a static company and one that <em>can be woken up.</em></p>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="head"><div class="mono">§ 03 · Studio</div><h2>Write <em>the studio.</em></h2></div>
+  <div class="c-inner">
+    <p>We take on three projects a year. Every engagement begins with a two-week paid discovery — no discovery, no proposal, no engagement letter. Founders and design leads write to us directly.</p>
+    <form id="cForm" novalidate>
+      <div class="field"><label for="n">Name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="d">A short note</label><textarea id="d" name="note" rows="3" placeholder="What are you shipping."></textarea></div>
+      <button type="submit">Send to studio →</button>
+      <p id="status" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--hot)" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">Marrow Type · Rotterdam · Melbourne · A seed in the Automation Nation library · <a href="guide/" style="color:inherit;border-bottom:1px solid currentColor">rebrand guide</a></footer>
+<script>
+// Live font-variation controls
+(() => {
+  const title = document.getElementById('title');
+  const axes = { wght: 400, wdth: 100, slnt: 0 };
+  document.querySelectorAll('input[type=range]').forEach(i => {
+    i.addEventListener('input', e => {
+      axes[i.dataset.axis] = +e.target.value;
+      document.getElementById(i.dataset.axis[0]+'V').textContent = e.target.value;
+      title.querySelectorAll('span').forEach(s => { s.style.fontVariationSettings = `"wght" ${axes.wght},"wdth" ${axes.wdth},"slnt" ${axes.slnt}`; });
+    });
+  });
+})();
+// Reveal on scroll — each work item animates in with wght
+(() => {
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.animate([{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'none'}],{duration:800,easing:'cubic-bezier(.2,.9,.2,1)',fill:'forwards'});
+      const h3 = e.target.querySelector('h3');
+      if (h3) h3.animate([{fontVariationSettings:'"wght" 100,"wdth" 25'},{fontVariationSettings:'"wght" 800,"wdth" 100'}],{duration:900,easing:'cubic-bezier(.2,.9,.2,1)',fill:'forwards'});
+      io.unobserve(e.target);
+    }
+  }), { threshold: 0.35 });
+  document.querySelectorAll('.work-item').forEach(el => io.observe(el));
+})();
+// Idle breathing on hero title
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+  let t = 0;
+  const spans = document.querySelectorAll('.title span');
+  setInterval(() => {
+    t += .06;
+    spans.forEach((s, i) => {
+      const baseW = i===0?900:i===1?100:900;
+      const baseD = i===0?151:i===1?25:151;
+      const baseS = i===2?-10:0;
+      s.style.fontVariationSettings = `"wght" ${baseW + Math.sin(t + i)*80},"wdth" ${baseD + Math.sin(t*.8 + i)*15},"slnt" ${baseS + Math.sin(t*.6)*2}`;
+    });
+  }, 60);
+})();
+// Form
+(() => { const f = document.getElementById('cForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/marrow';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.email){st.textContent='Name and email please.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'marrow.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Received. Studio replies within one business day.';
+  });
+})();</script></body></html>

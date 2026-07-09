@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Northline Climate — Rebrand guide</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>body{background:#f0f4f7;color:#0f2437;font-family:"DM Serif Display",serif;line-height:1.65;margin:0}.w{max-width:780px;margin:0 auto;padding:80px 32px 120px}h1{font-size:clamp(40px,6vw,72px);letter-spacing:-.02em;margin-bottom:16px}h2{font-size:22px;margin:48px 0 12px;color:#5cbde0;font-style:italic}code{font-family:"IBM Plex Mono",monospace;background:rgba(15,36,55,.06);padding:2px 6px;border-radius:3px}ul,ol{padding-left:22px}li{margin-bottom:6px}.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#8996a1;margin-bottom:24px}.back{display:inline-block;margin-top:32px;color:#5cbde0;text-decoration:none;border-bottom:1px solid}</style></head>
+<body><div class="w">
+<div class="meta">Rebrand Guide · Site 05 · HVAC</div>
+<h1>Northline Climate</h1>
+<p>An HVAC site that finally doesn't look like a 2011 template. Cool navy + cyan palette, animated SVG wind currents in the hero, live seasonal-banner messaging that reads from the visitor's clock, and a three-tier membership plan card.</p>
+<h2>Files</h2>
+<ul><li><code>brand.json</code> — brand tokens, palette, webhook.</li><li><code>index.html</code> — single-file; all styles + scripts inline. Search <code>data-editable</code> for every changeable string.</li></ul>
+<h2>Rebrand in 15 minutes</h2>
+<ol><li>Edit <code>brand.json</code> — name, phone, palette tokens.</li><li>Update the 5 CSS custom properties at the top of <code>&lt;style&gt;</code> to match.</li><li>Rewrite copy tagged with <code>data-editable</code>.</li><li>Adjust the seasonal-banner strings in the inline <code>&lt;script&gt;</code> to match the client's city/climate.</li><li>Update the three membership tiers if the pricing structure differs.</li></ol>
+<h2>Signature techniques</h2>
+<ul><li><strong>Live seasonal banner</strong> reads the visitor's clock and swaps messaging by month.</li><li><strong>SVG wind currents</strong> — dashed strokes traveling along bezier paths in the hero.</li><li><strong>Cyan glow pulse</strong> on the seasonal-banner dot.</li></ul>
+<h2>Iteration log</h2>
+<ul><li><strong>Pass 1</strong> — full site scaffold.</li><li><strong>Pass 2</strong> — screenshot at 1440 + 390; mobile nav collapses to phone-CTA only, service grid stacks.</li><li><strong>Pass 3</strong> — added live-clock seasonal messaging + membership tier card with "Most chosen" pop.</li></ul>
+<a class="back" href="../">← Return to site</a>
+</div></body></html>

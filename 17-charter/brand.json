@@ -1,0 +1,13 @@
+{
+  "brand": "Meridian Charters",
+  "tagline": "Wheels-up in four hours from most cities.",
+  "phone": "+1 (415) 555-0192",
+  "email": "concierge@meridiancharters.co",
+  "address": { "line1": "San Francisco · Miami · Zürich · Singapore", "city": "" },
+  "palette": {"navy":"#0d1a2c","offwhite":"#f0eee8","silver":"#c5cad0","gold":"#b28a4b","glass":"rgba(255,255,255,.06)"},
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/meridian-charters",
+  "meta": {
+    "title": "Meridian Charters — Private Jet & Yacht Charter",
+    "description": "A global private charter brokerage. Jet cards, ad-hoc charters, and yacht bookings across four regions. Concierge desk staffed by former line pilots."
+  }
+}

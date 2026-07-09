@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Norderlys Property — Private Estates, Aspen</title>
+<meta name="description" content="A private brokerage placing twelve extraordinary homes a year. Every listing is a chapter.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Recoleta:wght@400;500&family=Söhne:wght@400;500&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--obsidian:#0e0f12;--cream:#efe9dd;--brass:#b28a4b;--moss:#3a5348;--mist:#7d8891;--rule:rgba(239,233,221,.14);--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--obsidian);color:var(--cream);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Recoleta",serif}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mist)}
+.skip{position:absolute;left:-9999px;background:var(--brass);color:var(--obsidian);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.horizon{position:fixed;top:0;left:0;right:0;height:60px;z-index:35;overflow:hidden;background:rgba(14,15,18,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.horizon-inner{display:flex;gap:80px;white-space:nowrap;padding:24px 0;animation:mm 40s linear infinite;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+.horizon-inner b{color:var(--cream)}
+@keyframes mm{to{transform:translateX(-50%)}}
+.chrome{position:fixed;top:60px;left:0;right:0;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;z-index:34;color:var(--cream);border-bottom:1px solid var(--rule);background:rgba(14,15,18,.85);backdrop-filter:blur(14px)}
+.chrome .brand{font-family:"Recoleta",serif;font-size:22px;color:var(--cream);text-decoration:none;font-weight:500}
+.chrome nav{display:flex;gap:22px;font-size:12px;letter-spacing:.02em}
+.chrome nav a{color:inherit;text-decoration:none;opacity:.75}
+.chrome nav a:hover{opacity:1}
+.chrome .cta-h{background:var(--brass);color:var(--obsidian);padding:10px 18px;font-weight:500}
+.hero{padding:180px 32px 80px;max-width:1600px;margin:0 auto}
+.kicker{color:var(--brass);letter-spacing:.4em;font-size:11px;text-transform:uppercase;margin-bottom:32px;font-family:"IBM Plex Mono",monospace}
+h1{font-family:"Recoleta",serif;font-size:clamp(56px,8vw,140px);line-height:.96;letter-spacing:-.02em;font-weight:500;max-width:16ch}
+h1 em{color:var(--brass);font-style:italic;font-weight:400}
+.hero p{margin-top:32px;font-size:20px;line-height:1.55;max-width:52ch;color:rgba(239,233,221,.72)}
+.chapter{padding:120px 32px;max-width:1600px;margin:0 auto;position:relative;border-top:1px solid var(--rule)}
+.chapter-num{position:sticky;top:100px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);margin-bottom:24px}
+.chap-img{width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:32px;background:#000}
+.chap-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 1.2s var(--ease)}
+.chap-img:hover img{transform:scale(1.06)}
+.chap-body{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.chap-body h2{font-family:"Recoleta",serif;font-size:clamp(32px,4.5vw,64px);line-height:1;letter-spacing:-.02em;font-weight:500}
+.chap-body h2 em{color:var(--brass);font-style:italic;font-weight:400}
+.chap-body p{margin-bottom:1em;font-size:17px;line-height:1.65;color:rgba(239,233,221,.75);max-width:44ch}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;padding-top:24px;border-top:1px solid var(--rule)}
+.spec .l{color:var(--mist);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:6px}
+.spec .v{font-family:"Recoleta",serif;font-size:22px;font-weight:500}
+.spec .v em{color:var(--brass);font-style:italic}
+.enquire{padding:120px 32px;max-width:1200px;margin:0 auto;border-top:1px solid var(--rule)}
+.enquire-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.enquire p{font-family:"Recoleta",serif;font-size:24px;line-height:1.4;max-width:44ch;font-weight:500}
+.enquire p em{color:var(--brass);font-style:italic;font-weight:400}
+form{background:rgba(255,255,255,.03);border:1px solid var(--rule);padding:32px;display:flex;flex-direction:column;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mist)}
+input,textarea,select{font:inherit;font-size:16px;padding:12px 14px;background:transparent;border:0;border-bottom:1px solid var(--rule);color:var(--cream)}
+input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--brass)}
+textarea{border:1px solid var(--rule);border-radius:0;min-height:100px;resize:vertical}
+button{padding:16px 24px;background:var(--brass);color:var(--obsidian);border:0;font:inherit;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;transition:transform .35s var(--ease)}
+button:hover{transform:translateY(-2px);background:var(--cream)}
+.foot{padding:40px 32px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mist);border-top:1px solid var(--rule)}
+.foot a{color:var(--brass);text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:900px){.chrome{padding:12px 20px}.chrome nav a:not(.cta-h){display:none}.hero{padding:160px 20px 60px}.chapter,.enquire{padding:80px 20px}.chap-body,.enquire-inner{grid-template-columns:1fr;gap:24px}.specs{grid-template-columns:1fr}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="horizon"><div class="horizon-inner">
+  <span>◆ <b>Currently placing</b> · 03 / 12</span><span>·</span><span>Aspen · Snowmass · Crested Butte</span><span>·</span><span>New listing · <b>Reference N-04</b> · in preview</span><span>·</span><span>Recently placed · <b>Reference N-11</b> · $18.4M</span><span>·</span>
+  <span>◆ <b>Currently placing</b> · 03 / 12</span><span>·</span><span>Aspen · Snowmass · Crested Butte</span><span>·</span><span>New listing · <b>Reference N-04</b> · in preview</span><span>·</span><span>Recently placed · <b>Reference N-11</b> · $18.4M</span><span>·</span>
+</div></div>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">Norderlys Property</a>
+  <nav><a href="#a1">Portfolio</a><a href="#enquire">Enquiry</a><a class="cta-h" href="#enquire">Request private preview</a></nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="kicker" data-editable="hero.kicker">Aspen · 12 listings a year · By invitation</div>
+  <h1 data-editable="hero.headline">Twelve <em>homes</em> a year. All named.</h1>
+  <p data-editable="hero.sub">Norderlys is a private brokerage. We list twelve properties a year across Aspen, Snowmass, and Crested Butte, and prefer private previews to open houses. Every property is a chapter — with a reference number, a story, and a broker who returns your calls.</p>
+</section>
+<section class="chapter" id="a1">
+  <div class="chapter-num">§ Chapter 03 · Reference N-04</div>
+  <div class="chap-img"><img src="assets/hero-exterior.webp" alt="A modern low-slung Aspen home at twilight, warm interior light through floor-to-ceiling glass." loading="lazy"></div>
+  <div class="chap-body">
+    <div>
+      <h2>A house on a <em>quiet</em> road, above the town.</h2>
+      <p>Set on 4.2 acres above the East End, this is a 6-bedroom modernist commission built in 2019 by Studio B Architects. Floor-to-ceiling glass, a warm oak-and-stone interior, and a south-facing pool that stays open through October.</p>
+      <p>The lot backs directly onto the Ute Trail and is a five-minute drive to Ajax. Available for private preview by referral.</p>
+    </div>
+    <div>
+      <div class="specs">
+        <div class="spec"><div class="l">Reference</div><div class="v">N-04</div></div>
+        <div class="spec"><div class="l">Ask</div><div class="v"><em>$24.8M</em></div></div>
+        <div class="spec"><div class="l">Bedrooms</div><div class="v">6</div></div>
+        <div class="spec"><div class="l">Land</div><div class="v">4.2 ac</div></div>
+        <div class="spec"><div class="l">Built</div><div class="v">2019</div></div>
+        <div class="spec"><div class="l">Architect</div><div class="v">Studio B</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="chapter" id="a2">
+  <div class="chapter-num">§ Chapter 07 · Reference N-08 (interior study)</div>
+  <div class="chap-img"><img src="assets/interior.webp" alt="A great room with warm oak floors, stone fireplace, and floor-to-ceiling windows onto snowy pines." loading="lazy"></div>
+  <div class="chap-body">
+    <div>
+      <h2>The great room, <em>studied</em>.</h2>
+      <p>A 3-bedroom pied-à-terre near the Little Nell, currently on private hold. The great room is 32 by 24 feet, with a stone fireplace by Vermont Verde and oak floors reclaimed from a 19th-century tannery in Massachusetts.</p>
+      <p>The property comes with a legacy staff arrangement and a full audit of adjacent short-term rental history. Preview by appointment only.</p>
+    </div>
+    <div>
+      <div class="specs">
+        <div class="spec"><div class="l">Reference</div><div class="v">N-08</div></div>
+        <div class="spec"><div class="l">Ask</div><div class="v"><em>$12.6M</em></div></div>
+        <div class="spec"><div class="l">Bedrooms</div><div class="v">3</div></div>
+        <div class="spec"><div class="l">Status</div><div class="v">Private hold</div></div>
+        <div class="spec"><div class="l">Built</div><div class="v">2011</div></div>
+        <div class="spec"><div class="l">Architect</div><div class="v">Rowland+Broughton</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="enquire" id="enquire">
+  <div class="kicker">§ 04 · Enquiry</div>
+  <div class="enquire-inner">
+    <div>
+      <p>All previews are private. If you are working with another brokerage, ask them to introduce you. If not, this form <em>reaches</em> the partner desk.</p>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);margin-top:32px">Response within one business day · US mountain time</p>
+    </div>
+    <form id="eForm" novalidate>
+      <div class="field"><label for="n">Name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="p">Property of interest</label><input id="p" name="ref" type="text" placeholder="N-04, N-08, or "general""></div>
+      <div class="field"><label for="i">Introduced by (optional)</label><input id="i" name="intro" type="text"></div>
+      <div class="field"><label for="d">A short note</label><textarea id="d" name="note" rows="3"></textarea></div>
+      <button type="submit">Send to partner desk →</button>
+      <p id="status" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass)" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">Norderlys Property · Aspen · A seed in the Automation Nation library · <a href="guide/">rebrand guide</a></footer>
+<script>
+(() => { const f = document.getElementById('eForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/norderlys';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.email){st.textContent='Name and email please.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'norderlys.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Received. Partner desk replies within one business day.';
+  });
+})();</script></body></html>

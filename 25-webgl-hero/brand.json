@@ -1,10 +1,14 @@
 {
-  "brand": "Fold",
-  "tagline": "A shader study by an anonymous studio",
-  "concept": "Raymarched liquid metal, cursor-reactive",
-  "phone": "",
-  "email": "hello@fold.studio",
-  "address": "",
+  "brand": "Ingot Atelier",
+  "tagline": "Bespoke goldsmith · one commission per week",
+  "concept": "A single-goldsmith bespoke jewelry atelier. The WebGL shader hero is the metal being poured in the workshop — signet rings, wedding bands, small heirloom objects cast one piece at a time.",
+  "phone": "+48 12 555 0114",
+  "phoneDisplay": "+48 12 555 0114",
+  "email": "atelier@ingot.studio",
+  "address": {
+    "line1": "ul. Grodzka 14 / II p.",
+    "city": "31-006 Kraków, Poland"
+  },
   "palette": {
     "void": "#000000",
     "bone": "#efe9d9",
@@ -15,11 +19,11 @@
   "logoPath": "assets/logo.svg",
   "heroImage": null,
   "social": {
-    "instagram": "@fold.studio"
+    "instagram": "@ingot.atelier"
   },
-  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/fold",
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/ingot",
   "meta": {
-    "title": "Fold — Shader Study",
-    "description": "A raymarched liquid metal shader running in vanilla WebGL."
+    "title": "Ingot Atelier — Bespoke Goldsmith, Kraków",
+    "description": "A one-goldsmith bespoke jewelry atelier in Kraków. Signet rings, wedding bands, and small cast objects — one commission per week, by consultation."
   }
 }

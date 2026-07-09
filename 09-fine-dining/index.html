@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vespertine Room — Nine-course Tasting, San Francisco</title>
+<meta name="description" content="A twelve-seat tasting room in San Francisco. One seating a night, nine courses, no substitutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GT+Sectra:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono&family=Söhne&display=swap" rel="stylesheet">
+<style>
+:root{--aubergine:#1a0f19;--cream:#f0e5d4;--gold:#c8a45c;--blush:#c7899f;--ink:#0a0a0a;--rule:rgba(240,229,212,.14);--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--aubergine);color:var(--cream);font-family:"GT Sectra","Playfair Display",serif;font-size:18px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative}
+.spot{position:fixed;pointer-events:none;top:0;left:0;width:600px;height:600px;background:radial-gradient(circle,rgba(200,164,92,.14),transparent 60%);transform:translate(-50%,-50%);z-index:1;transition:transform .3s var(--ease)}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.skip{position:absolute;left:-9999px;background:var(--gold);color:var(--ink);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:24px 40px;display:flex;justify-content:space-between;align-items:center;z-index:40;color:var(--cream)}
+.chrome .brand{font-family:"GT Sectra",serif;font-style:italic;font-size:22px;color:inherit;text-decoration:none}
+.chrome nav{display:flex;gap:22px;font-size:12px;letter-spacing:.02em}
+.chrome nav a{color:inherit;text-decoration:none;opacity:.82}
+.chrome nav a:hover{opacity:1}
+.hero{min-height:100vh;padding:140px 40px 80px;max-width:1200px;margin:0 auto;position:relative;z-index:2}
+.kicker{color:var(--gold);letter-spacing:.5em;font-size:11px;text-transform:uppercase;margin-bottom:44px;font-family:"IBM Plex Mono",monospace}
+h1{font-family:"GT Sectra",serif;font-size:clamp(64px,10vw,180px);line-height:.9;letter-spacing:-.02em;font-style:italic;font-weight:400}
+h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{margin-top:40px;font-size:22px;line-height:1.5;max-width:44ch;color:rgba(240,229,212,.75);font-family:"GT Sectra",serif}
+.hero-meta{margin-top:60px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--blush);display:flex;gap:32px;flex-wrap:wrap}
+section{padding:120px 40px;position:relative;z-index:2;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px}
+.head .m{color:var(--gold);letter-spacing:.28em;font-size:11px;text-transform:uppercase;margin-bottom:16px}
+.head h2{font-family:"GT Sectra",serif;font-size:clamp(40px,5.5vw,80px);line-height:1;font-style:italic;letter-spacing:-.02em;font-weight:400}
+.head h2 em{font-style:normal;color:var(--gold)}
+.menu-inner{max-width:1000px;margin:0 auto}
+.course{display:grid;grid-template-columns:100px 1fr;gap:32px;padding:32px 0;border-bottom:1px solid var(--rule)}
+.course .n{font-family:"GT Sectra",serif;font-size:56px;line-height:1;font-style:italic;color:var(--gold)}
+.course h3{font-family:"GT Sectra",serif;font-size:32px;line-height:1.1;letter-spacing:-.01em;font-style:italic;font-weight:400;margin-bottom:8px}
+.course h3 em{font-style:normal;color:var(--gold)}
+.course p{font-family:"Söhne",sans-serif;font-size:14px;line-height:1.6;color:rgba(240,229,212,.7);font-family:"IBM Plex Mono",monospace;letter-spacing:.05em}
+.plates{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.plates img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.plates .p .cap{margin-top:16px}
+.plates .p .n{color:var(--gold);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:8px}
+.plates .p h3{font-family:"GT Sectra",serif;font-size:24px;font-style:italic;line-height:1.1;font-weight:400}
+.plates .p h3 em{font-style:normal;color:var(--gold)}
+.res{background:var(--ink)}
+.res-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.res p{font-family:"GT Sectra",serif;font-size:24px;line-height:1.4;max-width:44ch;font-style:italic}
+form{display:flex;flex-direction:column;gap:16px;background:rgba(255,255,255,.03);border:1px solid var(--rule);padding:32px}
+.field{display:flex;flex-direction:column;gap:6px}
+label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--blush)}
+input,select,textarea{font:inherit;font-family:"GT Sectra",serif;font-size:18px;padding:12px 14px;background:transparent;border:0;border-bottom:1px solid var(--rule);color:var(--cream)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--gold)}
+textarea{border:1px solid var(--rule);border-radius:0;min-height:80px;resize:vertical}
+button{padding:16px 24px;background:var(--gold);color:var(--ink);border:0;font:inherit;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
+.foot{padding:40px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--blush);border-top:1px solid var(--rule)}
+.foot a{color:var(--gold);text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:900px){.chrome{padding:16px 20px}.chrome nav a{font-size:11px}.hero{padding:100px 20px 60px}.hero-meta{gap:16px;font-size:10px}.plates{grid-template-columns:1fr}.res-inner{grid-template-columns:1fr;gap:32px}section{padding:80px 20px}.course{grid-template-columns:60px 1fr;gap:20px}.course .n{font-size:36px}}
+</style></head><body>
+<div class="spot" id="spot" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">Vespertine <em style="color:var(--gold);font-style:normal">Room</em></a>
+  <nav><a href="#menu">Menu</a><a href="#plates">Plates</a><a href="#reserve">Reserve</a></nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="kicker" data-editable="hero.kicker">A twelve-seat tasting room · San Francisco · Wed–Sun</div>
+  <h1 data-editable="hero.headline">Dinner, <em>as a</em><br>program.</h1>
+  <p class="hero-sub" data-editable="hero.sub">One seating a night, nine courses, no substitutions. The room seats twelve at a single limestone counter, facing the pass. Reservations open on the first of the month, at nine, and the room is full by ten.</p>
+  <div class="hero-meta">
+    <span>7:00 PM · one seating</span><span>Nine courses · $260</span><span>Pairings · $180 or $340</span>
+  </div>
+</section>
+<section id="menu">
+  <div class="head"><div class="m">§ 01 · The program</div><h2><em>Nine</em> courses, no substitutions.</h2></div>
+  <div class="menu-inner">
+    <div class="course"><div class="n">I</div><div><h3>Chilled <em>cauliflower</em> veloute, oscietra, urchin</h3><p>Local uni · truffle oil · winter cauliflower · ivory pepper</p></div></div>
+    <div class="course"><div class="n">II</div><div><h3>Aged <em>butter</em>, sourdough, black salt</h3><p>Three-day fermented country loaf · aged Normandy butter · Kaluga salt</p></div></div>
+    <div class="course"><div class="n">III</div><div><h3><em>Halibut</em>, kelp, brown butter</h3><p>Line-caught halibut · flash-cured kelp · brown butter · finger lime</p></div></div>
+    <div class="course"><div class="n">IV</div><div><h3>Confit <em>egg yolk</em>, hazelnut, sage</h3><p>Slow yolk · toasted hazelnut · brown sage · buckwheat crumb</p></div></div>
+    <div class="course"><div class="n">V</div><div><h3><em>Duck</em>, plum, foie</h3><p>Muscovy duck · plum reduction · seared foie · fermented shallot</p></div></div>
+    <div class="course"><div class="n">VI</div><div><h3>Cheese <em>&amp;</em> pear · one selection</h3><p>Camembert de Normandie · Anjou pear · hazelnut honeycomb</p></div></div>
+    <div class="course"><div class="n">VII</div><div><h3>Burnt <em>honey</em>, fig, sesame</h3><p>Burnt honey ice cream · fresh Black Mission figs · sesame tuile · balsamic</p></div></div>
+    <div class="course"><div class="n">VIII</div><div><h3><em>Palate</em> cleanser · yuzu granita</h3><p>Yuzu · shiso · white pepper · house tonic</p></div></div>
+    <div class="course"><div class="n">IX</div><div><h3>Mignardises · <em>five</em></h3><p>Five small things · with coffee or an amaro of the day</p></div></div>
+  </div>
+</section>
+<section id="plates">
+  <div class="head"><div class="m">§ 02 · Plates</div><h2>Three plates, <em>photographed</em>.</h2></div>
+  <div class="plates">
+    <div class="p"><img src="assets/course-01.webp" alt="A dark plate with pale scallop, dots of sauce, herbs and citrus oil." loading="lazy"><div class="cap"><div class="n">Course I · Winter</div><h3>Cauliflower veloute, <em>oscietra</em>, urchin</h3></div></div>
+    <div class="p"><img src="assets/course-02.webp" alt="A shallow bowl with sea urchin, cauliflower veloute, truffle oil, and caviar." loading="lazy"><div class="cap"><div class="n">Course I · Rotation</div><h3>Chilled cauliflower, <em>uni</em>, truffle</h3></div></div>
+    <div class="p"><img src="assets/course-03.webp" alt="A quenelle of burnt honey ice cream with figs, sesame tuile, and balsamic drizzle." loading="lazy"><div class="cap"><div class="n">Course VII · Finale</div><h3>Burnt <em>honey</em>, fig, sesame</h3></div></div>
+  </div>
+</section>
+<section class="res" id="reserve">
+  <div class="head"><div class="m">§ 03 · Reserve</div><h2>Reservations for <em>September</em>.</h2></div>
+  <div class="res-inner">
+    <div><p>Reservations open on the first of the month, at nine, for the following month. If you would like a specific date, submit below and the general manager writes back with availability.</p>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--blush);margin-top:24px">Wednesday–Sunday · 7:00 PM · one seating · twelve seats</p></div>
+    <form id="rForm" novalidate>
+      <div class="field"><label for="n">Name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="p">Party size</label><select id="p" name="party"><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>Full room · 12 guests</option></select></div>
+      <div class="field"><label for="d">Preferred dates</label><input id="d" name="dates" type="text" placeholder="e.g. any Fri/Sat, Sept 12 onward"></div>
+      <div class="field"><label for="a">Allergies · notes</label><textarea id="a" name="note" rows="2"></textarea></div>
+      <button type="submit">Request reservation →</button>
+      <p id="status" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">Vespertine Room · 1024 Bush · San Francisco · A seed in the Automation Nation library · <a href="guide/">rebrand guide</a></footer>
+<script>
+// Cursor-following spotlight
+(() => { const s = document.getElementById('spot');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { s.style.display='none'; return; }
+  addEventListener('pointermove', e => { s.style.transform = `translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`; });
+})();
+// Form
+(() => { const f = document.getElementById('rForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/vespertine';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.email){st.textContent='Name and email please.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'vespertine.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Received. The general manager writes back within one business day.';
+  });
+})();</script></body></html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meridian Spinal Care — Santa Monica</title>
+<meta name="description" content="A sports-medicine chiropractic practice combining adjustment, mobility, and breathwork. Same-week new-patient exams, direct-pay pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Söhne:wght@400;500&family=Fraunces:opsz,wght,ital@9..144,300..700,0..1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#f2ebe0;--ink:#1a1614;--terracotta:#c26a4a;--sage:#7a8f6d;--dim:#6a655e;--rule:rgba(26,22,20,.14);--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bone);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Fraunces",serif;font-variation-settings:"opsz" 24,"wght" 400}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.skip{position:absolute;left:-9999px;background:var(--ink);color:var(--bone);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;background:rgba(242,235,224,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.chrome .brand{font-family:"Fraunces",serif;font-variation-settings:"opsz" 32,"wght" 500;font-size:22px;letter-spacing:-.005em;color:var(--ink);text-decoration:none;display:flex;gap:10px;align-items:center}
+.chrome .brand svg{width:24px;height:24px;color:var(--terracotta)}
+.chrome nav{display:flex;gap:20px;align-items:center;font-size:13px}
+.chrome nav a{color:var(--ink);text-decoration:none;opacity:.72}
+.chrome nav a:hover{opacity:1}
+.chrome .cta-h{background:var(--terracotta);color:var(--bone);padding:10px 18px;border-radius:999px;font-weight:600}
+.hero{padding:140px 32px 80px;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;max-width:1500px;margin:0 auto}
+.hero .kicker{color:var(--terracotta);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.4em;text-transform:uppercase;margin-bottom:32px}
+h1{font-family:"Fraunces",serif;font-size:clamp(56px,7vw,120px);line-height:.94;letter-spacing:-.02em;font-variation-settings:"opsz" 144,"wght" 400}
+h1 em{font-style:italic;color:var(--terracotta);font-variation-settings:"opsz" 144,"wght" 350}
+.hero p{margin-top:32px;font-family:"Fraunces",serif;font-variation-settings:"opsz" 22,"wght" 350;font-size:20px;line-height:1.55;max-width:44ch;color:rgba(26,22,20,.72)}
+.hero .actions{margin-top:44px;display:flex;gap:16px;flex-wrap:wrap}
+.cta{padding:16px 28px;border-radius:999px;font-weight:500;font-size:14px;letter-spacing:.02em;text-decoration:none;transition:transform .35s var(--ease);border:1px solid transparent;display:inline-flex;align-items:center;gap:8px}
+.cta.p{background:var(--ink);color:var(--bone)}
+.cta.p:hover{background:var(--terracotta);transform:translateY(-2px)}
+.cta.g{background:transparent;color:var(--ink);border-color:var(--ink)}
+.cta.g:hover{background:var(--ink);color:var(--bone);transform:translateY(-2px)}
+.spine{width:100%;aspect-ratio:1/1.6;max-height:80vh;position:relative}
+.spine svg{width:100%;height:100%;display:block}
+.spine .vert{fill:var(--sage);opacity:.4;transition:opacity .5s var(--ease),fill .5s var(--ease),transform .5s var(--ease);transform-origin:center;transform-box:fill-box}
+.spine .vert.active{opacity:1;fill:var(--terracotta);transform:scale(1.1)}
+.spine .label{position:absolute;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--terracotta);pointer-events:none;opacity:0;transition:opacity .3s}
+.spine .label.on{opacity:1}
+section{padding:120px 32px;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start}
+.head>.mono{color:var(--terracotta);padding-top:20px;border-top:1px solid var(--terracotta)}
+.head h2{font-family:"Fraunces",serif;font-size:clamp(36px,5vw,72px);line-height:1;font-variation-settings:"opsz" 96,"wght" 400;letter-spacing:-.02em;max-width:22ch}
+.head h2 em{font-style:italic;color:var(--terracotta);font-variation-settings:"opsz" 96,"wght" 350}
+.svc-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.svc{padding:32px;border:1px dashed rgba(26,22,20,.24);border-radius:6px;transition:border-color .35s var(--ease),background-color .35s var(--ease)}
+.svc:hover{border-color:var(--terracotta);border-style:solid;background:rgba(194,106,74,.04)}
+.svc .num{color:var(--terracotta);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.3em;margin-bottom:20px}
+.svc h3{font-family:"Fraunces",serif;font-size:24px;line-height:1.15;font-variation-settings:"opsz" 32,"wght" 500;margin-bottom:10px}
+.svc h3 em{font-style:italic;color:var(--terracotta);font-variation-settings:"opsz" 32,"wght" 400}
+.svc p{color:var(--dim);font-size:15px;line-height:1.6;margin-bottom:16px}
+.svc .price{padding-top:16px;border-top:1px dashed var(--rule);display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;color:var(--dim)}
+.svc .price b{color:var(--ink);font-weight:500}
+.rev{max-width:1200px;margin:0 auto}
+.rev q{display:block;font-family:"Fraunces",serif;font-variation-settings:"opsz" 96,"wght" 400,"ital" 1;font-style:italic;font-size:clamp(28px,4vw,60px);line-height:1.15;quotes:"“" "”";letter-spacing:-.01em}
+.rev .who{margin-top:32px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+.book{background:var(--sage);color:var(--bone)}
+.book .head h2{color:var(--bone)}
+.book .head h2 em,.book .head>.mono{color:var(--bone);border-top-color:var(--bone)}
+.book-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.book form{background:var(--bone);color:var(--ink);padding:32px;border-radius:6px;display:flex;flex-direction:column;gap:16px}
+.book .field{display:flex;flex-direction:column;gap:6px}
+.book label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+.book input,.book select,.book textarea{font:inherit;font-size:16px;padding:12px 14px;background:transparent;border:1px solid var(--rule);border-radius:3px;color:var(--ink)}
+.book input:focus,.book select:focus,.book textarea:focus{outline:none;border-color:var(--terracotta)}
+.book textarea{resize:vertical;min-height:80px}
+.foot{background:var(--ink);color:var(--bone);padding:60px 32px 24px}
+.foot-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(242,235,224,.15)}
+.foot-brand{font-family:"Fraunces",serif;font-variation-settings:"opsz" 24,"wght" 500;font-size:22px}
+.foot-h{color:var(--terracotta);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:10px}
+.foot-col{font-size:14px;color:rgba(242,235,224,.82)}
+.foot-col a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(242,235,224,.2)}
+.foot-fine{max-width:1400px;margin:20px auto 0;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.2em;color:rgba(242,235,224,.35)}
+@media(max-width:900px){.chrome{padding:14px 20px}.chrome nav a:not(.cta-h){display:none}.hero{grid-template-columns:1fr;padding:100px 20px 60px;gap:32px}.spine{aspect-ratio:2/1;max-height:none}.head{grid-template-columns:1fr;gap:16px}.svc-grid{grid-template-columns:1fr}.book-inner{grid-template-columns:1fr;gap:32px}section{padding:80px 20px}.foot-inner{grid-template-columns:1fr}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/><path d="M12 8 v2 M12 14 v2"/></svg>
+    Meridian Spinal Care
+  </a>
+  <nav>
+    <a href="#services">Services</a><a href="#dr">Meet Dr. Nour</a><a href="#reviews">Reviews</a>
+    <a class="cta-h" href="#book">Book a visit</a>
+  </nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div>
+    <div class="kicker" data-editable="hero.kicker">Sports · Postural · Recovery · Santa Monica</div>
+    <h1 data-editable="hero.headline">Your spine is <br>the <em>schedule</em> your <br>day runs on.</h1>
+    <p data-editable="hero.sub">A hands-on sports-medicine chiropractic practice. Adjustment, mobility, and breathwork under one appointment. Same-week new patient exams. Direct-pay pricing, no packages, no rebilling.</p>
+    <div class="actions">
+      <a class="cta p" href="#book">Book a new-patient exam →</a>
+      <a class="cta g" href="tel:+13105550164">310 · 555 · 0164</a>
+    </div>
+  </div>
+  <div class="spine" aria-hidden="true">
+    <svg viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+      <g id="spineG" transform="translate(100 0)">
+        <rect class="vert" data-region="cervical" x="-14" y="24" width="28" height="14" rx="4"/>
+        <rect class="vert" data-region="cervical" x="-14" y="42" width="28" height="14" rx="4"/>
+        <rect class="vert" data-region="cervical" x="-15" y="60" width="30" height="14" rx="4"/>
+        <rect class="vert" data-region="thoracic" x="-16" y="80" width="32" height="16" rx="4"/>
+        <rect class="vert" data-region="thoracic" x="-17" y="100" width="34" height="16" rx="4"/>
+        <rect class="vert" data-region="thoracic" x="-18" y="120" width="36" height="16" rx="4"/>
+        <rect class="vert" data-region="thoracic" x="-19" y="140" width="38" height="16" rx="4"/>
+        <rect class="vert" data-region="lumbar" x="-22" y="164" width="44" height="20" rx="6"/>
+        <rect class="vert" data-region="lumbar" x="-23" y="188" width="46" height="20" rx="6"/>
+        <rect class="vert" data-region="lumbar" x="-24" y="212" width="48" height="20" rx="6"/>
+        <path d="M-22 246 L22 246 L26 300 L-26 300 Z" fill="#7a8f6d" opacity=".2"/>
+      </g>
+    </svg>
+    <span class="label" id="lab-cervical" style="top:12%;right:6%">Cervical · C1–C7</span>
+    <span class="label" id="lab-thoracic" style="top:38%;right:6%">Thoracic · T1–T12</span>
+    <span class="label" id="lab-lumbar" style="top:65%;right:6%">Lumbar · L1–L5</span>
+  </div>
+</section>
+<section id="services">
+  <div class="head"><div class="mono">§ 01 · What a visit is</div><h2>Adjustment, <em>plus</em> the work.</h2></div>
+  <div class="svc-grid">
+    <div class="svc" data-region="cervical"><div class="num">01 · Cervical</div><h3>Neck &amp; upper back</h3><p>Screen-fatigue posture, tension headaches, TMJ. Adjustment paired with breathwork &amp; deep-neck-flexor drills you'll take home.</p><div class="price"><span>New patient exam</span><b>$240 · 60 min</b></div></div>
+    <div class="svc" data-region="thoracic"><div class="num">02 · Thoracic</div><h3>Mid-back &amp; ribs</h3><p>Between the shoulder blades, deep breath restriction, rib restrictions from sport or side-sleeping. Manual work + a 10-min mobility flow after.</p><div class="price"><span>Recurring visit</span><b>$140 · 45 min</b></div></div>
+    <div class="svc" data-region="lumbar"><div class="num">03 · Lumbar</div><h3>Lower back &amp; pelvis</h3><p>Runners, cyclists, desk-lumbar. Sacroiliac work, hip mobility, and a 3-week return-to-load plan for anyone rebuilding after an injury.</p><div class="price"><span>Return-to-load plan</span><b>$480 · 3 visits</b></div></div>
+  </div>
+</section>
+<section>
+  <div class="rev">
+    <div class="mono" style="margin-bottom:24px;color:var(--terracotta)">§ 02 · A neighbor</div>
+    <q>I have run marathons on a lumbar that Dr. Nour rebuilt in eight weeks. She is the only practitioner who ever told me that if I <em>didn't</em> come back in a month, that would be a good sign. I still come back in three, because she was right.</q>
+    <div class="who">— Rana K. · Ocean Park runner · Nov 2025</div>
+  </div>
+</section>
+<section id="book" class="book">
+  <div class="head"><div class="mono">§ 03 · New patient</div><h2>The first visit is <em>60 minutes</em>.</h2></div>
+  <div class="book-inner">
+    <div><p style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 22,'wght' 350;font-size:20px;line-height:1.55;max-width:44ch">Fill this out and Dr. Nour reads it before you arrive. If we're a bad fit for what you're carrying, we tell you Tuesday, and we hand you a name we trust — no visit charged.</p><ul style="margin-top:24px;list-style:none">
+      <li style="padding:10px 0;border-bottom:1px dashed rgba(242,235,224,.28)"><b>New-patient exam</b> · $240 · 60 min</li>
+      <li style="padding:10px 0;border-bottom:1px dashed rgba(242,235,224,.28)"><b>Recurring</b> · $140 · 45 min</li>
+      <li style="padding:10px 0"><b>Direct-pay only</b> · superbills provided</li>
+    </ul></div>
+    <form id="bookForm" novalidate>
+      <div class="field"><label for="n">Name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="r">Region</label><select id="r" name="region"><option>Cervical / neck</option><option>Thoracic / mid-back</option><option>Lumbar / lower</option><option>Multiple / not sure</option></select></div>
+      <div class="field"><label for="d">A short note</label><textarea id="d" name="note" rows="3" placeholder="How long, how it started, what makes it worse."></textarea></div>
+      <button class="cta p" type="submit">Book my exam →</button>
+      <p class="mono" id="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="foot-inner">
+    <div><div class="foot-brand">Meridian Spinal Care</div><div class="mono" style="color:rgba(242,235,224,.55);margin-top:6px">Direct-pay · No packages · Santa Monica</div></div>
+    <div class="foot-col"><div class="foot-h">Contact</div><a href="tel:+13105550164">310 · 555 · 0164</a><br><a href="mailto:hello@meridianspinal.co">hello@meridianspinal.co</a></div>
+    <div class="foot-col"><div class="foot-h">Hours</div>Tue–Fri · 8 AM–6 PM<br>Sat · 8 AM–1 PM</div>
+    <div class="foot-col"><div class="foot-h">Address</div>2140 Main St., Suite 202<br>Santa Monica, CA 90405<br><a href="guide/">Rebrand guide</a></div>
+  </div>
+  <div class="foot-fine">© MMXXVI Meridian Spinal Care · A seed in the Automation Nation library</div>
+</footer>
+<script>
+// Spine highlight on scroll — activates the region of the current section
+(() => {
+  const REGIONS = ['cervical','thoracic','lumbar'];
+  const labels = { cervical:'lab-cervical', thoracic:'lab-thoracic', lumbar:'lab-lumbar' };
+  const highlight = (region) => {
+    document.querySelectorAll('.spine .vert').forEach(v => v.classList.toggle('active', v.dataset.region === region));
+    REGIONS.forEach(r => document.getElementById(labels[r])?.classList.toggle('on', r === region));
+  };
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) highlight(e.target.dataset.region); }), { threshold: 0.55 });
+  document.querySelectorAll('.svc[data-region]').forEach(el => io.observe(el));
+  // scroll-linked rotation of the spine
+  const spineG = document.getElementById('spineG');
+  addEventListener('scroll', () => {
+    const y = Math.min(1, Math.max(0, scrollY / (document.body.scrollHeight - innerHeight)));
+    spineG.setAttribute('transform', `translate(100 0) rotate(${y*30 - 5} 100 160)`);
+  }, { passive: true });
+})();
+// Form
+(() => {
+  const form = document.getElementById('bookForm'); const st = document.getElementById('status');
+  let webhook = 'https://services.leadconnectorhq.com/hooks/example/meridian';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)webhook=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  form.addEventListener('submit', async e => { e.preventDefault();
+    const d = Object.fromEntries(new FormData(form).entries());
+    if (!d.name || !d.email){st.textContent='Name and email please.';return}
+    st.textContent='Sending…';
+    try{await fetch(webhook,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'meridian.web',at:new Date().toISOString()})})}catch(_){}
+    form.reset(); st.textContent='Received. Dr. Nour replies personally within one business day.';
+  });
+})();
+</script></body></html>

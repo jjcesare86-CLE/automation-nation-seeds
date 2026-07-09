@@ -1,0 +1,13 @@
+{
+  "brand": "Sonderberg Advisors",
+  "tagline": "A private wealth practice that signs a client agreement, not a marketing letter.",
+  "phone": "(212) 555-0170",
+  "email": "office@sonderberg.co",
+  "address": { "line1": "40 Wall Street, 41st Fl.", "city": "New York, NY 10005" },
+  "palette": {"parchment":"#efe9dd","ink":"#0e0f12","navy":"#1a3a75","gold":"#b28a4b","moss":"#3a5348"},
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/sonderberg",
+  "meta": {
+    "title": "Sonderberg Advisors — Independent Private Wealth Management",
+    "description": "A four-partner independent private wealth practice. Fee-only, fiduciary, minimum $5M investable. Fifty-two clients, capped."
+  }
+}

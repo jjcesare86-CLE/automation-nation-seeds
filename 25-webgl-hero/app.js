@@ -174,11 +174,28 @@
   });
 
   let paused = false;
-  const pauseBtn = document.getElementById('pauseBtn');
-  pauseBtn.addEventListener('click', () => {
-    paused = !paused;
-    pauseBtn.textContent = paused ? 'Resume the metal' : 'Pause the metal';
-  });
+
+  // Commission form
+  const form = document.getElementById('commForm');
+  const status = document.getElementById('formStatus');
+  if (form) {
+    let webhook = 'https://services.leadconnectorhq.com/hooks/example/ingot';
+    fetch('brand.json').then(r => r.ok ? r.json() : null).then(b => { if (b?.FORM_WEBHOOK_URL) webhook = b.FORM_WEBHOOK_URL; }).catch(() => {});
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (!data.name || !data.email || !data.note) {
+        status.textContent = 'Name, email, and a short note — Marek reads all three before replying.';
+        return;
+      }
+      status.textContent = 'Sending…';
+      try {
+        await fetch(webhook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...data, source: 'ingot-atelier.web', at: new Date().toISOString() }), mode: 'no-cors' });
+      } catch (_) { /* graceful */ }
+      form.reset();
+      status.textContent = 'Received. Marek replies personally within one business day.';
+    });
+  }
 
   const start = performance.now();
   let t = 0;

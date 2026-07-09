@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Astria — Rebrand guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Söhne+Breit:wght@700&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>body{background:#f0ece4;color:#111;font-family:system-ui,sans-serif;line-height:1.65;margin:0}.w{max-width:780px;margin:0 auto;padding:80px 32px 120px}h1{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:clamp(40px,7vw,80px);text-transform:uppercase;letter-spacing:-.02em;margin-bottom:16px}h2{font-size:22px;margin:48px 0 12px;color:#c9955a;text-transform:uppercase;letter-spacing:.02em}code{font-family:"IBM Plex Mono",monospace;background:rgba(17,17,17,.06);padding:2px 6px;border-radius:3px}.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#a8a29a;margin-bottom:24px}.back{margin-top:32px;display:inline-block;color:#c9955a;text-decoration:none;border-bottom:1px solid}ul,ol{padding-left:22px}</style></head>
+<body><div class="w"><div class="meta">Rebrand Guide · Site 21 · Product Configurator</div>
+<h1>Astria Objects</h1>
+<p>Real-time product configurator for a small-batch cast concrete table lamp. Drag-to-rotate 3D stage rendered in Canvas 2D (a lightweight substitute for Three.js — no external dependency, no GLB required at seed stage). Three finishes, three stems, live price update. Space-bar toggles auto-spin.</p>
+<h2>Why Canvas 2D instead of Three.js</h2>
+<p>Loading Three.js from a CDN adds ~600 KB and network dependency to a page whose whole point is instant interaction. The Canvas 2D substitute is ~150 lines and hits the same UX beats: rotate on drag, swap materials, swap stems, live price, spin toggle. When the seed is sold to a client with a real GLB, swap the <code>draw()</code> function for a Three.js scene using the marker comment in <code>index.html</code>.</p>
+<h2>Rebrand in 15 minutes</h2>
+<ol><li>Edit <code>brand.json</code>.</li><li>Update 5 palette CSS vars.</li><li>Update the three finish options + prices in the <code>finPrice</code> object in the inline script.</li><li>Update the three stem options + price deltas in <code>stemPrice</code>.</li><li>Swap the fallback <code>hero-lamp.webp</code> for the client's product still.</li></ol>
+<h2>Signature techniques</h2>
+<ul><li>Drag-to-rotate Canvas 2D lamp with rotation-based lateral light bias.</li><li>Live-updating price on swatch selection.</li><li>Keyboard: <code>Space</code> toggles spin, <code>1</code>–<code>3</code> switch finish.</li></ul>
+<a class="back" href="../">← Return to site</a></div></body></html>

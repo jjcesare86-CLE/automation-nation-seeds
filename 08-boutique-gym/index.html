@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Foundry Strength — Barbell Club, Williamsburg</title>
+<meta name="description" content="A twelve-lifter barbell club. Small-group coaching, block-based programming, a schedule like a train timetable.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000;--offwhite:#efece7;--blood:#cf1a1a;--concrete:#8a8a8a;--chalk:#f0ede4;--rule:rgba(255,255,255,.14);--ease:cubic-bezier(.7,0,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--offwhite);font-family:"Inter",sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.display{font-family:"Anton","Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:-.005em}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--concrete)}
+.skip{position:absolute;left:-9999px;background:var(--blood);color:var(--offwhite);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;background:rgba(0,0,0,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.chrome .brand{font-family:"Anton",sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.02em;color:var(--offwhite);text-decoration:none;display:flex;align-items:center;gap:10px}
+.chrome .brand span{color:var(--blood)}
+.chrome nav{display:flex;gap:22px;align-items:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.chrome nav a{color:var(--offwhite);text-decoration:none;opacity:.75}
+.chrome nav a:hover{opacity:1}
+.chrome .cta-h{background:var(--blood);color:var(--offwhite);padding:10px 18px;letter-spacing:.24em}
+.hero{padding:140px 32px 80px;max-width:1400px;margin:0 auto;position:relative}
+.hero .kicker{color:var(--blood);letter-spacing:.4em;font-size:11px;text-transform:uppercase;margin-bottom:32px}
+h1{font-family:"Anton",sans-serif;font-size:clamp(72px,15vw,220px);line-height:.9;letter-spacing:-.005em;text-transform:uppercase;max-width:11ch}
+h1 .red{color:var(--blood)}
+h1 span{display:block}
+.hero .sub{margin-top:36px;font-size:19px;line-height:1.55;max-width:52ch;color:rgba(239,236,231,.72)}
+.hero .actions{margin-top:48px;display:flex;gap:16px;flex-wrap:wrap}
+.cta{padding:16px 28px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;transition:transform .35s var(--ease);display:inline-block}
+.cta.p{background:var(--blood);color:var(--offwhite)}
+.cta.p:hover{transform:translateY(-2px);background:#a71414}
+.cta.g{background:transparent;color:var(--offwhite);border:1px solid var(--offwhite)}
+.cta.g:hover{background:var(--offwhite);color:var(--black);transform:translateY(-2px)}
+section{padding:100px 32px;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start}
+.head>.mono{color:var(--blood);padding-top:20px;border-top:1px solid var(--blood)}
+.head h2{font-family:"Anton",sans-serif;font-size:clamp(48px,7vw,110px);line-height:.95;letter-spacing:-.005em;text-transform:uppercase;max-width:18ch}
+.head h2 .red{color:var(--blood)}
+.timetable{background:var(--chalk);color:var(--black);border-top:0}
+.timetable .head h2{color:var(--black)}
+.timetable .head>.mono{color:var(--blood)}
+.tt-inner{max-width:1400px;margin:0 auto;background:var(--black);color:var(--offwhite);border:2px solid var(--blood);padding:0;overflow:hidden}
+.tt-header{display:grid;grid-template-columns:110px 1fr 200px 180px 100px;padding:16px 24px;background:var(--blood);color:var(--offwhite);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.tt-row{display:grid;grid-template-columns:110px 1fr 200px 180px 100px;padding:20px 24px;border-bottom:1px solid var(--rule);align-items:center;font-family:"IBM Plex Mono",monospace}
+.tt-row:last-child{border-bottom:0}
+.tt-row.next{background:rgba(207,26,26,.12);position:relative}
+.tt-row.next::before{content:"NEXT";position:absolute;left:24px;top:6px;color:var(--blood);font-size:9px;letter-spacing:.24em}
+.tt-time{font-family:"Anton",sans-serif;font-size:26px;letter-spacing:-.005em;color:var(--offwhite)}
+.tt-name{font-family:"Anton",sans-serif;font-size:22px;letter-spacing:-.005em;text-transform:uppercase}
+.tt-coach{color:var(--concrete);font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+.tt-slots{color:var(--offwhite);font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+.tt-slots.tight{color:var(--blood)}
+.tt-action a{color:var(--offwhite);text-decoration:none;font-size:10px;letter-spacing:.24em;border-bottom:1px solid var(--offwhite)}
+.tt-action a:hover{color:var(--blood);border-color:var(--blood)}
+.countdown{max-width:1400px;margin:24px auto 0;font-family:"Anton",sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.02em;color:var(--black);text-align:right}
+.countdown b{color:var(--blood)}
+.coach{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.c-card{background:#0a0a0a;border:1px solid var(--rule);padding:32px;transition:transform .35s var(--ease),border-color .35s var(--ease)}
+.c-card:hover{transform:translateY(-6px);border-color:var(--blood)}
+.c-card .init{font-family:"Anton",sans-serif;font-size:80px;line-height:1;color:var(--blood);margin-bottom:20px}
+.c-card h3{font-family:"Anton",sans-serif;font-size:28px;text-transform:uppercase;margin-bottom:6px}
+.c-card .role{color:var(--concrete);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:16px}
+.c-card p{font-size:14px;line-height:1.6;color:rgba(239,236,231,.75)}
+.pgm{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.pgm>div{padding:32px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.pgm h3{font-family:"Anton",sans-serif;font-size:36px;text-transform:uppercase;margin-bottom:16px}
+.pgm h3 .red{color:var(--blood)}
+.pgm p{font-size:14px;line-height:1.6;color:rgba(239,236,231,.72);margin-bottom:12px}
+.pgm .m{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);color:var(--blood);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase}
+.book{background:var(--blood);color:var(--offwhite)}
+.book .head h2{color:var(--offwhite)}
+.book .head>.mono{color:var(--offwhite);border-top-color:var(--offwhite)}
+.book-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.book form{background:var(--black);padding:32px;display:flex;flex-direction:column;gap:16px}
+.book .field{display:flex;flex-direction:column;gap:6px}
+.book label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--concrete)}
+.book input,.book select,.book textarea{font:inherit;font-family:"Inter",sans-serif;font-size:16px;padding:12px 14px;background:transparent;border:1px solid var(--rule);color:var(--offwhite)}
+.book input:focus,.book select:focus,.book textarea:focus{outline:none;border-color:var(--blood)}
+.foot{padding:40px 32px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--concrete);border-top:1px solid var(--rule)}
+@media(max-width:900px){.chrome{padding:14px 20px}.chrome nav a:not(.cta-h){display:none}.hero{padding:120px 20px 60px}.head{grid-template-columns:1fr;gap:16px}.tt-header,.tt-row{grid-template-columns:70px 1fr 60px;gap:12px}.tt-header>*:nth-child(3),.tt-row>*:nth-child(3),.tt-header>*:nth-child(4),.tt-row>*:nth-child(4){display:none}.coach,.pgm{grid-template-columns:1fr}.book-inner{grid-template-columns:1fr;gap:32px}section{padding:80px 20px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">FOUNDRY<span>◈</span>STRENGTH</a>
+  <nav>
+    <a href="#schedule">Schedule</a><a href="#coaches">Coaches</a><a href="#programs">Programs</a>
+    <a class="cta-h" href="#book">Free session</a>
+  </nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="kicker" data-editable="hero.kicker">12 lifters · 6 barbells · Williamsburg · MMXXVI</div>
+  <h1 data-editable="hero.headline"><span>You'll add</span><span class="red">weight</span><span>in six weeks.</span></h1>
+  <p class="sub" data-editable="hero.sub">A boutique barbell club running block-periodized programming for adults who want to move a heavier bar in six weeks than they moved this morning. Twelve lifters per class, six barbells, one coach at every bar. Or the block is refunded.</p>
+  <div class="actions">
+    <a class="cta p" href="#book">Book a free session →</a>
+    <a class="cta g" href="#schedule">See this week</a>
+  </div>
+</section>
+<section class="timetable" id="schedule">
+  <div class="head"><div class="mono">§ 01 · This week</div><h2>Schedule <span class="red">·</span> like a timetable.</h2></div>
+  <div class="tt-inner" id="ttInner">
+    <div class="tt-header"><span>Time</span><span>Class</span><span>Coach</span><span>Slots</span><span></span></div>
+    <div class="tt-row" data-hh="6"><span class="tt-time">06:00</span><span class="tt-name">Barbell A · Squat</span><span class="tt-coach">Coach Miles</span><span class="tt-slots">7 of 12</span><span class="tt-action"><a href="#book">Reserve →</a></span></div>
+    <div class="tt-row" data-hh="7"><span class="tt-time">07:15</span><span class="tt-name">Barbell B · Press</span><span class="tt-coach">Coach Amaya</span><span class="tt-slots tight">2 of 12</span><span class="tt-action"><a href="#book">Reserve →</a></span></div>
+    <div class="tt-row" data-hh="12"><span class="tt-time">12:15</span><span class="tt-name">Open lift</span><span class="tt-coach">Coach Miles</span><span class="tt-slots">9 of 12</span><span class="tt-action"><a href="#book">Reserve →</a></span></div>
+    <div class="tt-row" data-hh="17"><span class="tt-time">17:00</span><span class="tt-name">Barbell A · Deadlift</span><span class="tt-coach">Coach Reef</span><span class="tt-slots">6 of 12</span><span class="tt-action"><a href="#book">Reserve →</a></span></div>
+    <div class="tt-row" data-hh="18"><span class="tt-time">18:15</span><span class="tt-name">Barbell B · Pull</span><span class="tt-coach">Coach Amaya</span><span class="tt-slots tight">1 of 12</span><span class="tt-action"><a href="#book">Reserve →</a></span></div>
+    <div class="tt-row" data-hh="19"><span class="tt-time">19:30</span><span class="tt-name">Open lift</span><span class="tt-coach">Coach Miles</span><span class="tt-slots">10 of 12</span><span class="tt-action"><a href="#book">Reserve →</a></span></div>
+  </div>
+  <div class="countdown">Next class · <b id="cd">calculating…</b></div>
+</section>
+<section id="coaches">
+  <div class="head"><div class="mono">§ 02 · The bench</div><h2>Three coaches. <span class="red">One</span> philosophy.</h2></div>
+  <div class="coach">
+    <div class="c-card"><div class="init">M</div><h3>Coach Miles Nakamura</h3><div class="role">Head coach · squat + pull</div><p>Seven years coaching under a national-level programming lineage. Was a lineman, is a father, teaches everyone the same setup he teaches his eight-year-old.</p></div>
+    <div class="c-card"><div class="init">A</div><h3>Coach Amaya Fields</h3><div class="role">Press + accessory</div><p>Former USAW-2 Olympic lifting coach. Turns beginners into competent overhead athletes in three blocks or refunds the third.</p></div>
+    <div class="c-card"><div class="init">R</div><h3>Coach Reef Owens</h3><div class="role">Deadlift + recovery</div><p>Ex-college DB. Wrote his master's on rate-of-force development. Runs deadlift block for adults who thought they'd never pull again.</p></div>
+  </div>
+</section>
+<section id="programs">
+  <div class="head"><div class="mono">§ 03 · Programs</div><h2>Three programs. <span class="red">No membership</span> trap.</h2></div>
+  <div class="pgm">
+    <div><h3>Block <span class="red">A</span></h3><p>6 weeks. 3 sessions per week. Squat/press/deadlift block, individualized around your working sets. Every session is programmed the week prior.</p><div class="m">$480 · 18 sessions · refundable at week 3</div></div>
+    <div><h3>Open <span class="red">lift</span></h3><p>Unlimited access to the open-lift hours with a coach on the floor. Bring your own program or borrow one of ours. Best for competitive lifters or returning veterans.</p><div class="m">$180 / mo · month-to-month</div></div>
+    <div><h3>1:1</h3><p>One hour per week, only you and one coach. Best for adults returning after injury or preparing for a specific test. Sixty-minute sessions.</p><div class="m">$140 / session · 6-pack $760</div></div>
+  </div>
+</section>
+<section id="book" class="book">
+  <div class="head"><div class="mono">§ 04 · Free session</div><h2>Come lift <span style="color:var(--black)">on us.</span></h2></div>
+  <div class="book-inner">
+    <div><p style="font-size:19px;line-height:1.55;max-width:44ch">One free introductory session, sixty minutes, on a barbell with a coach. You'll leave knowing your working numbers and a plan for the next six weeks. No card, no pitch, no obligation.</p><ul style="margin-top:24px;list-style:none;font-size:14px">
+      <li style="padding:10px 0;border-bottom:1px dashed rgba(239,236,231,.28)">Bring: any pair of trainers you own</li>
+      <li style="padding:10px 0;border-bottom:1px dashed rgba(239,236,231,.28)">Skip: pre-workout, ego, and a wristband HRM</li>
+      <li style="padding:10px 0">Time: sixty minutes, on the barbell, with a coach</li>
+    </ul></div>
+    <form id="bookForm" novalidate>
+      <div class="field"><label for="n">Name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="ex">Lifting background</label><select id="ex" name="exp"><option>Never used a barbell</option><option>Some gym experience</option><option>Previously trained, off for years</option><option>Currently training</option><option>Competitive lifter</option></select></div>
+      <div class="field"><label for="d">Anything I should know</label><textarea id="d" name="note" rows="3" placeholder="Injury history, competition dates, or the sport you're conditioning for."></textarea></div>
+      <button class="cta p" type="submit" style="border:0;font-family:inherit;cursor:pointer">Book my free session →</button>
+      <p class="mono" id="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">© MMXXVI FOUNDRY STRENGTH · 88 N 6th St., Brooklyn · A seed in the Automation Nation library · <a href="guide/" style="color:inherit;border-bottom:1px solid currentColor">rebrand guide</a></footer>
+<script>
+// Live "next class" countdown from the visitor's clock
+(() => {
+  const rows = document.querySelectorAll('.tt-row');
+  const cd = document.getElementById('cd');
+  const tick = () => {
+    const now = new Date();
+    const hh = now.getHours(), mm = now.getMinutes();
+    const minsNow = hh*60 + mm;
+    let nextRow = null, nextMins = Infinity;
+    rows.forEach(r => {
+      const t = r.querySelector('.tt-time').textContent.split(':');
+      const rowMins = +t[0]*60 + +t[1];
+      const diff = rowMins - minsNow;
+      r.classList.remove('next');
+      if (diff > 0 && diff < nextMins) { nextMins = diff; nextRow = r; }
+    });
+    if (nextRow) {
+      nextRow.classList.add('next');
+      const hrs = Math.floor(nextMins/60), rem = nextMins%60;
+      cd.textContent = `${nextRow.querySelector('.tt-name').textContent} · in ${hrs}h ${rem}m`;
+    } else {
+      cd.textContent = 'Tomorrow — book any 06:00 slot for a warm platform.';
+    }
+  };
+  tick(); setInterval(tick, 30000);
+})();
+// Form
+(() => { const f = document.getElementById('bookForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/foundry';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.email){st.textContent='Name and email — that\'s all we need.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'foundry.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Booked. Coach Miles texts within one business hour.';
+  });
+})();</script></body></html>

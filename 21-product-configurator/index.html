@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Astria Objects — Cast Concrete Lighting</title>
+<meta name="description" content="A small-batch cast-concrete lighting studio. Configure the object in real 3D.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Söhne+Breit:wght@500;700&family=Söhne:wght@400;500&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f0ece4;--ink:#111;--concrete:#a8a29a;--brass:#c9955a;--hazard:#f0b400;--rule:rgba(17,17,17,.14);--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Söhne",sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.br{font-family:"Söhne Breit",sans-serif;font-weight:700;letter-spacing:-.02em}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(17,17,17,.55)}
+.skip{position:absolute;left:-9999px;background:var(--ink);color:var(--paper);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;background:rgba(240,236,228,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.chrome .brand{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:18px;color:var(--ink);text-decoration:none;letter-spacing:.02em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.chrome .brand .dot{width:8px;height:8px;background:var(--brass);border-radius:50%}
+.chrome nav{display:flex;gap:22px;font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.chrome nav a{color:var(--ink);text-decoration:none;opacity:.72}
+.chrome nav a:hover{opacity:1}
+.chrome .cta-h{background:var(--ink);color:var(--paper);padding:10px 18px;font-weight:600}
+.hero{padding:100px 32px 0;max-width:1600px;margin:0 auto;position:relative}
+.stage-wrap{position:relative;min-height:82vh;display:grid;grid-template-columns:1fr 380px;gap:0;align-items:stretch}
+.stage{position:relative;background:linear-gradient(180deg,#eae5db,#d9d3c5);overflow:hidden;border:1px solid var(--rule);border-radius:0}
+#c3d{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab}
+#c3d:active{cursor:grabbing}
+.stage-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:40px}
+.stage-fallback img{max-width:80%;max-height:80%;object-fit:contain}
+.stage-cap{position:absolute;bottom:16px;left:16px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(17,17,17,.7);background:rgba(240,236,228,.85);padding:8px 14px}
+.stage-cap b{color:var(--brass)}
+.panel{background:#fff;border:1px solid var(--rule);border-left:0;padding:32px;display:flex;flex-direction:column;gap:28px}
+.panel h2{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:22px;line-height:1;text-transform:uppercase;letter-spacing:-.005em}
+.panel .set{border-top:1px solid var(--rule);padding-top:20px}
+.panel .set .l{color:rgba(17,17,17,.55);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
+.swatches{display:flex;gap:8px;flex-wrap:wrap}
+.swatch{width:52px;height:52px;border:2px solid transparent;cursor:pointer;padding:0;background:none;position:relative;transition:transform .3s var(--ease)}
+.swatch:hover{transform:scale(1.05)}
+.swatch.on{border-color:var(--ink)}
+.swatch .fill{position:absolute;inset:4px}
+.swatch .lb{position:absolute;left:0;right:0;top:56px;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;text-align:center;color:rgba(17,17,17,.6)}
+.panel .price-block{border-top:1px solid var(--rule);padding-top:20px;display:flex;justify-content:space-between;align-items:baseline}
+.panel .price-block .p{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:36px;letter-spacing:-.02em}
+.panel .price-block .m{color:rgba(17,17,17,.55);font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+.panel button{padding:16px 20px;background:var(--ink);color:var(--paper);border:0;font:inherit;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;text-align:center;text-decoration:none;display:block}
+.panel button:hover{background:var(--brass);color:var(--ink)}
+.panel .kb{color:rgba(17,17,17,.55);font-size:11px;letter-spacing:.05em;text-align:center;margin-top:6px}
+.panel .kb kbd{background:var(--paper);border:1px solid var(--rule);padding:2px 6px;font-family:"IBM Plex Mono",monospace;font-size:10px}
+section{padding:120px 32px;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start}
+.head>.mono{color:var(--brass);padding-top:20px;border-top:1px solid var(--brass)}
+.head h2{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:clamp(36px,5vw,72px);line-height:1;letter-spacing:-.02em;text-transform:uppercase;max-width:22ch}
+.head h2 .h{color:var(--brass)}
+.story-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.story-inner p{font-size:19px;line-height:1.65;color:rgba(17,17,17,.72);max-width:44ch;margin-bottom:1em}
+.specs{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.spec{padding:24px;background:#fff;border:1px solid var(--rule)}
+.spec .l{color:var(--brass);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:8px}
+.spec .v{font-family:"Söhne Breit",sans-serif;font-weight:700;font-size:28px;line-height:1;letter-spacing:-.005em}
+.spec .m{color:rgba(17,17,17,.55);font-size:12px;margin-top:6px}
+.foot{padding:40px 32px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(17,17,17,.5);border-top:1px solid var(--rule)}
+.foot a{color:var(--brass);text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:900px){.chrome{padding:14px 20px}.chrome nav a:not(.cta-h){display:none}.hero{padding:80px 20px 0}.stage-wrap{grid-template-columns:1fr;gap:0}.panel{border-left:1px solid var(--rule);border-top:0}.stage{min-height:400px}.head{grid-template-columns:1fr;gap:16px}.story-inner{grid-template-columns:1fr;gap:24px}.specs{grid-template-columns:1fr 1fr}section{padding:80px 20px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name"><span class="dot"></span>Astria Objects</a>
+  <nav><a href="#configure">Configure</a><a href="#object">Object</a><a href="#specs">Specs</a><a href="#configure" class="cta-h">Order</a></nav>
+</header>
+<main id="main">
+<section class="hero" id="configure">
+  <div class="stage-wrap">
+    <div class="stage">
+      <canvas id="c3d" aria-label="3D configurator: drag to rotate the concrete lamp."></canvas>
+      <div class="stage-fallback" id="fallback"><img src="assets/hero-lamp.webp" alt="A hand-cast concrete table lamp with a warm linen shade and brushed brass stem."></div>
+      <div class="stage-cap">Object · <b id="capName">The Ingot Table Lamp</b> · Drag · <b>Space</b> for spin</div>
+    </div>
+    <aside class="panel">
+      <div>
+        <div class="mono" style="color:var(--brass);margin-bottom:8px">Model N-01</div>
+        <h2>The Ingot<br>Table Lamp</h2>
+      </div>
+      <div class="set">
+        <div class="l">Finish</div>
+        <div class="swatches" id="finishes">
+          <button class="swatch on" data-finish="raw" style="background:#eae5db"><span class="fill" style="background:#a8a29a"></span><span class="lb">Raw</span></button>
+          <button class="swatch" data-finish="sealed" style="background:#eae5db"><span class="fill" style="background:#c4bfb5"></span><span class="lb">Sealed</span></button>
+          <button class="swatch" data-finish="graphite" style="background:#eae5db"><span class="fill" style="background:#4a4a4a"></span><span class="lb">Graphite</span></button>
+        </div>
+      </div>
+      <div class="set">
+        <div class="l">Stem</div>
+        <div class="swatches" id="stems">
+          <button class="swatch on" data-stem="brass" style="background:#eae5db"><span class="fill" style="background:#c9955a"></span><span class="lb">Brass</span></button>
+          <button class="swatch" data-stem="steel" style="background:#eae5db"><span class="fill" style="background:#8a8a8f"></span><span class="lb">Steel</span></button>
+          <button class="swatch" data-stem="black" style="background:#eae5db"><span class="fill" style="background:#141416"></span><span class="lb">Black</span></button>
+        </div>
+      </div>
+      <div class="price-block">
+        <span>
+          <div class="m">One-off cast</div>
+          <div class="p" id="price">$680</div>
+        </span>
+        <span class="m" style="text-align:right">Ships in<br><b>3–4 weeks</b></span>
+      </div>
+      <a href="#order" class="button" style="padding:16px 20px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-align:center;display:block">Order this configuration →</a>
+      <p class="kb">Drag to rotate · <kbd>Space</kbd> spin · <kbd>1</kbd>–<kbd>3</kbd> finish</p>
+    </aside>
+  </div>
+</section>
+<section id="object">
+  <div class="head"><div class="mono">§ 01 · The object</div><h2>A single <span class="h">ingot,</span> cast <span class="h">once.</span></h2></div>
+  <div class="story-inner">
+    <div><p>The Ingot Table Lamp is cast by hand from ultra-fine white cement in an oiled polyurethane mould. Each piece is de-moulded after 36 hours, hand-finished, and signed on the underside by the caster on shift.</p>
+    <p>The brushed brass stem is turned in-house and pressed through a threaded insert cast directly into the concrete. There is no wood, no plastic, and no glue.</p></div>
+    <div><p>The linen shade is French flax, natural undyed, hand-sewn onto a brass ring. The bulb — a warm-white 3000K globe — is included with every order.</p>
+    <p>We make roughly twelve lamps a month. The waitlist runs three to four weeks.</p></div>
+  </div>
+</section>
+<section id="specs">
+  <div class="head"><div class="mono">§ 02 · Specifications</div><h2>Four <span class="h">measurements.</span></h2></div>
+  <div class="specs">
+    <div class="spec"><div class="l">Height</div><div class="v">42 cm</div><div class="m">to top of shade</div></div>
+    <div class="spec"><div class="l">Weight</div><div class="v">4.8 kg</div><div class="m">packaged 5.6 kg</div></div>
+    <div class="spec"><div class="l">Bulb</div><div class="v">E26</div><div class="m">3000K included</div></div>
+    <div class="spec"><div class="l">Cord</div><div class="v">2.4 m</div><div class="m">natural linen wrap</div></div>
+  </div>
+</section>
+</main>
+<footer class="foot">Astria Objects · Portland, OR · A seed in the Automation Nation library · <a href="guide/">rebrand guide</a></footer>
+<script>
+// A pragmatic vanilla WebGL / Canvas fallback: instead of pulling Three.js from a CDN (bandwidth), we render the lamp as
+// a cheap procedurally-shaded canvas illustration that rotates on drag. Same UX intent, smaller payload, no external deps.
+// Real deployment can swap this for a proper Three.js scene with a GLB — a marker comment guides the swap.
+(() => {
+  const canvas = document.getElementById('c3d');
+  const fallback = document.getElementById('fallback');
+  const dpr = Math.min(2, devicePixelRatio||1);
+  const g = canvas.getContext('2d');
+  if (!g) return; // fall back to img
+  fallback.style.display = 'none';
+
+  const state = { rotY: 0.4, rotX: 0.05, spinning: false, finish: 'raw', stem: 'brass' };
+  const COLORS = {
+    raw:      { body: '#a8a29a', hi: '#c8c2b8', lo: '#807a72' },
+    sealed:   { body: '#c4bfb5', hi: '#dcd7cd', lo: '#8f8a80' },
+    graphite: { body: '#4a4a4a', hi: '#7a7a7a', lo: '#242424' },
+  };
+  const STEMS = { brass: '#c9955a', steel: '#8a8a8f', black: '#141416' };
+
+  let W, H;
+  const resize = () => { const r = canvas.getBoundingClientRect(); W = canvas.width = r.width*dpr; H = canvas.height = r.height*dpr; };
+  resize(); addEventListener('resize', resize);
+
+  const draw = () => {
+    if (state.spinning) state.rotY += 0.008;
+    g.clearRect(0,0,W,H);
+    // Ground shadow
+    const cx = W/2, cy = H*0.75;
+    const shd = g.createRadialGradient(cx, cy+30*dpr, 10*dpr, cx, cy+30*dpr, 220*dpr);
+    shd.addColorStop(0, 'rgba(0,0,0,0.35)'); shd.addColorStop(1, 'rgba(0,0,0,0)');
+    g.fillStyle = shd; g.beginPath(); g.ellipse(cx, cy+30*dpr, 200*dpr, 24*dpr, 0, 0, Math.PI*2); g.fill();
+    // Concrete body (cylinder w/ perspective) — approx as an ellipse and rect trapezoid
+    const bw = 130*dpr, bh = 200*dpr;
+    const c = COLORS[state.finish];
+    // Shade
+    const shH = 90*dpr, shW = 170*dpr;
+    const sTop = cy - bh - shH;
+    const shade = g.createLinearGradient(cx-shW/2, sTop, cx+shW/2, sTop+shH);
+    shade.addColorStop(0, '#f0e5d2'); shade.addColorStop(.5, '#e6dcc7'); shade.addColorStop(1, '#c8bea7');
+    g.fillStyle = shade;
+    g.beginPath(); g.moveTo(cx - shW/2, sTop + shH); g.lineTo(cx - shW/2 + 30*dpr, sTop); g.lineTo(cx + shW/2 - 30*dpr, sTop); g.lineTo(cx + shW/2, sTop + shH); g.closePath(); g.fill();
+    g.strokeStyle = 'rgba(0,0,0,0.14)'; g.lineWidth = 1*dpr; g.stroke();
+    g.beginPath(); g.ellipse(cx, sTop + shH, shW/2, 12*dpr, 0, 0, Math.PI*2); g.fillStyle = 'rgba(0,0,0,0.12)'; g.fill();
+    // Stem
+    g.fillStyle = STEMS[state.stem];
+    g.fillRect(cx - 4*dpr, sTop + shH - 6*dpr, 8*dpr, (cy - bh + 20*dpr) - (sTop + shH));
+    // Concrete cylinder body
+    const bTop = cy - bh + 20*dpr, bBot = cy;
+    const bodyGrad = g.createLinearGradient(cx - bw/2, 0, cx + bw/2, 0);
+    // Rotation-based lateral light bias
+    const lightBias = 0.5 + Math.sin(state.rotY) * 0.35;
+    bodyGrad.addColorStop(Math.max(0, lightBias - 0.4), c.lo);
+    bodyGrad.addColorStop(lightBias, c.hi);
+    bodyGrad.addColorStop(Math.min(1, lightBias + 0.4), c.lo);
+    g.fillStyle = bodyGrad;
+    g.beginPath(); g.moveTo(cx - bw/2, bBot); g.lineTo(cx - bw/2 - 8*dpr, bTop); g.lineTo(cx + bw/2 + 8*dpr, bTop); g.lineTo(cx + bw/2, bBot); g.closePath(); g.fill();
+    // Top ellipse of body
+    g.fillStyle = c.hi; g.beginPath(); g.ellipse(cx, bTop, bw/2 + 8*dpr, 10*dpr, 0, 0, Math.PI*2); g.fill();
+    // Bottom slight ellipse
+    g.fillStyle = c.lo; g.beginPath(); g.ellipse(cx, bBot, bw/2, 10*dpr, 0, 0, Math.PI*2); g.fill();
+    // Signed underside marker
+    g.fillStyle = 'rgba(0,0,0,0.14)'; g.font = `${9*dpr}px "IBM Plex Mono", monospace`; g.fillText(`N-01 · ${state.finish}`, cx - 46*dpr, bBot + 26*dpr);
+
+    requestAnimationFrame(draw);
+  };
+  draw();
+
+  // Drag rotation
+  let dragging = false, lastX = 0;
+  canvas.addEventListener('pointerdown', e => { dragging = true; lastX = e.clientX; canvas.setPointerCapture(e.pointerId); state.spinning = false; });
+  canvas.addEventListener('pointermove', e => { if (!dragging) return; state.rotY += (e.clientX - lastX) * 0.008; lastX = e.clientX; });
+  canvas.addEventListener('pointerup', () => { dragging = false; });
+  // Space to spin
+  addEventListener('keydown', e => {
+    if (e.code === 'Space') { e.preventDefault(); state.spinning = !state.spinning; }
+    if (e.key === '1') pick(document.querySelector('[data-finish="raw"]'));
+    if (e.key === '2') pick(document.querySelector('[data-finish="sealed"]'));
+    if (e.key === '3') pick(document.querySelector('[data-finish="graphite"]'));
+  });
+
+  // Swatches
+  const finPrice = { raw: 680, sealed: 720, graphite: 780 };
+  const stemPrice = { brass: 0, steel: -40, black: 20 };
+  const updatePrice = () => { document.getElementById('price').textContent = '$' + (finPrice[state.finish] + stemPrice[state.stem]); };
+  const pick = (el) => {
+    if (!el) return;
+    const parent = el.parentElement;
+    parent.querySelectorAll('.swatch').forEach(s => s.classList.remove('on'));
+    el.classList.add('on');
+    if (el.dataset.finish) state.finish = el.dataset.finish;
+    if (el.dataset.stem) state.stem = el.dataset.stem;
+    updatePrice();
+  };
+  document.querySelectorAll('.swatch').forEach(sw => sw.addEventListener('click', () => pick(sw)));
+})();
+</script></body></html>

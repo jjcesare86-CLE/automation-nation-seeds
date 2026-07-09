@@ -1,0 +1,13 @@
+{
+  "brand": "Foundry Strength",
+  "tagline": "You'll add weight in six weeks. Or the block is refunded.",
+  "phone": "(718) 555-0143",
+  "email": "hello@foundrystrength.co",
+  "address": { "line1": "88 N 6th St., Ground Floor", "city": "Brooklyn, NY 11249" },
+  "palette": { "black":"#000000","offwhite":"#efece7","blood":"#cf1a1a","concrete":"#8a8a8a","chalk":"#f0ede4" },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/foundry",
+  "meta": {
+    "title": "Foundry Strength — Barbell Club, Williamsburg",
+    "description": "A twelve-lifter barbell club in Williamsburg. Small-group coaching, block-based programming, and a schedule that runs like a train timetable."
+  }
+}

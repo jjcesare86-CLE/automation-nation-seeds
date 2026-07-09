@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Halcyon Estate — Country wedding venue, Healdsburg</title>
+<meta name="description" content="A 40-guest to 200-guest country estate in Sonoma. One wedding a weekend, three seasons a year.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&family=Manrope:wght@400;500&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#f3ecdf;--ink:#1a1614;--sage:#94a889;--rose:#dcb0a9;--gold:#c9a353;--rule:rgba(26,22,20,.12);--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:"Manrope",sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Cormorant Garamond",serif;font-style:italic}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage)}
+.skip{position:absolute;left:-9999px;background:var(--gold);color:var(--ink);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;color:var(--ivory);mix-blend-mode:difference}
+.chrome .brand{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:24px;color:inherit;text-decoration:none;font-weight:500}
+.chrome nav{display:flex;gap:22px;font-size:12px;letter-spacing:.02em}
+.chrome nav a{color:inherit;text-decoration:none;opacity:.85}
+.chrome nav a:hover{opacity:1}
+.hero{position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:center}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.03);animation:zoom 14s var(--ease) forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,22,20,.35) 0%,transparent 30%,transparent 60%,rgba(26,22,20,.55) 100%)}
+.hero-inner{position:relative;z-index:2;padding:100px 40px 100px;max-width:1200px;margin:0 auto;color:var(--ivory);text-align:center}
+.kicker{color:var(--gold);letter-spacing:.5em;font-size:11px;text-transform:uppercase;margin-bottom:40px;font-family:"IBM Plex Mono",monospace}
+h1{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(56px,10vw,180px);line-height:.9;letter-spacing:-.02em;font-weight:400}
+h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{margin-top:40px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:24px;line-height:1.5;max-width:56ch;margin-left:auto;margin-right:auto;color:rgba(243,236,223,.85);font-weight:300}
+.hero-actions{margin-top:56px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta{padding:16px 28px;border-radius:0;font-size:12px;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;transition:transform .35s var(--ease);display:inline-block;font-family:"IBM Plex Mono",monospace;border:1px solid transparent}
+.cta.p{background:var(--gold);color:var(--ink)}
+.cta.p:hover{transform:translateY(-2px);background:var(--ivory)}
+.cta.g{background:transparent;color:var(--ivory);border-color:var(--ivory)}
+.cta.g:hover{background:var(--ivory);color:var(--ink);transform:translateY(-2px)}
+section{padding:120px 32px;border-top:1px solid var(--rule)}
+.head{max-width:1200px;margin:0 auto 60px;text-align:center}
+.head .m{color:var(--gold);letter-spacing:.4em;font-size:11px;text-transform:uppercase;margin-bottom:16px;font-family:"IBM Plex Mono",monospace}
+.head h2{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(40px,6vw,88px);line-height:1.05;font-weight:400}
+.head h2 em{font-style:normal;color:var(--gold)}
+.spaces{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.space{background:#fff;padding:0;border:1px solid var(--rule);overflow:hidden;transition:transform .5s var(--ease)}
+.space:hover{transform:translateY(-6px)}
+.space .top{aspect-ratio:4/3;background:linear-gradient(160deg,var(--sage),var(--ink))}
+.space:nth-child(2) .top{background:linear-gradient(160deg,var(--rose),var(--ink))}
+.space:nth-child(3) .top{background:linear-gradient(160deg,var(--gold),var(--ink))}
+.space .body{padding:24px 24px 32px}
+.space .n{color:var(--gold);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:10px}
+.space h3{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:28px;font-weight:400;margin-bottom:8px}
+.space p{color:rgba(26,22,20,.72);font-size:14px;line-height:1.6}
+.day-inner{max-width:900px;margin:0 auto}
+.day{display:grid;grid-template-columns:100px 1fr;gap:32px;padding:24px 0;border-bottom:1px dashed var(--rule)}
+.day .t{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:24px;color:var(--gold);font-weight:400}
+.day h3{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:22px;font-weight:400;margin-bottom:4px}
+.day p{color:rgba(26,22,20,.7);font-size:14px}
+.tests{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.test{padding:40px;background:#fff;border:1px solid var(--rule);text-align:center}
+.test q{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:24px;line-height:1.5;quotes:"“" "”";display:block;margin-bottom:20px;font-weight:400}
+.test .who{color:var(--gold);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase}
+.tour{background:var(--sage);color:var(--ivory)}
+.tour .head h2{color:var(--ivory)}
+.tour .head h2 em,.tour .head .m{color:var(--gold)}
+.tour-inner{max-width:900px;margin:0 auto}
+form{background:#fff;color:var(--ink);padding:40px;display:flex;flex-direction:column;gap:16px;border:1px dashed var(--gold);position:relative}
+form::before{content:"";position:absolute;top:12px;left:12px;right:12px;bottom:12px;border:1px dashed var(--gold);pointer-events:none}
+.field{display:flex;flex-direction:column;gap:6px;position:relative;z-index:1}
+label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(26,22,20,.6)}
+input,select,textarea{font:inherit;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:20px;padding:12px 14px;background:transparent;border:0;border-bottom:1px solid var(--rule);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--gold)}
+textarea{border:1px solid var(--rule);border-radius:0;min-height:80px;resize:vertical}
+button{padding:16px 24px;background:var(--gold);color:var(--ink);border:0;font:inherit;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;position:relative;z-index:1}
+.foot{padding:40px 32px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(26,22,20,.5);border-top:1px solid var(--rule)}
+.foot a{color:var(--gold);text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:900px){.chrome{padding:14px 20px}.chrome nav a{font-size:11px}.hero-inner{padding:60px 20px}.spaces,.tests{grid-template-columns:1fr}section{padding:80px 20px}.day{grid-template-columns:80px 1fr;gap:16px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">Halcyon Estate</a>
+  <nav><a href="#estate">The estate</a><a href="#day">The day</a><a href="#tour">Book a tour</a></nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <img src="assets/hero-estate.webp" alt="An ivy-covered stone country estate at golden hour, a rose garden in foreground, oak-lined gravel drive." fetchpriority="high">
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <div class="kicker" data-editable="hero.kicker">Healdsburg, Sonoma · Spring–Autumn · By tour</div>
+    <h1 data-editable="hero.headline"><em>One wedding.</em><br>Every weekend.</h1>
+    <p class="hero-sub" data-editable="hero.sub">A country estate on twelve acres in western Sonoma, hosting one wedding a weekend, three seasons a year. Rose garden, olive terrace, and a stone barn dating to 1904 that seats two hundred for dinner.</p>
+    <div class="hero-actions"><a class="cta p" href="#tour">Request a tour →</a><a class="cta g" href="#day">The day at Halcyon</a></div>
+  </div>
+</section>
+<section id="estate">
+  <div class="head"><div class="m">§ 01 · Three spaces</div><h2>Three <em>rooms</em>, one estate.</h2></div>
+  <div class="spaces">
+    <div class="space"><div class="top"></div><div class="body"><div class="n">Ceremony</div><h3>The <em>rose garden</em></h3><p>Sixty by ninety feet, oak arbor, seats up to 220 in wooden folding chairs. West-facing — the ceremony is planned for the hour before civil dusk.</p></div></div>
+    <div class="space"><div class="top"></div><div class="body"><div class="n">Cocktails</div><h3>The <em>olive terrace</em></h3><p>Flagstone terrace overlooking the vineyard. Fifty olive trees planted 1974, string lights, two bars during high season.</p></div></div>
+    <div class="space"><div class="top"></div><div class="body"><div class="n">Reception</div><h3>The <em>stone barn</em></h3><p>1904 stone-and-timber barn, restored 2019. Seats 200 rounds or 260 long tables. Full commercial kitchen, in-house sound.</p></div></div>
+  </div>
+</section>
+<section id="day" style="background:var(--rose)">
+  <div class="head"><div class="m">§ 02 · The day</div><h2>A <em>template</em> for the day.</h2></div>
+  <div class="day-inner">
+    <div class="day"><span class="t">2:00 pm</span><div><h3>Vendor arrival &amp; setup</h3><p>Our on-site coordinator and grounds team receive every vendor. Load-in ends by 3:15 sharp — we run the door.</p></div></div>
+    <div class="day"><span class="t">4:30 pm</span><div><h3>Guest arrival &amp; welcome</h3><p>Guests are directed to the olive terrace. A signature spritz and a small welcome table on the north lawn.</p></div></div>
+    <div class="day"><span class="t">5:15 pm</span><div><h3>Ceremony</h3><p>Under the oak arbor, west-facing, in the rose garden. Photographs are made in the last half-hour of good light.</p></div></div>
+    <div class="day"><span class="t">6:00 pm</span><div><h3>Cocktails &amp; canapés</h3><p>On the olive terrace. Two bars, walk-around canapés, a raw bar in high season.</p></div></div>
+    <div class="day"><span class="t">7:30 pm</span><div><h3>Dinner in the stone barn</h3><p>Long tables or rounds, service under the timber roof. Toasts around dessert, coffee and cognac at the door.</p></div></div>
+    <div class="day"><span class="t">10:30 pm</span><div><h3>Dancing &amp; farewell</h3><p>Music to eleven, farewell circle in the rose garden with sparklers, on-site until midnight to close.</p></div></div>
+  </div>
+</section>
+<section>
+  <div class="head"><div class="m">§ 03 · Two couples</div><h2>What <em>couples</em> tell us, after.</h2></div>
+  <div class="tests">
+    <div class="test"><q>We asked our coordinator, in the middle of dinner, if she needed anything from us. She said, "no — I need you to go back to your table and be present at your wedding." That, exactly, is Halcyon.</q><div class="who">— Maria &amp; Kwame · Aug 2025</div></div>
+    <div class="test"><q>Fifteen months of planning became fifteen quiet minutes on the estate before the ceremony. Our photographer said it was the first wedding she'd shot where the venue felt like a member of the family.</q><div class="who">— Ana &amp; Julian · Oct 2024</div></div>
+  </div>
+</section>
+<section class="tour" id="tour">
+  <div class="head"><div class="m">§ 04 · Book a tour</div><h2>The <em>tour</em> is by appointment.</h2></div>
+  <div class="tour-inner">
+    <form id="tForm" novalidate>
+      <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="d">Approximate wedding date</label><input id="d" name="date" type="text" placeholder="September 2027, or a season if you're not sure yet"></div>
+      <div class="field"><label for="g">Guest count</label><select id="g" name="guests"><option>40–80</option><option>80–140</option><option>140–200</option><option>Over 200</option></select></div>
+      <div class="field"><label for="note">A short note</label><textarea id="note" name="note" rows="3"></textarea></div>
+      <button type="submit">Send the RSVP →</button>
+      <p id="status" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">Halcyon Estate · Healdsburg, CA · A seed in the Automation Nation library · <a href="guide/">rebrand guide</a></footer>
+<script>
+(() => { const f = document.getElementById('tForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/halcyon';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.email){st.textContent='Name and email please.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'halcyon.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Received. The tour desk replies within one business day.';
+  });
+})();</script></body></html>

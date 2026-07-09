@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Northline Climate — Lakewood's heating & cooling family</title>
+<meta name="description" content="Furnaces, AC, ductless, and 24/7 emergency service. Second-generation, family-owned. Free estimates and a same-day guarantee.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2437;--cyan:#5cbde0;--brass:#c9955a;--cloud:#f0f4f7;--ash:#8996a1;--rule:rgba(15,36,55,.12);--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cloud);color:var(--navy);font-family:"Manrope",sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--navy);color:var(--cloud);padding:10px 14px;text-decoration:none;z-index:300}
+.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;background:rgba(240,244,247,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.chrome .brand{font-family:"DM Serif Display",serif;font-size:22px;display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
+.chrome .brand svg{width:26px;height:26px;color:var(--cyan)}
+.chrome nav{display:flex;gap:20px;align-items:center;font-size:13px}
+.chrome nav a{color:var(--navy);text-decoration:none;opacity:.7}
+.chrome nav a:hover,.chrome nav a:focus-visible{opacity:1;outline:none}
+.chrome .phone{padding:10px 18px;background:var(--cyan);color:var(--navy);border-radius:999px;font-weight:600;text-decoration:none}
+.season{background:var(--navy);color:var(--cloud);padding:10px 32px;text-align:center;font-size:13px;letter-spacing:.02em;position:relative;z-index:39;margin-top:65px}
+.season .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--cyan);margin-right:12px;box-shadow:0 0 12px var(--cyan);animation:p 2s ease-in-out infinite}
+@keyframes p{50%{opacity:.5}}
+.hero{position:relative;padding:80px 32px 100px;overflow:hidden;background:linear-gradient(180deg,var(--cloud),#e0eaf1)}
+.hero-inner{max-width:1400px;margin:0 auto;position:relative;z-index:2}
+.hero .kicker{color:var(--cyan);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.4em;text-transform:uppercase;margin-bottom:32px}
+.hero h1{font-family:"DM Serif Display",serif;font-size:clamp(56px,9vw,140px);line-height:.98;letter-spacing:-.02em;max-width:16ch;color:var(--navy)}
+.hero h1 em{color:var(--cyan);font-style:italic}
+.hero p{margin-top:36px;font-size:20px;line-height:1.55;max-width:56ch;color:rgba(15,36,55,.75)}
+.actions{margin-top:48px;display:flex;gap:16px;flex-wrap:wrap}
+.cta{padding:18px 30px;border-radius:999px;font-weight:600;font-size:14px;letter-spacing:.02em;text-decoration:none;transition:transform .3s var(--ease);border:1px solid transparent}
+.cta.primary{background:var(--navy);color:var(--cloud)}
+.cta.primary:hover,.cta.primary:focus-visible{transform:translateY(-2px);background:var(--cyan);color:var(--navy);outline:none}
+.cta.ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+.cta.ghost:hover{background:var(--navy);color:var(--cloud)}
+.wind{position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.5}
+.wind path{stroke:var(--cyan);stroke-width:1;fill:none;stroke-dasharray:8 12;animation:flow 4s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-40}}
+section{padding:120px 32px;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start}
+.head > .mono{color:var(--cyan);padding-top:20px;border-top:1px solid var(--cyan)}
+.head h2{font-family:"DM Serif Display",serif;font-size:clamp(36px,5vw,72px);line-height:1;letter-spacing:-.02em;max-width:20ch}
+.head h2 em{color:var(--cyan);font-style:italic}
+.svc-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.svc{background:#fff;padding:32px;border-radius:6px;border:1px solid var(--rule);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.svc:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(15,36,55,.08);border-color:var(--cyan)}
+.svc .icon{width:44px;height:44px;color:var(--cyan);margin-bottom:20px}
+.svc h3{font-family:"DM Serif Display",serif;font-size:24px;line-height:1.1;margin-bottom:10px}
+.svc p{color:var(--ash);font-size:14px;line-height:1.6}
+.plans{background:var(--navy);color:var(--cloud);border-top:0}
+.plans .head h2{color:var(--cloud)}
+.plans .head h2 em,.plans .head > .mono{color:var(--brass);border-top-color:var(--brass)}
+.plan-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.plan{padding:32px;border:1px solid rgba(240,244,247,.15);border-radius:6px;background:rgba(255,255,255,.02);position:relative}
+.plan.pop{border-color:var(--brass);background:linear-gradient(180deg,rgba(201,149,90,.08),transparent)}
+.plan .pop-tag{position:absolute;top:-12px;left:32px;background:var(--brass);color:var(--navy);padding:4px 12px;border-radius:999px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.plan h3{font-family:"DM Serif Display",serif;font-size:28px;line-height:1;margin-bottom:12px}
+.plan .price{font-family:"DM Serif Display",serif;font-size:44px;margin:20px 0 4px}
+.plan .per{color:rgba(240,244,247,.6);font-size:12px;margin-bottom:24px;letter-spacing:.06em}
+.plan ul{list-style:none;padding-top:20px;border-top:1px dashed rgba(240,244,247,.15)}
+.plan li{padding:6px 0;font-size:14px;color:rgba(240,244,247,.85)}
+.plan li::before{content:"› ";color:var(--brass)}
+.reviews{background:var(--cloud)}
+.rev-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev{background:#fff;padding:32px;border-radius:6px;border:1px solid var(--rule)}
+.rev q{font-family:"DM Serif Display",serif;font-size:19px;line-height:1.5;quotes:"“" "”";display:block;margin-bottom:20px}
+.rev .who{display:flex;justify-content:space-between;font-size:12px}
+.rev .name{font-weight:600}
+.rev .meta{color:var(--ash);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.15em}
+.book{background:var(--cyan);color:var(--navy)}
+.book .head h2 em,.book .head > .mono{color:var(--navy);border-top-color:var(--navy)}
+.book-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.book form{background:var(--cloud);padding:32px;border-radius:6px;display:flex;flex-direction:column;gap:16px}
+.book .field{display:flex;flex-direction:column;gap:6px}
+.book label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ash)}
+.book input,.book select,.book textarea{font-family:inherit;font-size:16px;padding:12px 14px;background:transparent;border:1px solid var(--rule);border-radius:3px;color:var(--navy)}
+.book input:focus,.book select:focus,.book textarea:focus{outline:none;border-color:var(--cyan)}
+.book textarea{min-height:80px;resize:vertical}
+.book .form-status{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;color:var(--navy)}
+.foot{background:var(--navy);color:var(--cloud);padding:60px 32px 24px}
+.foot-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(240,244,247,.15)}
+.foot-brand{font-family:"DM Serif Display",serif;font-size:22px}
+.foot-est{color:rgba(240,244,247,.55);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.2em;margin-top:6px;text-transform:uppercase}
+.foot-h{color:var(--brass);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:10px}
+.foot-col{font-size:14px;color:rgba(240,244,247,.82)}
+.foot-col a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(240,244,247,.2)}
+.foot-fine{max-width:1400px;margin:20px auto 0;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.2em;color:rgba(240,244,247,.35)}
+@media(max-width:900px){.chrome{padding:14px 20px}.chrome nav a:not(.phone){display:none}.season{margin-top:60px}.hero{padding:60px 20px 80px}.head{grid-template-columns:1fr;gap:16px}.svc-grid,.plan-grid,.rev-grid{grid-template-columns:1fr}.book-inner{grid-template-columns:1fr;gap:32px}.foot-inner{grid-template-columns:1fr}section{padding:80px 20px}}
+</style></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12 Q8 6 12 12 T20 12" stroke-linecap="round"/><path d="M4 17 Q8 11 12 17 T20 17" stroke-linecap="round" opacity=".6"/></svg>
+    Northline Climate
+  </a>
+  <nav>
+    <a href="#services">Services</a><a href="#plans">Plans</a><a href="#reviews">Reviews</a>
+    <a class="phone" href="tel:+12165550179" data-editable="brand.phone">216 · 555 · 0179</a>
+  </nav>
+</header>
+<div class="season" id="seasonBar"><span class="dot"></span><span id="seasonMsg">Loading local conditions…</span></div>
+<main id="main">
+<section class="hero" id="top">
+  <svg class="wind" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-50,180 C300,120 700,280 1200,140 S1700,220 1700,220"/><path d="M-50,340 C300,280 700,440 1200,300 S1700,380 1700,380" style="animation-delay:.6s"/>
+    <path d="M-50,540 C300,480 700,640 1200,500 S1700,580 1700,580" style="animation-delay:1.2s"/><path d="M-50,720 C300,660 700,820 1200,680 S1700,760 1700,760" style="animation-delay:1.8s"/>
+  </svg>
+  <div class="hero-inner">
+    <div class="kicker" data-editable="hero.kicker">Second generation · Family owned · Est. 1972</div>
+    <h1 data-editable="hero.headline">A house that <em>runs</em><br>ahead of the weather.</h1>
+    <p data-editable="hero.sub">Furnaces, AC, ductless, and 24/7 emergency service across Cuyahoga and Lake counties. If it's above 85° when you call before noon, a technician is on your street by dinner — or the service call is free.</p>
+    <div class="actions">
+      <a class="cta primary" href="#book">Book a technician →</a>
+      <a class="cta ghost" href="tel:+12165550179">Call 216 · 555 · 0179</a>
+    </div>
+  </div>
+</section>
+<section id="services">
+  <div class="head"><div class="mono">§ 01 · What we do</div><h2>Four services. <em>One truck.</em></h2></div>
+  <div class="svc-grid">
+    <div class="svc"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 v18"/><path d="M8 7 h8"/><path d="M6 11 h12"/><path d="M8 15 h8"/></svg><h3>Furnaces</h3><p>High-efficiency gas &amp; heat-pump installs, tune-ups, and repair. Same-day diagnostic on any furnace in Lakewood between October &amp; March.</p></div>
+    <div class="svc"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3 v18 M3 12 h18"/></svg><h3>Air conditioning</h3><p>Central AC replacement, spring commissioning, and refrigerant leak repair. We do not sell you a new system if a $180 capacitor fixes it.</p></div>
+    <div class="svc"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 12 h10"/></svg><h3>Ductless / mini-split</h3><p>Additions, sunrooms, garages, and detached studios. Mitsubishi elite installer, three-zone systems finished in a single day.</p></div>
+    <div class="svc"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 l3 6 6 1 -4.5 4.4 1 6.1 -5.5 -3 -5.5 3 1 -6.1 -4.5 -4.4 6 -1 z"/></svg><h3>24/7 emergency</h3><p>Real-person answers seven nights a week. If your heat is out below 40°, we roll a truck that hour.</p></div>
+  </div>
+</section>
+<section class="plans" id="plans">
+  <div class="head"><div class="mono">§ 02 · Membership</div><h2>Three tiers. <em>No auto-renew traps.</em></h2></div>
+  <div class="plan-grid">
+    <div class="plan"><h3>Essential</h3><div class="price">$14<span style="font-size:16px">/mo</span></div><div class="per">One tune-up per season</div><ul><li>Spring AC check</li><li>Fall furnace check</li><li>10% off repairs</li><li>Priority scheduling</li></ul></div>
+    <div class="plan pop"><div class="pop-tag">Most chosen</div><h3>Comfort</h3><div class="price">$24<span style="font-size:16px">/mo</span></div><div class="per">Two visits + no diagnostic fee</div><ul><li>Everything in Essential</li><li>Free diagnostic on any call</li><li>15% off repairs</li><li>Waived after-hours fees</li></ul></div>
+    <div class="plan"><h3>Whole-home</h3><div class="price">$44<span style="font-size:16px">/mo</span></div><div class="per">Includes water heater + dryer vent</div><ul><li>Everything in Comfort</li><li>Water heater flush</li><li>Dryer vent clean</li><li>20% off installs</li></ul></div>
+  </div>
+</section>
+<section class="reviews" id="reviews">
+  <div class="head"><div class="mono">§ 03 · Neighbors</div><h2>What Cuyahoga <em>actually</em> says.</h2></div>
+  <div class="rev-grid">
+    <div class="rev"><q>Called at 11 pm on a Sunday when the boiler dropped. Ashley answered, dispatched Ray, and we were warm again by 12:20. Never billed the after-hours line item — she just said "this is what we do."</q><div class="who"><span class="name">Priya D.</span><span class="meta">Waterbury · Feb 2025</span></div></div>
+    <div class="rev"><q>Three quotes on a heat pump swap. Northline was $600 more than the cheapest, and $1,200 less than the biggest brand in town. Two years in, quietest install we've ever had.</q><div class="who"><span class="name">Robert M.</span><span class="meta">Cove Ave. · Aug 2024</span></div></div>
+    <div class="rev"><q>The tech spent forty minutes explaining why we did NOT need a new furnace. Sold us a capacitor and a filter, then cleaned our return himself. That was three years ago.</q><div class="who"><span class="name">Casey &amp; Jorge V.</span><span class="meta">Franklin Blvd. · Jun 2023</span></div></div>
+  </div>
+</section>
+<section class="book" id="book">
+  <div class="head"><div class="mono">§ 04 · Book</div><h2>Free estimates. <em>No pressure.</em></h2></div>
+  <div class="book-inner">
+    <div><p style="font-size:19px;font-family:'DM Serif Display',serif;line-height:1.4;max-width:44ch">Fill out the form or call. A senior estimator answers. We hold your slot without a card on file — and if we can't help, we'll tell you who can.</p><ul style="margin-top:24px;list-style:none">
+      <li style="padding:8px 0;border-bottom:1px dashed rgba(15,36,55,.18)"><b>Response</b> — within 45 minutes, 7 AM to 9 PM</li>
+      <li style="padding:8px 0;border-bottom:1px dashed rgba(15,36,55,.18)"><b>Coverage</b> — Cuyahoga + Lake County</li>
+      <li style="padding:8px 0"><b>Emergency</b> — 24/7 through the same number</li>
+    </ul></div>
+    <form id="bookForm" novalidate>
+      <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="p">Phone</label><input id="p" name="phone" type="tel" autocomplete="tel" required></div>
+      <div class="field"><label for="i">What's going on?</label><select id="i" name="issue"><option>No heat</option><option>No cooling</option><option>Making a noise</option><option>Bill went up</option><option>New system quote</option><option>Something else</option></select></div>
+      <div class="field"><label for="d">Details</label><textarea id="d" name="details" rows="3" placeholder="Zip code + a sentence helps us dispatch the right truck."></textarea></div>
+      <button class="cta primary" type="submit">Book my visit →</button>
+      <p class="form-status mono" id="formStatus" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="foot-inner">
+    <div><div class="foot-brand">Northline Climate</div><div class="foot-est">Second generation · Est. 1972 · Lakewood, OH</div></div>
+    <div class="foot-col"><div class="foot-h">Reach us</div><a href="tel:+12165550179">216 · 555 · 0179</a><br><a href="mailto:hello@northlineclimate.com">hello@northlineclimate.com</a></div>
+    <div class="foot-col"><div class="foot-h">Hours</div>Mon–Sat · 7 AM–9 PM<br>Emergency · 24/7</div>
+    <div class="foot-col"><div class="foot-h">Coverage</div>Cuyahoga · Lake · Geauga<br><a href="/25-webgl-hero/guide/">Rebrand guide</a></div>
+  </div>
+  <div class="foot-fine">© MMXXVI Northline Climate · A seed in the Automation Nation library</div>
+</footer>
+<script>
+// Seasonal banner — reads from the visitor's clock
+(() => {
+  const el = document.getElementById('seasonMsg');
+  const now = new Date();
+  const m = now.getMonth();
+  const hr = now.getHours();
+  const day = now.toLocaleDateString('en-US',{weekday:'long'});
+  let msg;
+  if (m>=4 && m<=8) msg = `It's ${day} in Lakewood — schedule your AC tune-up before the weekend rush.`;
+  else if (m>=9 && m<=10) msg = `Furnace season is here. Free heater safety check when we service before Nov 15.`;
+  else if (m===11 || m<=1) msg = `Emergency heat calls answered within 45 minutes, ${hr<12?'this morning':'this afternoon'}.`;
+  else msg = `Spring is close. Book your AC commissioning by April 15 for priority scheduling.`;
+  el.textContent = msg;
+})();
+// Form submit
+(() => {
+  const form = document.getElementById('bookForm');
+  const status = document.getElementById('formStatus');
+  let webhook = 'https://services.leadconnectorhq.com/hooks/example/northline';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)webhook=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(form).entries());
+    if (!d.name || !d.phone){status.textContent='Name and phone please — the dispatcher needs both.';return}
+    status.textContent='Sending…';
+    try{await fetch(webhook,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'northline.web',at:new Date().toISOString()})})}catch(_){}
+    form.reset(); status.textContent='Received. Ashley calls within 45 minutes.';
+  });
+})();
+</script></body></html>

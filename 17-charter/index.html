@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meridian Charters — Private Jet & Yacht Charter</title>
+<meta name="description" content="A global private charter brokerage. Jet cards, ad-hoc charters, yacht bookings across four regions.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,ital@9..144,300..700,0..1&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1a2c;--offwhite:#f0eee8;--silver:#c5cad0;--gold:#b28a4b;--glass:rgba(255,255,255,.06);--rule:rgba(240,238,232,.14);--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--offwhite);font-family:"IBM Plex Sans",sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--silver)}
+.skip{position:absolute;left:-9999px;background:var(--gold);color:var(--navy);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;background:rgba(13,26,44,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.chrome .brand{font-family:"Fraunces",serif;font-variation-settings:"opsz" 32,"wght" 500;font-size:22px;letter-spacing:-.005em;color:var(--offwhite);text-decoration:none;display:flex;gap:10px;align-items:center}
+.chrome .brand svg{width:22px;height:22px;color:var(--gold)}
+.chrome nav{display:flex;gap:22px;align-items:center;font-size:12px;letter-spacing:.02em}
+.chrome nav a{color:var(--offwhite);text-decoration:none;opacity:.75}
+.chrome nav a:hover{opacity:1}
+.chrome .cta-h{background:var(--gold);color:var(--navy);padding:10px 18px;letter-spacing:.02em;font-weight:500}
+.hero{padding:90px 0 0 0;position:relative;min-height:88vh}
+.hero canvas{position:absolute;inset:0;z-index:0;width:100%;height:100%;display:block}
+.hero-inner{position:relative;z-index:2;max-width:1600px;margin:0 auto;padding:80px 40px}
+.kicker{color:var(--gold);letter-spacing:.4em;font-size:11px;text-transform:uppercase;margin-bottom:32px}
+h1{font-family:"Fraunces",serif;font-size:clamp(56px,8vw,140px);line-height:.96;font-variation-settings:"opsz" 144,"wght" 400;letter-spacing:-.02em;max-width:16ch}
+h1 em{font-style:italic;color:var(--gold);font-variation-settings:"opsz" 144,"wght" 400,"ital" 1}
+.hero-sub{margin-top:32px;font-size:19px;line-height:1.55;max-width:52ch;color:rgba(240,238,232,.75)}
+.hero .actions{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.cta{padding:16px 28px;font-family:"IBM Plex Sans",sans-serif;font-size:14px;letter-spacing:.02em;text-decoration:none;font-weight:500;transition:transform .35s var(--ease);display:inline-block}
+.cta.p{background:var(--gold);color:var(--navy)}
+.cta.p:hover{transform:translateY(-2px);background:#9a742f}
+.cta.g{background:transparent;color:var(--offwhite);border:1px solid var(--offwhite)}
+.cta.g:hover{background:var(--offwhite);color:var(--navy);transform:translateY(-2px)}
+.ticker{position:absolute;left:0;right:0;bottom:0;z-index:2;background:rgba(13,26,44,.7);border-top:1px solid var(--rule);padding:14px 0;overflow:hidden}
+.ticker-inner{display:flex;gap:60px;white-space:nowrap;animation:mm 45s linear infinite;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.15em;color:var(--silver)}
+.ticker-inner b{color:var(--gold)}
+@keyframes mm{to{transform:translateX(-50%)}}
+section{padding:120px 40px;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start}
+.head>.mono{color:var(--gold);padding-top:20px;border-top:1px solid var(--gold)}
+.head h2{font-family:"Fraunces",serif;font-size:clamp(36px,5vw,72px);line-height:1;font-variation-settings:"opsz" 96,"wght" 400;letter-spacing:-.02em;max-width:20ch}
+.head h2 em{font-style:italic;color:var(--gold);font-variation-settings:"opsz" 96,"wght" 400,"ital" 1}
+.fleet{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.fleet>div{padding:32px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background-color .35s var(--ease)}
+.fleet>div:hover{background:var(--glass)}
+.fleet .cat{color:var(--gold);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:20px}
+.fleet h3{font-family:"Fraunces",serif;font-size:26px;line-height:1.15;font-variation-settings:"opsz" 32,"wght" 500;margin-bottom:8px}
+.fleet .m{color:var(--silver);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em}
+.fleet p{margin-top:20px;color:rgba(240,238,232,.7);font-size:14px;line-height:1.6}
+.routes{background:rgba(255,255,255,.02)}
+.routes-list{max-width:1200px;margin:0 auto}
+.route{display:grid;grid-template-columns:1fr 200px 120px 100px;gap:24px;padding:24px 0;border-bottom:1px solid var(--rule);align-items:center;font-family:"IBM Plex Mono",monospace}
+.route .pair{font-family:"Fraunces",serif;font-size:22px;font-variation-settings:"opsz" 24,"wght" 500;color:var(--offwhite);letter-spacing:-.005em}
+.route .pair em{font-style:italic;color:var(--gold)}
+.route .m{color:var(--silver);font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+.contact{background:var(--offwhite);color:var(--navy)}
+.contact .head h2{color:var(--navy)}
+.contact .head h2 em,.contact .head>.mono{color:var(--navy);border-top-color:var(--navy)}
+.contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact form{background:var(--navy);color:var(--offwhite);padding:32px;display:flex;flex-direction:column;gap:16px}
+.contact .field{display:flex;flex-direction:column;gap:6px}
+.contact label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--silver)}
+.contact input,.contact select,.contact textarea{font:inherit;font-family:"IBM Plex Sans",sans-serif;font-size:16px;padding:12px 14px;background:transparent;border:1px solid var(--rule);color:var(--offwhite)}
+.contact input:focus,.contact select:focus,.contact textarea:focus{outline:none;border-color:var(--gold)}
+.foot{background:var(--navy);color:var(--silver);padding:40px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;border-top:1px solid var(--rule)}
+@media(max-width:900px){.chrome{padding:14px 20px}.chrome nav a:not(.cta-h){display:none}.hero-inner{padding:60px 20px}.head{grid-template-columns:1fr;gap:16px}.fleet{grid-template-columns:1fr}.route{grid-template-columns:1fr auto;gap:8px}.route>*:nth-child(2){display:none}.contact-inner{grid-template-columns:1fr;gap:32px}section{padding:80px 20px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12 h20 M12 2 a15 15 0 0 1 0 20 M12 2 a15 15 0 0 0 0 20"/></svg>
+    Meridian Charters
+  </a>
+  <nav>
+    <a href="#fleet">Fleet</a><a href="#routes">Routes</a><a href="#concierge">Concierge</a>
+    <a class="cta-h" href="#contact">Request quote</a>
+  </nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <canvas id="map" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <div class="kicker" data-editable="hero.kicker">Global · 24/7 · Est. 2011 · SFO · MIA · ZRH · SIN</div>
+    <h1 data-editable="hero.headline">Wheels-up in <em>four hours</em><br>from most cities.</h1>
+    <p class="hero-sub" data-editable="hero.sub">A private charter brokerage staffed by former line pilots and superyacht captains. We source the aircraft or vessel, negotiate the price, and stay on the concierge line from first pickup to last disembark.</p>
+    <div class="actions">
+      <a class="cta p" href="#contact">Request a quote →</a>
+      <a class="cta g" href="tel:+14155550192">+1 415 · 555 · 0192</a>
+    </div>
+  </div>
+  <div class="ticker"><div class="ticker-inner">
+    <span><b>Fleet status</b> — Global 6000 · SFO · <b>positioning</b></span><span>·</span>
+    <span>Praetor 500 · MIA · <b>available</b></span><span>·</span>
+    <span>Falcon 8X · ZRH · <b>on charter</b></span><span>·</span>
+    <span>Legacy 500 · SIN · <b>available</b></span><span>·</span>
+    <span>M/Y "Halcyon" 34m · Antibes · <b>booked to Jul 22</b></span><span>·</span>
+    <span>Citation X · SFO · <b>on charter</b></span><span>·</span>
+    <span>Global 6000 · SFO · <b>positioning</b></span><span>·</span>
+    <span>Praetor 500 · MIA · <b>available</b></span><span>·</span>
+    <span>Falcon 8X · ZRH · <b>on charter</b></span><span>·</span>
+    <span>Legacy 500 · SIN · <b>available</b></span><span>·</span>
+    <span>M/Y "Halcyon" 34m · Antibes · <b>booked to Jul 22</b></span><span>·</span>
+    <span>Citation X · SFO · <b>on charter</b></span><span>·</span>
+  </div></div>
+</section>
+<section id="fleet">
+  <div class="head"><div class="mono">§ 01 · Fleet</div><h2>Six categories. <em>One broker.</em></h2></div>
+  <div class="fleet">
+    <div><div class="cat">Light jet</div><h3>Citation CJ4 · Phenom 300</h3><div class="m">Range · 2,000 nm · seats 6–8</div><p>Regional pairs — SFO/LAS, MIA/CHS, ZRH/NCE. Wheels-up in 4 hours from most bases.</p></div>
+    <div><div class="cat">Midsize</div><h3>Praetor 500 · Learjet 60</h3><div class="m">Range · 3,300 nm · seats 8–9</div><p>Cross-country US, intra-Europe, standing charter contracts for our jet-card holders.</p></div>
+    <div><div class="cat">Super-mid</div><h3>Legacy 500 · Falcon 8X</h3><div class="m">Range · 4,200–6,450 nm · seats 8–14</div><p>Transatlantic, transpacific with one tech stop. Preferred for delegation travel.</p></div>
+    <div><div class="cat">Heavy</div><h3>Global 6000 · Gulfstream G650</h3><div class="m">Range · 6,000–7,000 nm · seats 13–19</div><p>Nonstop transpacific. Available with a permanent cabin crew on request.</p></div>
+    <div><div class="cat">Motor yacht</div><h3>28m–42m fleet</h3><div class="m">Med · Caribbean · Adriatic</div><p>Weekly charters, staffed. Captains average 14 years at the helm. Provisioning at first call.</p></div>
+    <div><div class="cat">Sail</div><h3>26m–34m sailing yachts</h3><div class="m">Med · Ionian · BVI</div><p>Fully-crewed. Charter cook, provisioning, and a hostess on every booking above 40 nm distance.</p></div>
+  </div>
+</section>
+<section id="routes" class="routes">
+  <div class="head"><div class="mono">§ 02 · Standing pairs</div><h2>Our <em>most-flown</em> pairs.</h2></div>
+  <div class="routes-list">
+    <div class="route"><div class="pair">SFO <em>→</em> ASE</div><div class="m">Global 6000 · 2h 45m</div><div class="m">Weekly · Dec–Mar</div><a href="#contact" class="m" style="color:var(--gold);text-decoration:none;letter-spacing:.24em">Quote →</a></div>
+    <div class="route"><div class="pair">TEB <em>→</em> LSGG</div><div class="m">Falcon 8X · 6h 40m</div><div class="m">Weekly · biz travel</div><a href="#contact" class="m" style="color:var(--gold);text-decoration:none;letter-spacing:.24em">Quote →</a></div>
+    <div class="route"><div class="pair">MIA <em>→</em> AGO</div><div class="m">Praetor 500 · 2h 15m</div><div class="m">Monthly · winter</div><a href="#contact" class="m" style="color:var(--gold);text-decoration:none;letter-spacing:.24em">Quote →</a></div>
+    <div class="route"><div class="pair">ZRH <em>→</em> LFMN</div><div class="m">Citation CJ4 · 1h 05m</div><div class="m">Weekly · Cannes</div><a href="#contact" class="m" style="color:var(--gold);text-decoration:none;letter-spacing:.24em">Quote →</a></div>
+    <div class="route"><div class="pair">SIN <em>→</em> WBGG</div><div class="m">Legacy 500 · 1h 55m</div><div class="m">Weekly · corporate</div><a href="#contact" class="m" style="color:var(--gold);text-decoration:none;letter-spacing:.24em">Quote →</a></div>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="head"><div class="mono">§ 03 · Concierge</div><h2>A quote in <em>ninety</em> minutes.</h2></div>
+  <div class="contact-inner">
+    <div><p style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 22,'wght' 350;font-size:20px;line-height:1.55;max-width:44ch">A senior broker replies with three options, priced, within ninety minutes during operating hours. Outside them, the on-call concierge answers within twenty. There is no automated quoting engine.</p><p style="margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.15em;color:rgba(13,26,44,.65)">24 / 7 · concierge@meridiancharters.co · +1 415 · 555 · 0192</p></div>
+    <form id="cForm" novalidate>
+      <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email or number</label><input id="e" name="contact" type="text" autocomplete="email" required></div>
+      <div class="field"><label for="t">What are we sourcing?</label><select id="t" name="type"><option>Light / mid jet · one-way</option><option>Light / mid jet · return</option><option>Super-mid / heavy · long-haul</option><option>Yacht · weekly charter</option><option>Not sure — advise</option></select></div>
+      <div class="field"><label for="d">Route / dates</label><textarea id="d" name="brief" rows="3" placeholder="From, to, dates, party size."></textarea></div>
+      <button class="cta p" type="submit" style="border:0;cursor:pointer;font-family:inherit">Send to concierge →</button>
+      <p id="status" style="font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">Meridian Charters · SFO · MIA · ZRH · SIN · A seed in the Automation Nation library · <a href="guide/" style="color:inherit;border-bottom:1px solid currentColor">rebrand guide</a></footer>
+<script>
+// Canvas world map with pulsing route arcs
+(() => {
+  const c = document.getElementById('map'); const g = c.getContext('2d'); let W, H;
+  const dpr = Math.min(2, devicePixelRatio || 1);
+  const resize = () => { const rect = c.getBoundingClientRect(); W = c.width = rect.width * dpr; H = c.height = rect.height * dpr; };
+  resize(); addEventListener('resize', resize);
+  // very rough dot-map of continents (fake ~random-looking blobs)
+  const dots = [];
+  for (let i=0;i<450;i++) dots.push({ x: Math.random(), y: Math.random(), s: Math.random()*1.6+.4 });
+  // Route arcs (city-city pairs as fake normalized coords)
+  const routes = [
+    { a:{x:.15,y:.4}, b:{x:.85,y:.45}, phase: 0 },
+    { a:{x:.18,y:.55}, b:{x:.5,y:.3}, phase: .3 },
+    { a:{x:.72,y:.35}, b:{x:.9,y:.55}, phase: .6 },
+    { a:{x:.3,y:.6}, b:{x:.8,y:.7}, phase: 1.1 },
+  ];
+  let t = 0;
+  const draw = () => {
+    t += .01;
+    g.fillStyle = '#0d1a2c'; g.fillRect(0,0,W,H);
+    // continents (dot-map)
+    g.fillStyle = 'rgba(197,202,208,.28)';
+    for (const d of dots) {
+      const x = d.x*W, y = (.25 + d.y*.55)*H;
+      // simple continent gate — only draw dots in a rough shape
+      const in1 = (d.x>.1 && d.x<.32 && d.y>.15 && d.y<.85);
+      const in2 = (d.x>.42 && d.x<.6 && d.y>.15 && d.y<.75 && !(d.x>.48 && d.x<.55 && d.y>.5 && d.y<.7));
+      const in3 = (d.x>.62 && d.x<.92 && d.y>.15 && d.y<.6);
+      if (in1||in2||in3) { g.beginPath(); g.arc(x, y, d.s*dpr, 0, Math.PI*2); g.fill(); }
+    }
+    // Route arcs
+    for (const r of routes) {
+      const ax = r.a.x*W, ay = r.a.y*H, bx = r.b.x*W, by = r.b.y*H;
+      const mx = (ax+bx)/2, my = (ay+by)/2 - 100*dpr;
+      // static arc dim
+      g.strokeStyle = 'rgba(178,138,75,.25)'; g.lineWidth = 1*dpr; g.beginPath(); g.moveTo(ax,ay); g.quadraticCurveTo(mx,my,bx,by); g.stroke();
+      // traveling dashed segment
+      const p = ((t + r.phase) % 1);
+      const px = (1-p)*(1-p)*ax + 2*(1-p)*p*mx + p*p*bx;
+      const py = (1-p)*(1-p)*ay + 2*(1-p)*p*my + p*p*by;
+      g.fillStyle = '#b28a4b'; g.beginPath(); g.arc(px, py, 3*dpr, 0, Math.PI*2); g.fill();
+      // node dots
+      g.fillStyle = '#b28a4b';
+      [[ax,ay],[bx,by]].forEach(([x,y]) => { g.beginPath(); g.arc(x,y,3*dpr,0,Math.PI*2); g.fill(); const gl = 6*dpr; g.strokeStyle='rgba(178,138,75,.4)'; g.beginPath(); g.arc(x,y,gl,0,Math.PI*2); g.stroke(); });
+    }
+    requestAnimationFrame(draw);
+  };
+  draw();
+})();
+// Form
+(() => { const f = document.getElementById('cForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/meridian-charters';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.contact){st.textContent='Name and a way to reach you please.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'meridian-charters.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Received. Concierge replies within ninety minutes.';
+  });
+})();</script></body></html>

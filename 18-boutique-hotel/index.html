@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Larkspur — Boutique Hotel, San Francisco</title>
+<meta name="description" content="An eighteen-room boutique hotel on Nob Hill. Restaurant + rooftop bar.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Söhne:wght@400;500&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f0e5d4;--ink:#141210;--terracotta:#c46a4a;--sage:#7a8f6d;--gold:#c9a45c;--rule:rgba(20,18,16,.14);--ease:cubic-bezier(.2,.9,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:"Söhne",sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Fraunces",serif}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.skip{position:absolute;left:-9999px;background:var(--terracotta);color:var(--cream);padding:10px 14px;text-decoration:none;z-index:300}.skip:focus{left:16px;top:16px}
+.chrome{position:fixed;inset:0 0 auto 0;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;z-index:40;color:var(--cream);mix-blend-mode:difference}
+.chrome .brand{font-family:"Fraunces",serif;font-variation-settings:"opsz" 32,"wght" 500;font-size:24px;color:inherit;text-decoration:none;letter-spacing:.01em}
+.chrome nav{display:flex;gap:22px;font-size:12px;letter-spacing:.02em}
+.chrome nav a{color:inherit;text-decoration:none;opacity:.85}
+.chrome nav a:hover{opacity:1}
+.hero{position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:flex-end}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.03);animation:pan 16s var(--ease) forwards}
+@keyframes pan{to{transform:scale(1) translateX(-1%)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.35) 0%,transparent 35%,transparent 55%,rgba(20,18,16,.85) 100%)}
+.hero-inner{position:relative;z-index:2;padding:80px 40px 100px;max-width:1400px;margin:0 auto;color:var(--cream)}
+.kicker{color:var(--gold);letter-spacing:.5em;font-size:11px;text-transform:uppercase;margin-bottom:28px;font-family:"IBM Plex Mono",monospace}
+h1{font-family:"Fraunces",serif;font-size:clamp(56px,10vw,180px);line-height:.9;font-variation-settings:"opsz" 144,"wght" 500;letter-spacing:-.02em}
+h1 em{font-family:"Fraunces",serif;font-style:italic;color:var(--gold);font-variation-settings:"opsz" 144,"wght" 400}
+.hero-sub{margin-top:32px;font-family:"Fraunces",serif;font-size:22px;line-height:1.5;max-width:52ch;color:rgba(240,229,212,.85);font-variation-settings:"opsz" 22,"wght" 400}
+.avail{margin-top:40px;padding:16px 24px;background:rgba(240,229,212,.1);border:1px solid rgba(240,229,212,.24);display:flex;gap:24px;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+.avail b{color:var(--gold)}
+.hero-actions{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap}
+.cta{padding:16px 28px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;transition:transform .35s var(--ease);display:inline-block;font-family:"IBM Plex Mono",monospace;border:1px solid transparent}
+.cta.p{background:var(--gold);color:var(--ink)}
+.cta.p:hover{transform:translateY(-2px);background:var(--cream)}
+.cta.g{background:transparent;color:var(--cream);border-color:var(--cream)}
+.cta.g:hover{background:var(--cream);color:var(--ink);transform:translateY(-2px)}
+section{padding:120px 32px;border-top:1px solid var(--rule)}
+.head{max-width:1400px;margin:0 auto 60px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start}
+.head>.mono{color:var(--terracotta);padding-top:20px;border-top:1px solid var(--terracotta)}
+.head h2{font-family:"Fraunces",serif;font-size:clamp(36px,5vw,80px);line-height:1;font-variation-settings:"opsz" 96,"wght" 500;letter-spacing:-.02em;max-width:22ch}
+.head h2 em{font-style:italic;color:var(--terracotta);font-variation-settings:"opsz" 96,"wght" 400}
+.rooms{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.room{border:1px solid var(--rule);background:#fff;overflow:hidden;transition:transform .5s var(--ease)}
+.room:hover{transform:translateY(-6px)}
+.room img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.room .body{padding:24px}
+.room .n{color:var(--terracotta);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:8px}
+.room h3{font-family:"Fraunces",serif;font-size:26px;line-height:1.1;font-variation-settings:"opsz" 32,"wght" 500;letter-spacing:-.01em;margin-bottom:6px}
+.room h3 em{font-style:italic;color:var(--terracotta);font-variation-settings:"opsz" 32,"wght" 400}
+.room .m{color:var(--ink);opacity:.6;font-size:13px}
+.room .p{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;color:var(--terracotta)}
+.venue{background:var(--ink);color:var(--cream)}
+.venue .head h2{color:var(--cream)}
+.venue .head h2 em,.venue .head>.mono{color:var(--gold);border-top-color:var(--gold)}
+.venue-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.venue-inner img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.venue-inner h3{font-family:"Fraunces",serif;font-size:44px;line-height:1;font-variation-settings:"opsz" 64,"wght" 500;margin-bottom:16px}
+.venue-inner h3 em{font-style:italic;color:var(--gold);font-variation-settings:"opsz" 64,"wght" 400}
+.venue-inner p{font-family:"Fraunces",serif;font-size:19px;line-height:1.55;color:rgba(240,229,212,.75);margin-bottom:1em;max-width:44ch}
+.book-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.book-inner p{font-family:"Fraunces",serif;font-size:22px;line-height:1.5;max-width:36ch;font-variation-settings:"opsz" 22,"wght" 400}
+form{background:#fff;padding:32px;display:flex;flex-direction:column;gap:16px;border:1px solid var(--rule)}
+.field{display:flex;flex-direction:column;gap:6px}
+label{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);opacity:.6}
+input,select,textarea{font:inherit;font-family:"Fraunces",serif;font-size:18px;padding:12px 14px;background:transparent;border:0;border-bottom:1px solid var(--rule);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--terracotta)}
+button{padding:16px 24px;background:var(--terracotta);color:var(--cream);border:0;font:inherit;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
+.foot{background:var(--ink);color:var(--cream);padding:40px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(240,229,212,.55)}
+.foot a{color:var(--gold);text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:900px){.chrome{padding:14px 20px}.chrome nav a{font-size:11px}.hero-inner{padding:60px 20px 80px}.head{grid-template-columns:1fr;gap:16px}.rooms{grid-template-columns:1fr}.venue-inner,.book-inner{grid-template-columns:1fr;gap:32px}section{padding:80px 20px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="chrome">
+  <a href="#top" class="brand" data-editable="brand.name">The Larkspur</a>
+  <nav><a href="#rooms">Rooms</a><a href="#restaurant">Restaurant</a><a href="#rooftop">Rooftop</a><a href="#book">Book a stay</a></nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <img src="assets/hero.webp" alt="Warm brick facade of a four-story boutique hotel at dusk, arched windows glowing amber, wet cobblestone street." fetchpriority="high">
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <div class="kicker" data-editable="hero.kicker">Nob Hill · Sutter Street · San Francisco</div>
+    <h1 data-editable="hero.headline">Eighteen <em>rooms.</em> <br>One rooftop <em>bar.</em></h1>
+    <p class="hero-sub" data-editable="hero.sub">A boutique hotel on the last quiet block of Sutter Street. Eighteen rooms in a restored 1911 mercantile building, a chef-driven restaurant on the ground floor, and a rooftop bar that serves neighbors as often as guests.</p>
+    <div class="avail">
+      <span>Tonight · <b>$486</b> · 4 rooms available</span><span>·</span>
+      <span>Restaurant · <b>seating at 8:30</b></span><span>·</span>
+      <span>Rooftop · <b>open, no wait</b></span>
+    </div>
+    <div class="hero-actions"><a class="cta p" href="#book">Book a stay →</a><a class="cta g" href="#restaurant">Reserve dinner</a></div>
+  </div>
+</section>
+<section id="rooms">
+  <div class="head"><div class="mono">§ 01 · Rooms</div><h2>Three <em>categories</em>. Eighteen rooms.</h2></div>
+  <div class="rooms">
+    <div class="room"><img src="assets/room.webp" alt="Warm cream limewashed walls, a low modern beige linen bed, brass sconce, arched window with linen curtain." loading="lazy"><div class="body"><div class="n">Room type · King</div><h3>The <em>Standard</em> King</h3><div class="m">330 sq ft · 12 rooms</div><div class="p">from $386 / night</div></div></div>
+    <div class="room"><img src="assets/room.webp" alt="A larger corner suite version of the standard room." loading="lazy"><div class="body"><div class="n">Room type · Corner</div><h3>The <em>Corner</em> Suite</h3><div class="m">460 sq ft · 4 rooms · sitting area</div><div class="p">from $524 / night</div></div></div>
+    <div class="room"><img src="assets/room.webp" alt="The largest suite with a full sitting room and a private terrace." loading="lazy"><div class="body"><div class="n">Room type · Terrace</div><h3>The <em>Terrace</em> Suite</h3><div class="m">640 sq ft · 2 rooms · private terrace</div><div class="p">from $872 / night</div></div></div>
+  </div>
+</section>
+<section class="venue" id="restaurant">
+  <div class="venue-inner">
+    <div>
+      <div class="mono" style="color:var(--gold);margin-bottom:20px">§ 02 · Restaurant</div>
+      <h3>Sutter, <em>on the ground floor.</em></h3>
+      <p>An open-kitchen counter with fourteen seats and a bar with twenty, serving a rolling menu of California produce and a wine list weighted toward the North Coast. Reservations open thirty days in advance.</p>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-top:24px">Wed–Sun · 5:30–10 PM · guests + neighbors</p>
+    </div>
+    <div><img src="assets/bar.webp" alt="A warm brass hotel bar with a bartender pouring a drink, low leather stools, and a blurred city skyline behind."></div>
+  </div>
+</section>
+<section class="venue" id="rooftop">
+  <div class="venue-inner" style="grid-template-columns:1fr 1fr">
+    <div><img src="assets/bar.webp" alt="A cozy warm-lit rooftop bar at dusk, bistro lights, city skyline behind."></div>
+    <div>
+      <div class="mono" style="color:var(--gold);margin-bottom:20px">§ 03 · Rooftop</div>
+      <h3>The <em>Rooftop</em>, five stories up.</h3>
+      <p>A small covered rooftop with heaters, string lights, and a curved brass bar. Drinks and small plates. Guests take the elevator; neighbors take the alley door.</p>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-top:24px">Thu–Sun · 4–11 PM · open to all</p>
+    </div>
+  </div>
+</section>
+<section id="book">
+  <div class="head"><div class="mono">§ 04 · Book</div><h2>Book a stay.</h2></div>
+  <div class="book-inner">
+    <div><p>Fill this out and reception replies within one business day. If tonight is what you need, call — someone answers between 7 AM and midnight, PT.</p></div>
+    <form id="bForm" novalidate>
+      <div class="field"><label for="n">Your name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="d">Dates</label><input id="d" name="dates" type="text" placeholder="e.g. Sept 20 → 23 or a season"></div>
+      <div class="field"><label for="r">Room type</label><select id="r" name="room"><option>Standard King</option><option>Corner Suite</option><option>Terrace Suite</option><option>Not sure — advise</option></select></div>
+      <button type="submit">Request stay →</button>
+      <p id="status" style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--terracotta)" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot">The Larkspur · Sutter Street · San Francisco · A seed in the Automation Nation library · <a href="guide/">rebrand guide</a></footer>
+<script>
+(() => { const f = document.getElementById('bForm'); const st = document.getElementById('status');
+  let w = 'https://services.leadconnectorhq.com/hooks/example/larkspur';
+  fetch('brand.json').then(r=>r.ok?r.json():null).then(b=>{if(b?.FORM_WEBHOOK_URL)w=b.FORM_WEBHOOK_URL}).catch(()=>{});
+  f.addEventListener('submit', async e => { e.preventDefault(); const d=Object.fromEntries(new FormData(f).entries());
+    if(!d.name||!d.email){st.textContent='Name and email please.';return}
+    st.textContent='Sending…';
+    try{await fetch(w,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({...d,source:'larkspur.web',at:new Date().toISOString()})})}catch(_){}
+    f.reset(); st.textContent='Received. Reception replies within one business day.';
+  });
+})();</script></body></html>
