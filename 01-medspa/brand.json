@@ -1,0 +1,35 @@
+{
+  "brand": "Lumen Aesthetics",
+  "tagline": "We work in afternoon light, on skin that has been listened to.",
+  "concept": "Editorial-quality med spa built around one large window-lit portrait, an ink-underlining treatment menu, and a first-visit intake form written like a letter.",
+  "phone": "(628) 555-0142",
+  "phoneDisplay": "628 · 555 · 0142",
+  "email": "hello@lumenaesthetics.co",
+  "address": {
+    "line1": "1108 Sacramento St., Studio 3",
+    "city": "San Francisco, CA 94108"
+  },
+  "hours": {
+    "wed": "11 AM – 7 PM",
+    "thu": "11 AM – 7 PM",
+    "fri": "11 AM – 6 PM",
+    "sat": "10 AM – 4 PM"
+  },
+  "palette": {
+    "bone": "#f5efe6",
+    "ink": "#1a1614",
+    "warm": "#c89a70",
+    "rose": "#e8c7be",
+    "dim": "#8a7f6d"
+  },
+  "logoPath": "assets/logo.svg",
+  "heroImage": "assets/hero-portrait.webp",
+  "social": {
+    "instagram": "@lumen.aesthetics"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/lumen",
+  "meta": {
+    "title": "Lumen Aesthetics — An editorial med spa in San Francisco",
+    "description": "A small, quiet, afternoon-light med spa on Nob Hill. Botox, filler, microneedling, and skin studies — by consultation, by appointment, by a practitioner who runs on time."
+  }
+}

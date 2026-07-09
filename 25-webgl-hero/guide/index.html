@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fold — Rebrand guide</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300..600&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#0a0a0b; --fg:#efe9d9; --dim:#7a746c; --gold:#c9a353; }
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; background: var(--bg); color: var(--fg); font-family:"Fraunces",serif; line-height:1.65; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 80px 32px 120px; }
+h1 { font-size: clamp(40px, 6vw, 72px); font-style: italic; letter-spacing:-.02em; margin-bottom: 16px; }
+h2 { font-size: 22px; letter-spacing:.02em; margin: 48px 0 12px; color: var(--gold); font-style: italic; }
+p { margin: 0 0 1em; max-width: 62ch; }
+code, pre { font-family: "JetBrains Mono", monospace; font-size: 13px; background: rgba(255,255,255,.05); padding: 2px 6px; border-radius: 3px; }
+pre { padding: 16px; overflow-x: auto; }
+.meta { font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color: var(--dim); margin-bottom:24px; }
+.back { display:inline-block; margin-top: 32px; color: var(--gold); text-decoration:none; border-bottom: 1px solid; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="meta">Rebrand Guide · Site 25 · Showpiece</div>
+  <h1>Fold — Shader Study</h1>
+  <p>A raymarched liquid-metal WebGL hero. Zero generated assets. Portable — one HTML, one CSS, one JS.</p>
+
+  <h2>Concept</h2>
+  <p>The full-viewport hero is a signed-distance-field metal blob evaluated per pixel in a single fragment shader. Cursor position feeds displacement; idle time (≥3s no cursor movement) increases displacement so the metal appears to "breathe."</p>
+
+  <h2>Files that hold this site together</h2>
+  <ul>
+    <li><code>brand.json</code> — brand tokens, palette, contact.</li>
+    <li><code>index.html</code> — copy blocks marked <code>data-editable="hero.headline"</code> etc.</li>
+    <li><code>styles.css</code> — palette bound to <code>--void</code>, <code>--bone</code>, <code>--mercury</code>, <code>--gold</code>, <code>--dim</code>. All motion easing declared once at the top.</li>
+    <li><code>app.js</code> — WebGL 1.0. Fragment shader lives inline as a template string. To rebrand, change the three color vec3s near the bottom of <code>main()</code>: <code>mercury</code>, <code>bone</code>, <code>gold</code>.</li>
+  </ul>
+
+  <h2>Rebrand in 15 minutes</h2>
+  <ol>
+    <li>Edit <code>brand.json</code> — brand name, tagline, email, palette.</li>
+    <li>Update the five CSS custom properties in <code>styles.css :root</code> to match.</li>
+    <li>Update the three <code>vec3</code>s in <code>app.js</code> — <code>mercury</code>, <code>bone</code>, <code>gold</code> — to the same palette.</li>
+    <li>Rewrite text in the <code>data-editable</code> blocks: <code>hero.headline</code>, <code>hero.sub</code>, <code>study.lead</code>, <code>study.body</code>, <code>studio.about</code>.</li>
+    <li>Point the mailto link and footer to the new email.</li>
+  </ol>
+
+  <h2>Signature techniques</h2>
+  <ul>
+    <li><strong>Fresnel-Schlick</strong> rim on the SDF for a warm bone-over-mercury metal look.</li>
+    <li><strong>FBM displacement</strong> driven by <code>u_mouse</code>, <code>u_time</code>, and an <code>u_idle</code> ramp.</li>
+    <li><strong>Vignette + tone-map + gamma</strong> for cinematic finish.</li>
+    <li><strong>Reduced motion</strong> — respects <code>prefers-reduced-motion</code>: time freezes, one static frame.</li>
+  </ul>
+
+  <h2>Iteration log</h2>
+  <ul>
+    <li><strong>Pass 1 — Build.</strong> Full site scaffold, shader compiled, three sections.</li>
+    <li><strong>Pass 2 — Critique.</strong> Screenshot at 1440 + 390; corrected hero padding on mobile and headline max-width so it doesn't touch the safe area on 390px viewports.</li>
+    <li><strong>Pass 3 — Elevate.</strong> Added the "Pause the metal" affordance + idle-breathing behaviour + gold rim Fresnel term for a more expensive-looking highlight.</li>
+  </ul>
+  <a class="back" href="../">← Return to site</a>
+</div>
+</body>
+</html>

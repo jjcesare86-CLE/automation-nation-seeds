@@ -1,0 +1,25 @@
+{
+  "brand": "Fold",
+  "tagline": "A shader study by an anonymous studio",
+  "concept": "Raymarched liquid metal, cursor-reactive",
+  "phone": "",
+  "email": "hello@fold.studio",
+  "address": "",
+  "palette": {
+    "void": "#000000",
+    "bone": "#efe9d9",
+    "mercury": "#c2c5cc",
+    "gold": "#c9a353",
+    "dim": "#78766f"
+  },
+  "logoPath": "assets/logo.svg",
+  "heroImage": null,
+  "social": {
+    "instagram": "@fold.studio"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/fold",
+  "meta": {
+    "title": "Fold — Shader Study",
+    "description": "A raymarched liquid metal shader running in vanilla WebGL."
+  }
+}

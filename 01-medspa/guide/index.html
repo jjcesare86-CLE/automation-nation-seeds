@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lumen Aesthetics — Rebrand guide</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300..600&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#f5efe6; --fg:#1a1614; --dim:#8a7f6d; --warm:#c89a70; --rule:rgba(26,22,20,.12); }
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:"Fraunces",serif;line-height:1.65;}
+.wrap{max-width:780px;margin:0 auto;padding:80px 32px 120px;}
+h1{font-size:clamp(40px,6vw,72px);font-variation-settings:"opsz" 96,"wght" 400;letter-spacing:-.02em;margin-bottom:16px;font-style:italic;}
+h2{font-size:22px;letter-spacing:.02em;margin:48px 0 12px;color:var(--warm);font-style:italic;}
+p{margin:0 0 1em;max-width:62ch;}
+code,pre{font-family:"IBM Plex Mono",monospace;font-size:13px;background:rgba(26,22,20,.06);padding:2px 6px;border-radius:3px;}
+pre{padding:16px;overflow-x:auto;border:1px solid var(--rule);}
+ul,ol{padding-left:24px;} li{margin-bottom:6px;}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-bottom:24px;}
+.back{display:inline-block;margin-top:32px;color:var(--warm);text-decoration:none;border-bottom:1px solid;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="meta">Rebrand Guide · Site 01 · Med Spa / Aesthetics</div>
+  <h1>Lumen Aesthetics</h1>
+  <p>An editorial, "afternoon light" med spa. Sits on the strength of one window-lit portrait, an ink-underlining treatment menu, and a first-visit intake form written like a personal letter.</p>
+
+  <h2>Concept</h2>
+  <p>Every page rhythm assumes the visitor is looking at their skin, not shopping. Language is hushed, first-person plural, and never uses the words "trusted," "boost," or "elevate." Fraunces italic carries emotion; Manrope carries operating information. Warm accent is used once per surface — the whole site would fall apart if the warm color were used decoratively.</p>
+
+  <h2>What lives where</h2>
+  <ul>
+    <li><code>brand.json</code> — brand name, address, hours, phone, email, palette, <code>FORM_WEBHOOK_URL</code>.</li>
+    <li><code>index.html</code> — every editable string tagged with <code>data-editable</code>. Search for the attribute to find them all.</li>
+    <li><code>styles.css</code> — five palette tokens at the top of <code>:root</code>. All colors reference them.</li>
+    <li><code>app.js</code> — hero parallax, menu accordion, form submit, IntersectionObserver-driven reveals.</li>
+    <li><code>assets/hero-portrait.webp</code> — the one image the site depends on. 16:9, subject on the left, warm-neutral negative space on the right where the headline sits.</li>
+  </ul>
+
+  <h2>Rebrand in 15 minutes</h2>
+  <ol>
+    <li>Edit <code>brand.json</code>: name, address, hours, phone, palette tokens, webhook.</li>
+    <li>Update the five palette tokens in <code>styles.css :root</code> to match.</li>
+    <li>Swap <code>assets/hero-portrait.webp</code>. Aspect ratio 16:9, subject occupies the left third, right two-thirds are the negative space the headline sits over.</li>
+    <li>Rewrite copy — every <code>data-editable</code> attribute names its semantic role (<code>hero.headline</code>, <code>menu.01.title</code>, etc.).</li>
+    <li>Rewrite the treatment menu — the five rows are the priced-and-timed services the client actually offers. Keep the pattern (duration, from/at price, description, follow-up cadence).</li>
+    <li>Rename Dr. Ravel in the letter block to the practice's actual practitioner of record.</li>
+  </ol>
+
+  <h2>Signature techniques</h2>
+  <ul>
+    <li><strong>Menu row ink underline</strong> — hover or open a row and the warm accent underline draws from left to right at 600ms with <code>cubic-bezier(.2,.9,.2,1)</code>.</li>
+    <li><strong>Hero parallax</strong> — image translates 4% over the hero's scroll length, respects reduced motion.</li>
+    <li><strong>Header dissolve</strong> — the top bar picks up its bone-colored fill only after the hero has scrolled out, so it never fights the image.</li>
+    <li><strong>Reveal stagger</strong> — philosophy, journal, and menu rows enter the viewport at a 50ms cadence.</li>
+    <li><strong>The letter</strong> — the intake form CTA is <em>Send the letter</em>. Small, deliberate. Do not change this without also softening the copy.</li>
+  </ul>
+
+  <h2>Copy voice cheat sheet</h2>
+  <ul>
+    <li>First-person plural. "We work in afternoon light."</li>
+    <li>Never "boost," "achieve," "reveal your best skin." Say the specific outcome, in specific units.</li>
+    <li>Prices are references. Every price ends in a plus, or a single number. Never a range with a dash — a dash reads like a haggle.</li>
+    <li>Follow-ups are named. "Complimentary at 14 days." "Return at 4 weeks."</li>
+    <li>The practitioner signs the letter. If your client isn't comfortable signing, cut the block — don't fake it.</li>
+  </ul>
+
+  <h2>Iteration log</h2>
+  <ul>
+    <li><strong>Pass 1 — Build.</strong> Full site: hero, philosophy, five-row menu with details, journal, letter form, footer.</li>
+    <li><strong>Pass 2 — Critique.</strong> Screenshot at 1440 + 390. Fixes: mobile hero switches from side-by-side to stacked with image on top; menu row detail padding narrows; row-meta duration hides under 480px so the price column doesn't crush the title.</li>
+    <li><strong>Pass 3 — Elevate.</strong> Added: hero parallax on scroll, header dissolve as hero scrolls off, IntersectionObserver-driven staggered reveal on menu rows + journal cards + philosophy columns, warm accent underline draw-in on nav links.</li>
+  </ul>
+
+  <a class="back" href="../">← Return to site</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Summit Roofing — Rebrand guide</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300..600&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#f4f1ec; --fg:#141416; --dim:#4a5058; --red:#c9241f; --rule:rgba(20,20,22,.12); }
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:"Fraunces",serif;line-height:1.65;}
+.wrap{max-width:780px;margin:0 auto;padding:80px 32px 120px;}
+h1{font-size:clamp(40px,6vw,72px);font-variation-settings:"opsz" 96,"wght" 500;letter-spacing:-.02em;margin-bottom:16px;}
+h2{font-size:22px;letter-spacing:.02em;margin:48px 0 12px;color:var(--red);font-style:italic;}
+p{margin:0 0 1em;max-width:62ch;}
+code,pre{font-family:"IBM Plex Mono",monospace;font-size:13px;background:rgba(20,20,22,.06);padding:2px 6px;border-radius:3px;}
+pre{padding:16px;overflow-x:auto;border:1px solid var(--rule);}
+ul, ol { padding-left: 24px; }
+li { margin-bottom: 6px; }
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-bottom:24px;}
+.back{display:inline-block;margin-top:32px;color:var(--red);text-decoration:none;border-bottom:1px solid;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="meta">Rebrand Guide · Site 04 · Roofing</div>
+  <h1>Summit Roofing Co.</h1>
+  <p>An editorial-quality site for a residential roofing contractor. Cinematic hero, a real before/after slider, and copy that reads like a neighbor wrote it. Rebrandable to any city and any roofer in ~15 minutes.</p>
+
+  <h2>Concept</h2>
+  <p>This site treats an unglamorous trade with the visual seriousness of a heritage brand. Fraunces italic serif carries the human voice; IBM Plex Sans holds the operating information. Red is used only for CTAs and warranty callouts — never decoratively.</p>
+
+  <h2>What lives where</h2>
+  <ul>
+    <li><code>brand.json</code> — every changeable field: brand name, tagline, phone, address, palette, and <code>FORM_WEBHOOK_URL</code>.</li>
+    <li><code>index.html</code> — every editable string tagged with a <code>data-editable="…"</code> attribute so a rebranding pass never misses copy.</li>
+    <li><code>styles.css</code> — five palette variables at the top of <code>:root</code>. Every color in the site references those.</li>
+    <li><code>app.js</code> — the before/after slider, sticky header, form submit, and the entrance stagger.</li>
+    <li><code>assets/hero-crew.webp</code>, <code>before.webp</code>, <code>after.webp</code> — swap these three files to make the site the new client's. Aspect ratios: hero 16:9, before/after 3:2.</li>
+  </ul>
+
+  <h2>Rebrand in 15 minutes</h2>
+  <ol>
+    <li>Edit <code>brand.json</code> — name, phone, address, palette tokens, webhook.</li>
+    <li>Update the five palette custom properties in <code>styles.css :root</code> to match.</li>
+    <li>Replace the three photos in <code>assets/</code>. Keep the file names.</li>
+    <li>Rewrite the copy in <code>index.html</code> — search for every <code>data-editable</code> attribute; each one names the semantic role (<code>hero.headline</code>, <code>brand.phone</code>, etc.).</li>
+    <li>Rewrite the three reviews in the <code>.review</code> blocks with real client testimonials and dates. Keep the same length range so the grid stays balanced.</li>
+    <li>Replace the SVG mountain logomark or leave it — it's built to survive most brands.</li>
+  </ol>
+
+  <h2>Signature techniques</h2>
+  <ul>
+    <li><strong>Cinematic hero zoom-out</strong> on load (14s slow ease-out) — respects <code>prefers-reduced-motion</code>.</li>
+    <li><strong>Draggable before/after slider</strong> with pointer, keyboard (← → Home End), and touch support. ARIA slider semantics.</li>
+    <li><strong>Sticky header</strong> that solidifies once the hero has scrolled off — reduces visual noise while keeping the phone number one thumb away on mobile.</li>
+    <li><strong>Service cards</strong> stagger into viewport at 80ms cadence with a <code>cubic-bezier(.2,.9,.2,1)</code>.</li>
+    <li><strong>Form submits</strong> to <code>brand.json.FORM_WEBHOOK_URL</code> with <code>mode: 'no-cors'</code> so a GoHighLevel webhook receives it without cross-origin friction.</li>
+  </ul>
+
+  <h2>Copy voice cheat sheet</h2>
+  <ul>
+    <li>Never use "we're proud" or "trusted." Say what you'll do and by when.</li>
+    <li>Every service ends with a warranty line in monospace — treat it like a signature.</li>
+    <li>Reviews reference street names and dates. Any review that could belong to any roofer isn't a testimonial, it's noise.</li>
+    <li>The word "family" is used once, in the hero. Don't dilute.</li>
+  </ul>
+
+  <h2>Iteration log</h2>
+  <ul>
+    <li><strong>Pass 1 — Build.</strong> Full site: hero, trust bar, services, before/after, reviews, form, footer.</li>
+    <li><strong>Pass 2 — Critique.</strong> Screenshot at 1440 + 390. Fixes: mobile hero title collapsed indentation, phone CTA hides label under 900px, service grid drops to single column, before/after disc scales smaller on mobile.</li>
+    <li><strong>Pass 3 — Elevate.</strong> Added: hero zoom-out on load, before/after keyboard support (<code>← → Home End</code>), service card entrance stagger, live warranty line under every service. All motion honors reduced-motion.</li>
+  </ul>
+
+  <a class="back" href="../">← Return to site</a>
+</div>
+</body>
+</html>

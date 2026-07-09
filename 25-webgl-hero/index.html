@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Fold — a shader study by an anonymous studio. Vanilla WebGL, raymarched liquid metal, cursor-reactive.">
+<title>Fold — Shader Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="void">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<header class="chrome">
+  <div class="brand" data-editable="brand.name">Fold<span class="brand-mark" aria-hidden="true">◈</span></div>
+  <nav>
+    <a href="#study">Study</a>
+    <a href="#studio">Studio</a>
+    <a href="mailto:hello@fold.studio" data-editable="brand.email">hello@fold.studio</a>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-meta">
+      <span class="mono">Fragment · WebGL 1.0 · SDF · 60fps</span>
+      <span class="mono">Study Nº 07 · MMXXVI</span>
+    </div>
+    <h1 id="hero-title" data-editable="hero.headline">
+      <span class="italic">how</span> a surface
+      <span class="block"><span class="italic">remembers</span> its</span>
+      <span class="block accent"><em>own weight.</em></span>
+    </h1>
+    <p class="hero-sub" data-editable="hero.sub">
+      A raymarched signed-distance field, animated in fragment. No mesh. No model. One equation, one loop, one long look at the light.
+    </p>
+    <div class="hero-actions">
+      <a class="cta" href="#study" data-editable="hero.cta">Read the study →</a>
+      <button class="ghost" id="pauseBtn" type="button">Pause the metal</button>
+    </div>
+  </section>
+
+  <section class="study" id="study">
+    <div class="study-inner">
+      <div class="study-num mono">§ 01</div>
+      <div class="study-body">
+        <p class="lead" data-editable="study.lead">
+          The metal is not modelled. There is no vertex here, no mesh, no ambient occlusion pass. Every frame is a fresh sphere-traced field, evaluated per pixel against a distance function that folds itself around a central mass, pulled toward the cursor, quieted by time.
+        </p>
+        <p data-editable="study.body">
+          When you leave the page idle, the field breathes. When you return, it remembers. The lighting model is a two-term reduction of the classic Fresnel-Schlick approximation, tuned for a warm bone highlight over a mercury body — the same palette a jeweller would use on a wax carving under a north-facing window.
+        </p>
+        <dl class="specs">
+          <div><dt>Runtime</dt><dd>Vanilla WebGL 1.0</dd></div>
+          <div><dt>Shader</dt><dd>~180 lines · GLSL</dd></div>
+          <div><dt>Payload</dt><dd>&lt; 14 KB · gzipped</dd></div>
+          <div><dt>Reduced motion</dt><dd>Yes · static frame</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="studio" id="studio">
+    <div class="studio-word" aria-hidden="true">Fold</div>
+    <div class="studio-note">
+      <p data-editable="studio.about">
+        Fold is a two-person shader studio operating out of a rented dark room in Kraków. We take one commission per quarter — usually for a museum, occasionally for a founder who understands that pixels are, structurally, a material.
+      </p>
+      <a class="cta" href="mailto:hello@fold.studio">Write the studio →</a>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div>Fold · Anonymous Studio · MMXXVI</div>
+  <div class="mono">A seed in the Automation Nation library · <a href="/sites/gallery/">Return to gallery</a></div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

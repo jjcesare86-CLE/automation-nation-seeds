@@ -1,0 +1,38 @@
+{
+  "brand": "Summit Roofing Co.",
+  "tagline": "We tear off, install, and clean up. You don't touch a shingle.",
+  "concept": "Editorial-quality trade site with cinematic hero, before/after slider, and neighbor-forward warranty copy.",
+  "phone": "(216) 555-0184",
+  "phoneDisplay": "216 · 555 · 0184",
+  "email": "hello@summitroofing.co",
+  "address": {
+    "line1": "4820 Detroit Ave.",
+    "city": "Lakewood, OH 44102"
+  },
+  "palette": {
+    "charcoal": "#141416",
+    "off-white": "#f4f1ec",
+    "safety-red": "#c9241f",
+    "steel": "#4a5058",
+    "sand": "#c9b088"
+  },
+  "logoPath": "assets/logo.svg",
+  "heroImage": "assets/hero-crew.webp",
+  "beforeImage": "assets/before.webp",
+  "afterImage": "assets/after.webp",
+  "social": {
+    "instagram": "@summitroofingco",
+    "facebook": "SummitRoofingOH"
+  },
+  "FORM_WEBHOOK_URL": "https://services.leadconnectorhq.com/hooks/example/summit",
+  "credentials": [
+    { "label": "BBB", "value": "A+ Accredited · 12 yrs" },
+    { "label": "GAF", "value": "Master Elite™ Contractor" },
+    { "label": "Insured", "value": "$2M General · Fully bonded" },
+    { "label": "Reviews", "value": "5.0 stars · 412 verified" }
+  ],
+  "meta": {
+    "title": "Summit Roofing Co. — Lakewood's neighborhood roofers",
+    "description": "Full tear-off, install, and cleanup. GAF Master Elite™ contractor. Free inspections, lifetime workmanship warranty, and a schedule you can plan a Saturday around."
+  }
+}
